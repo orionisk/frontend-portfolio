@@ -1,0 +1,17 @@
+block variables
+	- const { production } = htmlWebpackPlugin.options;
+	- const path = production ? '/portfolio/solovey' : '';
+	- const img = `${path}/assets/img`;
+	//- - const img = `/assets/img`;
+
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		if (production)
+			meta(name="robots" content="noindex")
+		title #{title}
+	body
+		.page
+			block content

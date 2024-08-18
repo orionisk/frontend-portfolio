@@ -1,0 +1,30 @@
+include ~views/components/_filtersModal
+include ~views/components/_accordion
+include ~views/components/_catalogView
+
+mixin s-catalog
+  - const data = require("~views/data/dropdownMenu.js").driver;
+  section.md_outer.max-md_pt-32
+    //- +filtersModal
+    .inner.lg_px-2o5
+      .mt-4o5.grid.gap-2o5(class="md_grid-cols-[2fr,1fr]")
+        .relative.bg-black.max-md_h-44
+          +img('~img/for-driver.jpg', { lazy: false })(
+            class="h-full w-full object-cover shadow-[0px_4px_4px_rgba(0,0,0,0.25)]"
+          )
+          .absolute.inset-0.flex.items-end.py-3.pr-3.text-white.md_pr-9
+            .relative.w-full.text-right.font-marianina.text-lg.uppercase.tracking-tight.before_absolute.before_left-0.before_bottom-0.before_h-px.before_w-full.before_bg-flamingo-01.md_pr-2.md_pb-2.md_text-2xl.lg_pb-4(
+              class="lg_text-[40px]"
+            )
+              span= data.title
+              span.md_hidden
+                span= " | "
+                span Racing Shoes
+        ul.flex-auto.bg-cod-gray.py-4.font-michroma.leading-none.text-white.max-sm_hidden.lg_text-lg
+          - const isActive = item => item.title === "Racing Shoes";
+          each item, i in data.children
+            li: a.block.px-5.py-1o5.hover_bg-flamingo-01(
+              class={ "bg-flamingo-01": isActive(item) },
+              href="#"
+            )= item.title
+      +catalog-view

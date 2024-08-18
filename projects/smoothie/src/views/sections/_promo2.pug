@@ -1,0 +1,29 @@
+mixin s-promo2
+  section.outer.promo2.py-5.md_py-10.xl_py-20.over
+    .inner.relative
+      block decor
+      .flex.flex-col.px-5.gap-10.lg_flex-row
+        - const titleCn = cn('text-3xl');
+        - const descrCn = cn('text-dusty-gray text-[15px] mt-[17px]');
+        ul.grid.flex-1.gap-5.lg_gap-10.xl_gap-20
+          li
+            p(class=titleCn) Triple Berry Smoothie
+            p(class=descrCn) A smoothie is so much more than blended fruit. It's an art with all of it's different elements blending perfectly together.
+          li
+            p(class=titleCn) Pick your fruit
+            p(class=descrCn) We chose strawberries, blackberries, raspberries, and bananas to be our base, but any combo of fruit is great.
+          li
+            p(class=titleCn) Fresh or frozen fruit?
+            p(class=descrCn) For smoothies, frozen fruit is best. It blends up thicker than fresh and gives you a really cold smoothie to enjoy when done.
+        block centerImg
+          +img('~img/kivi-smoothie.png', {cn: 'self-center max-w-xs xl_max-w-full'})
+        ul.grid.flex-1.gap-5.lg_gap-10.xl_gap-20
+          li
+            p(class=titleCn) Add a thickener.
+            p(class=descrCn) We use unsweetened greek yogurt in our smoothie, but peanut butter, almond butter, or vanilla yogurt are all great options.
+          li
+            p(class=titleCn) Choose a liquid
+            p(class=descrCn) Almond milk is great for the added nutty flavor, but coconut milk pairs well with a tropical smoothie.
+          li
+            p(class=titleCn) Throw some add-ins in
+            p(class=descrCn) Add some spinach or kale for additional nutrition or flax seeds for omega-3s. Flavors like fresh mint, vanilla extract, cinnamon, or honey

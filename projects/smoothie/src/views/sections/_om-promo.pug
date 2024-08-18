@@ -1,0 +1,15 @@
+mixin s-om-promo
+  section.outer.s-om-promo.pt-2.lg_pt-4
+    .inner
+      .grid.gap-5.sm_grid-cols-2.md_gap-10.lg_gap-20
+        - const btnCn = cvaButton({ intent: 'v4', size: 'small', class: 'my-8 self-center' });
+        article.flex.flex-col.justify-start.text-center
+          +img('~img/green-smoothie.png').mb-4.lg_mb-12
+          h3.text-3xl.font-bold Green Tasty Smoothie
+          p.px-6.mt-3.text-dusty-gray.leading-relaxed.lg_mt-7(class='text-[15px]') Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dui ante, consectetur non scelerisque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendtur non scelerisque.
+          button(class=btnCn) View More
+        article.flex.flex-col.justify-start.text-center.sm_pt-12.md_pt-24.lg_pt-36
+          +img('~img/red-smoothie.png', {cn: 'sm_order-last'}).mb-4.lg_mb-12
+          h3.text-3xl.font-bold Red Tasty Smoothie
+          p.px-6.mt-3.text-dusty-gray.leading-relaxed.lg_mt-7(class='text-[15px]') Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dui ante, consectetur non scelerisque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendtur non scelerisque.
+          button(class=btnCn) View More

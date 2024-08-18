@@ -1,0 +1,281 @@
+.m-form {
+  padding: 30px;
+  padding-right: 0;
+
+  font-size: 14px;
+
+  width: 100%;
+
+  &-wrapper {
+    padding-top: 32px;
+    display: flex;
+  }
+  &-left {
+    position: relative;
+    padding: 30px;
+
+    // width: 32%;
+    width: calc(41 / 129 * 100%);
+    flex-shrink: 0;
+    min-height: 410px;
+
+    background-color: #d0043c;
+    border-radius: 15px;
+
+    font-size: 23.66px;
+    color: #fff;
+
+    &__phone {
+      margin-top: 27px;
+    }
+    &__logo {
+      width: 100%;
+
+      @include flex;
+
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 25px;
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &-inputs {
+    // @include flex-gap-p(26px);
+    &--top {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 26px;
+    }
+  }
+
+  &-input {
+    &-wrapper {
+      width: 100%;
+    }
+    display: block;
+    margin: 0 auto;
+    max-width: 266px;
+    height: 36px;
+
+    padding: 10px 12px;
+
+    width: 100%;
+    height: 36px;
+    border: 1px solid #515050;
+    border-radius: 15px;
+
+    &::placeholder,
+    &::-webkit-input-placeholder,
+    &::-moz-placeholder {
+      color: #959595;
+    }
+
+    &-textarea {
+      &-wrapper {
+        margin-top: 30px;
+        max-width: 100%;
+      }
+      padding: 12px;
+
+      width: 100%;
+      height: 153px;
+
+      border: 1px solid #515050;
+      border-radius: 15px;
+
+      resize: none;
+
+      &::placeholder,
+      &::-webkit-input-placeholder,
+      &::-moz-placeholder {
+        color: #959595;
+      }
+    }
+
+    &-file-wrapper {
+      margin-top: 29px;
+    }
+  }
+  &-submit {
+    margin-top: 30px;
+
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+
+    &__text {
+      letter-spacing: -0.015em;
+    }
+
+    &__btn {
+      height: 40px;
+
+      background: #d0043c;
+      border-radius: 15px;
+
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+    }
+  }
+
+  // MD
+  @media screen and (max-width: $md-max) {
+    &-left {
+      font-size: 20px;
+    }
+  }
+
+  // SM
+  @media screen and (max-width: $sm-max) {
+    padding-right: 0;
+    padding-left: 0;
+    &-wrapper {
+      flex-wrap: wrap;
+    }
+    &-left {
+      padding: 20px;
+      padding-bottom: 30px;
+
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-template-rows: max-content;
+      justify-items: center;
+
+      gap: 10px;
+
+      width: 100%;
+      min-height: 200px;
+
+      font-size: 18px;
+      &__phone {
+        margin-top: 0;
+      }
+    }
+    &-inputs {
+      gap: 20px;
+
+      &--top {
+        gap: 15px;
+      }
+    }
+  }
+
+  // XM
+  @media screen and (max-width: $xm-max) {
+    padding-top: 20px;
+    padding-bottom: 0;
+    &-input {
+      max-width: 100%;
+      &-textarea-wrapper {
+        margin-top: 20px;
+      }
+      &-file-wrapper {
+        margin-top: 20px;
+      }
+    }
+    &-submit {
+      margin-top: 20px;
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.s-form {
+  margin: 0 auto;
+
+  max-width: 1070px;
+  font-size: 14px;
+
+  width: 100%;
+
+  &-wrapper {
+    padding: 32px 0 60px;
+  }
+
+  &-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  &-input {
+    &-wrapper {
+      width: 100%;
+    }
+    display: block;
+    margin: 0 auto;
+    // max-width: 266px;
+    height: 36px;
+
+    padding: 10px 12px;
+
+    width: 100%;
+    height: 36px;
+    border: 1px solid #515050;
+    border-radius: 15px;
+
+    &::placeholder,
+    &::-webkit-input-placeholder,
+    &::-moz-placeholder {
+      color: #959595;
+    }
+
+    &-textarea {
+      &-wrapper {
+        grid-row: span 2;
+      }
+      padding: 12px;
+      width: 100%;
+      border: 1px solid #515050;
+      border-radius: 15px;
+      resize: none;
+      &::placeholder,
+      &::-webkit-input-placeholder,
+      &::-moz-placeholder {
+        color: #959595;
+      }
+    }
+  }
+  &-submit {
+    margin: 0 auto;
+    margin-top: 25px;
+
+    max-width: 850px;
+
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+
+    &__btn {
+      height: 40px;
+
+      background: #d0043c;
+      border-radius: 15px;
+
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+    }
+  }
+  @media screen and (max-width: $xm-max) {
+    &-wrapper {
+      padding-bottom: 30px;
+    }
+    &-inputs {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    &-submit {
+      grid-template-columns: 1fr;
+    }
+  }
+}

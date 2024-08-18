@@ -1,0 +1,31 @@
+mixin sectors
+  - const bgWebp = require("~img/bg-1.png?format=webp");
+  - const bg = require("~img/bg-1.png");
+  //- section#krundid.s-sectors.outer.lazy(data-bg-set=`url(${bgWebp}) 1x, url(${bg}) 1x`)
+  section#krundid.s-sectors.outer
+    .inner.h-full
+      .h-full.flex.flex-col.justify-between
+        div
+          ul.s-sectors-list(x-data)
+            li
+              .mb-1.md_mb-6.h-12
+                img.w-7.md_w-auto(src=require("~img/vector/forest.svg"), alt="forest illustration")
+              div(x-intersect-class.once="animate-fadeInDown")
+                p.mb-2.md_mb-4.text-lg.md_text-2xl Mets
+                p.md_text-lg Elu metsa keskel
+            li.md_ml-14
+              .mb-1.md_mb-6.h-12
+                img.w-11.md_w-auto.pt-2(src=require("~img/vector/sea.svg"), alt="sea illustration")
+              div(x-intersect-class.once="animate-fadeInDown")
+                p.mb-2.md_mb-4.text-lg.md_text-2xl Meri
+                p.md_text-lg Sinu meri on kõigest 311 meetri kaugusel majast
+            li
+              .mb-1.md_mb-6.h-12
+                img.w-11.md_w-auto(src=require("~img/vector/air.svg"), alt="wind illustration")
+              div(x-intersect-class.once="animate-fadeInDown")
+                p.mb-2.md_mb-4.text-lg.md_text-2xl Õhk
+                p.md_text-lg Hinga iga päev õhku, mis on täis mere ja okaspuude lõhna
+        .s-sectors-circle
+          span 311 m
+          img.mr-1.md_mr-2(src=require("~img/vector/double-arrow.svg"), alt="arrow icon")
+          span Meri

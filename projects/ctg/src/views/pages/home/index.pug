@@ -1,0 +1,19 @@
+extends ~views/layout/default
+include ~views/sections/_promo
+include ~views/sections/_welcome
+include ~views/sections/_welcome2
+include ~views/sections/_featured
+include ~views/sections/_pro-tips
+
+block append variables
+  - title = "Home";
+
+block content
+  +s-promo
+  +s-welcome
+  +s-welcome2
+  +s-featured
+  +s-pro-tips
+
+block prepend script
+  script(src=require("~views/pages/home/home.js"), defer)

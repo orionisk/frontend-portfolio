@@ -1,0 +1,23 @@
+.s-history {
+  padding-top: 70px;
+  padding-bottom: 75px;
+
+  &-list {
+    display: grid;
+    gap: 14px 48px;
+
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.2;
+    @screen sm {
+      font-size: 16px;
+    }
+    @screen lg {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  @screen lg {
+    padding-top: 140px;
+    padding-bottom: 235px;
+  }
+}

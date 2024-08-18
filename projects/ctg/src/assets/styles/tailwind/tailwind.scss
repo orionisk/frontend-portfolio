@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .scrollbar-hidden {
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      @apply hidden;
+    }
+  }
+
+  .x-cloak[x-cloak=''] {
+    display: none !important;
+  }
+
+  .x-cloak-invisible[x-cloak='invisible'] {
+    visibility: hidden !important;
+  }
+}
+
+@layer components {
+  .outer {
+    @apply px-2;
+
+    @screen sm {
+      @apply px-4;
+    }
+    @screen lg {
+      @apply px-6;
+    }
+  }
+
+  .inner {
+    @apply container mx-auto;
+  }
+}

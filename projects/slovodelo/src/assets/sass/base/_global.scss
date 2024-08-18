@@ -1,0 +1,31 @@
+.page {
+  // max-width: 1920px; // Для корректного PixelPerfect
+  min-height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  // display: grid;
+  // grid-template-rows: auto 1fr auto;
+}
+
+.outer {
+  padding: 0 2rem;
+
+  @media screen and (max-width: $md-max) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  @media screen and (max-width: $xm-max) {
+    // padding: 0 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.inner {
+  margin: 0 auto;
+  max-width: 1290px;
+  width: 100%;
+}

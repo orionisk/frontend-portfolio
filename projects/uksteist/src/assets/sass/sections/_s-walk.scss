@@ -1,0 +1,28 @@
+.s-walk {
+  padding-top: 50px;
+  padding-bottom: 576px;
+
+  color: theme('colors.th-white');
+
+  background: linear-gradient(0deg, rgb(0 0 0 / 60%), rgb(0 0 0 / 60%)),
+    url('~img/bg-walk.jpg?prop=placeholder&placeholder=true&emitFile=false&placeholderSize=50') 50% /
+      cover no-repeat;
+
+  &-h3 {
+    letter-spacing: 0.3px;
+  }
+
+  &-btn {
+    width: 268px;
+    height: 63px;
+
+    font-size: 18px;
+    font-weight: 300;
+
+    border: 1px solid #f8f8f8;
+    border-radius: 30px;
+  }
+  @screen lg {
+    padding-top: 141px;
+  }
+}

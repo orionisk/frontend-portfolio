@@ -1,0 +1,22 @@
+.promo {
+}
+
+.promo-swiper {
+  .swiper-nav {
+    &::after {
+      font-family: unset;
+    }
+  }
+
+  .swiper-button-prev {
+    &::after {
+      content: url('~img/icons/chevron-left.svg');
+    }
+  }
+
+  .swiper-button-next {
+    &::after {
+      content: url('~img/icons/chevron-right.svg');
+    }
+  }
+}

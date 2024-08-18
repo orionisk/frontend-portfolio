@@ -1,0 +1,21 @@
+diff --git a/node_modules/micromodal/dist/micromodal.js b/node_modules/micromodal/dist/micromodal.js
+index 6d29006..128a556 100644
+--- a/node_modules/micromodal/dist/micromodal.js
++++ b/node_modules/micromodal/dist/micromodal.js
+@@ -216,14 +216,14 @@
+         key: "addEventListeners",
+         value: function addEventListeners() {
+           this.modal.addEventListener('touchstart', this.onClick);
+-          this.modal.addEventListener('click', this.onClick);
++          this.modal.addEventListener('mousedown', this.onClick);
+           document.addEventListener('keydown', this.onKeydown);
+         }
+       }, {
+         key: "removeEventListeners",
+         value: function removeEventListeners() {
+           this.modal.removeEventListener('touchstart', this.onClick);
+-          this.modal.removeEventListener('click', this.onClick);
++          this.modal.removeEventListener('mousedown', this.onClick);
+           document.removeEventListener('keydown', this.onKeydown);
+         }
+       }, {

@@ -1,0 +1,157 @@
+extends ./layout/_base
+//- include ./utils/_mixins.pug
+include ./components/_s-form.pug
+include ./components/_product-tile.pug
+//- include ./components/_catalog-block.pug
+include ./components/_breadcrumb.pug
+//- include ./components/_pswp.pug
+include ./components/_swiper-modal.pug
+
+block append variables
+	- const title = 'Карточка'
+
+block content
+	+breadcrumb(['Главная страница', 'Каталог', 'Автомобильные аксессуары', 'Кружка Molti Surprise Touch, soft-touch, голубая'])
+	//- +pswpContainer
+	section.outer.product
+		.inner
+			.product-block
+				.product-view
+					+swiperLightbox
+					.swiper-container.product-view-slider-container.item-discount.item-discount--big
+						.swiper-wrapper
+							.swiper-slide
+								.product-view-item
+									.product-view-item__img
+										img(src=`${img}/product-1.png`, alt="product" data-micromodal-trigger="lightbox-modal")
+							.swiper-slide
+								.product-view-item
+									.product-view-item__img
+										img(src=`${img}/product-1.png`, alt="product" data-micromodal-trigger="lightbox-modal")
+							.swiper-slide
+								.product-view-item
+									.product-view-item__img
+										img(src=`${img}/product-1.png`, alt="product" data-micromodal-trigger="lightbox-modal")
+							.swiper-slide
+								.product-view-item
+									.product-view-item__img
+										img(src=`${img}/product-1.png`, alt="product" data-micromodal-trigger="lightbox-modal")
+							.swiper-slide
+								.product-view-item
+									.product-view-item__img
+										img(src=`${img}/product-1.png`, alt="product" data-micromodal-trigger="lightbox-modal")
+						.item-star.item-star--big
+					.product-view-thumbs-wrapper
+						.swiper-container.product-view-thumbs-container
+							.swiper-wrapper
+								.swiper-slide
+									.product-view-thumb
+										.product-view-thumb-img: img(src=`${img}/product-1.png`, alt="thumb")
+								.swiper-slide
+									.product-view-thumb
+										.product-view-thumb-img: img(src=`${img}/product-1.png`, alt="thumb")
+								.swiper-slide
+									.product-view-thumb
+										.product-view-thumb-img: img(src=`${img}/product-1.png`, alt="thumb")
+								.swiper-slide
+									.product-view-thumb
+										.product-view-thumb-img: img(src=`${img}/product-1.png`, alt="thumb")
+								.swiper-slide
+									.product-view-thumb
+										.product-view-thumb-img: img(src=`${img}/product-1.png`, alt="thumb")
+						.sl-nav.sl-nav--next.product-view-thumbs-next
+						.sl-nav.sl-nav--prev.product-view-thumbs-prev
+				.product-info
+					.product-info__name Кружка Molti Surprise Touch, soft-touch, голубая
+					.product-info__code Код товара: IL-297469 
+					.product-info-item
+						.product-info-item__title Описание:
+						.product-info-item__text.text-p Aliquam neque orci, porta at finibus eget, lacinia in quam. <u>Ut pretium purus leo</u>, quis condimentum lorem dignissim in. Class aptent taciti sociosqu ad litora torquen.
+					.product-info-item
+						.product-info-item__title Характеристики:
+						ul.product-info-item__list.text-p
+							li.product-info-subitem Материал: пластик, искусственная кожа
+							li.product-info-subitem Размеры: блокнот: 10х16 см, аккумулятор: 12х17 см
+							li.product-info-subitem Емкость аккумулятора: 5000 мАч
+					.product-info-item
+						.product-info-item__title Возможные типы нанесения:
+						.product-info-item__text.text-p Флекс, Тиснение, Лазерная гравировка
+						a(href="#").product-info-item__link Подробнее о типах нанесения 
+						a(href="#").product-info-item__link Оплата и доставка
+					form(action="#").product-conf
+						.product-conf-item
+							.product-conf-item__title Цвет:
+							.product-color-items
+								label.product-color.product-color--red
+									input(type="radio", name="color" value="red" checked)
+									span
+								label.product-color.product-color--yellow
+									input(type="radio", name="color" value="yellow")
+									span
+								label.product-color.product-color--blue
+									input(type="radio", name="color" value="blue")
+									span
+						.product-conf-item
+							.product-conf-item__title Размер:
+							.product-size-items
+								label.product-size
+									input(type="radio", name="size" value="s")
+									span S
+								label.product-size
+									input(type="radio", name="size" value="m" checked)
+									span M
+								label.product-size
+									input(type="radio", name="size" value="l")
+									span L
+								label.product-size
+									input(type="radio", name="size" value="xl")
+									span XL
+						.product-conf-item.product-conf-amount Количество: <b>758 шт.</b>
+						.product-conf-item.product-conf-price
+							.product-conf-price__old 200 руб.
+							.product-conf-price__current 299 руб.
+						.product-conf-item.product-conf-amount-input
+							input(type="text", name="amount" placeholder="Укажите кол-во")
+						.product-conf-item
+							button(type="submit").product-conf-submit-btn В корзину
+	section.outer.request2
+		.inner.request2-inner
+			h1.s-title.s-title--1 заявка на просчет
+			h2.s-subtitle.s-subtitle--1 Предлагаем нашим Клиентам широкий спектр услуг по производству <br>
+				| печатной и сувенирной продукции. Мы воплотим в жизнь проекты любого уровня сложности <br>
+				| в кратчайшие сроки. Подробную информацию Вы можете получить в соответсвующих разделах сайта.
+			+sForm
+	section.outer.full-descr
+		.inner
+			h3.text-h.text-h--1 Полные характеристики и описание товара
+			p.text-p Aliquam neque orci, porta at finibus eget, lacinia in quam. Ut pretium purus leo, quis condimentum lorem dignissim in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec sit amet feugiat nisl, et aliquam orci. Cras vitae mattis nisl. Phasellus id mauris sed diam blandit aliquam ac vel eros. Integer a sapien vel massa accumsan ornare.
+			p.text-p Aliquam neque orci, porta at finibus eget, lacinia in quam. <u>Ut pretium purus leo</u>, quis condimentum lorem dignissim in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec sit amet feugiat nisl, et aliquam orci. Cras vitae mattis nisl. Phasellus id mauris sed diam blandit aliquam ac vel eros. Integer a sapien vel massa accumsan ornare.
+
+			h4.text-h.text-h--2 Сonsectetur adipiscing elit
+			p.text-p Aliquam neque orci, porta at finibus eget, lacinia in quam. Ut pretium purus leo, quis condimentum lorem dignissim in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec sit amet feugiat nisl, et aliquam orci. Cras vitae mattis nisl. Phasellus id mauris sed diam blandit aliquam ac vel eros. Integer a sapien vel massa accumsan ornare.
+			p.text-p Aliquam neque orci, porta at finibus eget, lacinia in quam. <u>Ut pretium purus leo</u>, quis condimentum lorem dignissim in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec sit amet feugiat nisl, et aliquam orci. Cras vitae mattis nisl. Phasellus id mauris sed diam blandit aliquam ac vel eros. Integer a sapien vel massa accumsan ornare.
+
+			ul.text-ul
+				li Ut pretium purus leo, quis condimentum lorem dignissim in
+				li Ut pretium purus leo, quis condimentum lorem dignissim in
+				li Ut pretium purus leo, quis condimentum lorem dignissim in
+				li Ut pretium purus leo, quis condimentum lorem dignissim in
+
+			p.text-p Aliquam neque orci, porta at finibus eget, lacinia in quam. Ut pretium purus leo, quis condimentum lorem dignissim in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec sit amet feugiat nisl, et aliquam orci. Cras vitae mattis nisl. Phasellus id mauris sed diam blandit aliquam ac vel eros. Integer a sapien vel massa accumsan ornare.
+	section.outer.morealso
+		.inner
+			h1.s-title.s-title--1 Вас также могут заинтересовать
+			h2.s-subtitle.s-subtitle--1 Предлагаем нашим Клиентам широкий спектр услуг по производству <br>
+				| печатной и сувенирной продукции. Мы воплотим в жизнь проекты любого уровня сложности <br>
+				| в кратчайшие сроки. Подробную информацию Вы можете получить в соответсвующих разделах сайта.
+			.products-small-slider
+				.products-small-slider-wrapper
+					.swiper-container.products-small-slider-container
+						.swiper-wrapper
+							+productTile
+							+productTile
+							+productTile
+							+productTile
+							+productTile
+				.sl-nav.sl-nav--next.products-small-slider-next
+				.sl-nav.sl-nav--prev.products-small-slider-prev

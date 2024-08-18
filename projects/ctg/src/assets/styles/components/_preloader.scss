@@ -1,0 +1,7 @@
+.app-preloader {
+  &.swiper-lazy-preloader {
+    border-color: theme('colors.cod-gray');
+    border-top-color: transparent;
+    animation: swiper-preloader-spin 1s infinite linear;
+  }
+}

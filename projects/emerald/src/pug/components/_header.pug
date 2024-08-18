@@ -1,0 +1,37 @@
+mixin header
+	header.outer.header
+		.container
+			.header__top
+				.header__logo
+					picture
+						source(srcset=`${img}/header__logo.webp` type='image/webp')
+						img(src=`${img}/header__logo.png` alt='logo')
+				nav.header__nav
+					a.header__nav--link(href='#about') О проекте
+					a.header__nav--link(href='#offers') Предложения
+					a.header__nav--link(href='#buys') Как купить
+					a.header__nav--link(href='#promotions') Акции
+				a.header__number(href='tel:8 (800) 550 60 40 ')
+					picture
+						source(srcset=`${img}/Viber.svg` type='image/webp')
+						img(src=`${img}/Viber.svg` alt='whatsap')
+					|           8 (800) 550 60 40
+			.header__main
+				h1.header__main-title Изумрудный город
+				h2.header__main-subtitle.header__main-subtitle--1
+					| Коттеджный поселок комфорт-класса 
+					br
+					| в Краснодаре
+				h2.header__main-subtitle.header__main-subtitle--2
+					| Готовые коттеджи 
+					br.br-ignore-dn 
+					| от
+					| 3 млн рублей
+				ul.header__main-text-items
+					li.header__main-text Газ, свет и вода
+					li.header__main-text
+						| Проведение коммуникаций
+						br
+						|  включено
+					li.header__main-text Городская прописка, ИЖС
+			button.btn.btn-white(data-micromodal-trigger='modal-form-6') скачать презентацию

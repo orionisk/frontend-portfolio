@@ -1,0 +1,12 @@
+.title {
+	color: #000000;
+	font-family: 'Proxima Nova';
+	font-size: 5.5rem;
+	font-weight: 700;
+	line-height: 5.703rem;
+
+	white-space: pre-line;
+	@media screen and (max-width: $md-max) {
+		font-size: 44px;
+	}
+}

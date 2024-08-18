@@ -1,0 +1,72 @@
+extends ./layout/_base
+
+//- include ./utils/_mixins.pug
+include ./components/_m-form.pug
+//- include ./components/_product-tile.pug
+//- include ./components/_catalog-block.pug
+include ./components/_breadcrumb.pug
+
+block append variables
+	- const title = 'Вопросы и ответы'
+
+block content
+	+breadcrumb(['Главная страница', 'Вопросы и ответы'])
+	section.outer.faq
+		.inner
+			.s-title.s-title--2 ВОПРОСЫ И ОТВЕТЫ
+			.s-subtitle.s-subtitle--2 Aliquam neque orci, porta at finibus eget, lacinia in quam. <u>Ut pretium purus leo</u>, quis condimentum lorem dignissim in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec sit amet feugiat nisl, et aliquam orci. Cras vitae mattis nisl. Phasellus id mauris sed diam blandit aliquam ac vel eros. Integer a sapien vel massa accumsan ornare.
+			ul.faq-items
+				li.active
+					.faq-item__title Как оформить заказ?
+					.faq-item__content
+						p.text-p Aliquam neque orci, porta at finibus eget, lacinia in quam. Ut pretium purus leo, quis condimentum lorem dignissim in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec sit amet feugiat nisl, et aliquam orci. Cras vitae mattis nisl. Phasellus id mauris sed diam blandit aliquam ac vel eros. Integer a sapien vel massa accumsan ornare.
+						p.text-p Aliquam neque orci, porta at finibus eget, lacinia in quam. <u>Ut pretium purus leo</u>, quis condimentum lorem dignissim in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec sit amet feugiat nisl, et aliquam orci. Cras vitae mattis nisl. Phasellus id mauris sed diam blandit aliquam ac vel eros. Integer a sapien vel massa accumsan ornare.
+						ul.text-ul
+							li Ut pretium purus leo, quis condimentum lorem dignissim in
+							li Ut pretium purus leo, quis condimentum lorem dignissim in
+							li Ut pretium purus leo, quis condimentum lorem dignissim in
+							li Ut pretium purus leo, quis condimentum lorem dignissim in
+						p.text-p Aliquam neque orci, porta at finibus eget, lacinia in quam. Ut pretium purus leo, quis condimentum lorem dignissim in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec sit amet feugiat nisl, et aliquam orci. Cras vitae mattis nisl. Phasellus id mauris sed diam blandit aliquam ac vel eros. Integer a sapien vel massa accumsan ornare.
+				li
+					.faq-item__title Как оплатить заказ?
+					.faq-item__content content
+				li
+					.faq-item__title Как получить скидку?
+					.faq-item__content content
+				li
+					.faq-item__title Можно ли комбинировать в одном тираже сувениры разного цвета, объема или размера?
+					.faq-item__content content
+				li
+					.faq-item__title Какие бывают способы нанесения логотипа на сувениры?
+					.faq-item__content content
+				li
+					.faq-item__title Как оплатить заказ?
+					.faq-item__content content
+				li
+					.faq-item__title Как получить скидку?
+					.faq-item__content content
+				li
+					.faq-item__title Можно ли комбинировать в одном тираже сувениры разного цвета, объема или размера?
+					.faq-item__content content
+				li
+					.faq-item__title Какие бывают способы нанесения логотипа на сувениры?
+					.faq-item__content content
+				li
+					.faq-item__title Как оплатить заказ?
+					.faq-item__content content
+				li
+					.faq-item__title Как получить скидку?
+					.faq-item__content content
+				li
+					.faq-item__title Можно ли комбинировать в одном тираже сувениры разного цвета, объема или размера?
+					.faq-item__content content
+				li
+					.faq-item__title Какие бывают способы нанесения логотипа на сувениры?
+					.faq-item__content content
+	section.outer.request
+		.inner
+			h1.s-title.s-title--1 Оставить заявку
+			h2.s-subtitle.s-subtitle--1 Предлагаем нашим Клиентам широкий спектр услуг по производству <br>
+				| печатной и сувенирной продукции. Мы воплотим в жизнь проекты любого уровня сложности <br>
+				| в кратчайшие сроки. Подробную информацию Вы можете получить в соответсвующих разделах сайта.
+			+mForm

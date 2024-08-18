@@ -1,0 +1,13 @@
+extends ~views/layout/default
+include ~views/components/_breadcrumbs
+include ./_blogs
+
+block append variables
+  - title = "Blog";
+
+block content
+  +breadcrumbs(['Pro racing tips & track news', 'blogger']).pt-40.max-md_hidden.lg_pt-32
+  +s-blogs
+
+block prepend script
+  script(src=require("./blogs.js"), defer)

@@ -1,0 +1,49 @@
+mixin header(page = 'home')
+  header.header.py-4
+    - const liCn = cn('hover_text-rose-bud');
+    - const activeCn = 'text-rose-bud';
+    - const checkActive = pageName => ({ [activeCn]: page === pageName });
+    .inner.relative
+      template#mobile-menu
+        swal-html
+          nav.p-6
+            ul.mt-5.grid.gap-3.text-xl
+              li(class=cn(liCn, checkActive('index')))
+                a(href='/') Home
+              li(class=cn(liCn, checkActive('about')))
+                a(href='/about.html') About
+              li(class=cn(liCn, checkActive('blog')))
+                a(href='/blog.html') Blog
+              li(class=cn(liCn, checkActive('menu')))
+                a(href='/menu.html') Menu
+              li(class=cn(liCn, checkActive('shop')))
+                a(href='/shop.html') Shop
+              li(class=cn(liCn, checkActive('contacts')))
+                a(href='/contacts.html') Contact
+      .flex.justify-between.items-center.mx-auto.text-lg.dsm_hidden(class='max-w-[900px]')
+        ul.flex.gap-3.md_gap-7
+          li(class=cn(liCn, checkActive('index')))
+            a(href='/') Home
+          li(class=cn(liCn, checkActive('about')))
+            a(href='/about.html') About
+          li(class=cn(liCn, checkActive('blog')))
+            a(href='/blog.html') Blog
+        //- img(src=require("~img/logo.png?format=webp"), alt="logo")
+        a(href='#')
+          +img('~img/logo.png', {lazy: false})(width=224)
+        ul.flex.gap-3.md_gap-7
+          li(class=cn(liCn, checkActive('menu')))
+            a(href='/menu.html') Menu
+          li(class=cn(liCn, checkActive('shop')))
+            a(href='/shop.html') Shop
+          li(class=cn(liCn, checkActive('contacts')))
+            a(href='/contacts.html') Contact
+      .flex.justify-center.sm_hidden
+        button(
+          x-data=`mobileMenu({
+            showClass: { popup: "animate-slideInUp" },
+            hideClass: { popup: "animate-slideOutDown"  },
+            customClass: "h-screen !w-full",
+          })`,
+          @click='showMenu()'
+        ) Menu

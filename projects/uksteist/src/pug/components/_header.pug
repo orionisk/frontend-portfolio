@@ -1,0 +1,60 @@
+mixin header
+  header#header.header.outer
+    .inner
+      #header-top.pt-4.flex-between-center.gap-2.initial-opacity-0
+        .hidden.sm_flex.gap-6
+          img(src=require("~img/icons/inst.svg"), alt="inst icon")
+          img(src=require("~img/icons/fb.svg"), alt="fb icon")
+        img(src=require("~img/logo.svg"), alt="logo")
+        .flex.gap-7
+          img.pr-14.sm_pr-0(src=require("~img/icons/phone.svg"), alt="phone icon")
+          .hidden.sm_flex.items-center.gap-0o5
+            span Et
+            //- img(src=require("~img/icons/arrow-down.svg"), alt="arrow-down icon")
+          template(x-data, x-teleport="#header")
+            button#menu-burger.menu-burger(
+              x-data="mobileMenuTrigger",
+              aria-label="Open mobile menu",
+              @click="showMenu"
+            )
+              .line
+              .line
+              .line
+          template#menu-slide
+            swal-html
+              div(x-data="mobileMenu")
+                button.menu-slide-close(aria-label="Close", @click="close")
+                  img(src=require("~img/icons/cross.svg?inline"), alt="")
+                .p-6
+                  img(class="w-[120px]", src=require("~img/logo.svg"), alt="logo")
+                  nav
+                    ul.mt-5.grid.gap-3.text-2xl.font-medium
+                      li: a(href="#krundid", @click="scroll($el.hash)") Krundid
+                      li: a(href="#ajalugu", @click="scroll($el.hash)") Ajalugu
+                      li: a(href="#etapid", @click="scroll($el.hash)") Etapid
+                      li: a(href="#meeskond", @click="scroll($el.hash)") Meeskond
+                      li: a(href="#dokumendid", @click="scroll($el.hash)") Dokumendid
+                      li: a(href="#jalutuskaik", @click="scroll($el.hash)") Jalutuskäik
+                      li: a(href="#koht", @click="scroll($el.hash)") Koht
+                  .mt-36.text-sm
+                    p.font-medium Sinu isiklik abiline krundi ostmisel:
+                    p.mt-5 Svetlana Davidovski
+                    a(href="#") +372 5813 0166
+                    ul.mt-5.flex.gap-3
+                      li: a(tabindex="0", href="#"): img.w-8.h-8(
+                        src=require("~img/icons/fb.svg?inline"),
+                        alt="instagram icon"
+                      )
+                      li: a(tabindex="0", href="#"): img.w-8.h-8(
+                        src=require("~img/icons/inst.svg?inline"),
+                        alt="facebook icon"
+                      )
+      nav#header-menu.header-nav.initial-opacity-0
+        ul.header-menu(x-data)
+          li: a(href="#krundid", @click="$scroll($el.hash)", tabindex="0") Krundid
+          li: a(href="#ajalugu", @click="$scroll($el.hash)", tabindex="0") Ajalugu
+          li: a(href="#etapid", @click="$scroll($el.hash)", tabindex="0") Etapid
+          li: a(href="#meeskond", @click="$scroll($el.hash)", tabindex="0") Meeskond
+          li: a(href="#dokumendid", @click="$scroll($el.hash)", tabindex="0") Dokumendid
+          li: a(href="#jalutuskaik", @click="$scroll($el.hash)", tabindex="0") Jalutuskäik
+          li: a(href="#koht", @click="$scroll($el.hash)", tabindex="0") Koht

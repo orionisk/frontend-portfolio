@@ -1,0 +1,44 @@
+mixin mobileMenu
+  div(
+    x-data="{ isShown: false, open() {this.isShown = true}, close() {this.isShown = false} }",
+    x-on:keydown.window.escape="close",
+    @open-mobile-menu.window="open"
+  )
+    .x-cloak.fixed.inset-0.animate-duration-500.animate-ease-out(
+      x-cloak,
+      x-show="isShown",
+      x-transition:enter="animate-fadeIn",
+      x-transition:leave="animate-fadeOut",
+      class="bg-black-01/50"
+    )
+    .x-cloak.fixed.inset-y-0.right-0.z-50.w-full.max-w-screen-2xs.bg-white.animate-duration-300.animate-ease-out(
+      x-cloak,
+      x-show="isShown",
+      x-trap.noscroll.inert.noreturn="isShown",
+      x-transition:enter="animate-slideInRight",
+      x-transition:leave="animate-slideOutRight",
+      x-on:click.away="close"
+    )
+      .relative.p-6.pt-20
+        button.absolute.top-5o5.right-5o5.outline-none(
+          @click="close",
+          aria-label="Close this dialog"
+        ): span.icm.icm-close.text-xl
+        ul.grid.text-left.leading-snug(
+          class="[&>:nth-of-type(n)]_border-white-02 [&>:nth-of-type(n)]_border-b"
+        )
+          li
+            +accordion
+              .px-4.pb-4
+                p Teknologi
+                br
+                p Words of content from dropdown you can put any context in here
+                br
+                p Words of content from dropdown you can put any context in here
+          li
+            a.block.p-4.font-semibold(href="#") Pelatihan Prakerja
+          li
+            a.text-lightsalmon-03.block.p-4.font-semibold(href="#") Kode Voucher
+        .mt-10.grid.gap-3
+          button(class=cvaButton({ type: "link", class: "w-full" })) Daftar
+          button(class=cvaButton({ type: "link", intent: "tertiary", class: "w-full" })) Masuk

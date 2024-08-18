@@ -1,0 +1,71 @@
+mixin mobile-menu(a)
+  .relative.z-50.sm_shrink-0(
+    x-data="{ isShown: false, toggle(s){this.isShown = s ?? !this.isShown} }",
+    x-model="isShown",
+    @open-menu.window="toggle",
+    @keydown.window.escape="toggle(false)"
+  )&attributes(attributes)
+    .max-md_x-cloak-invisible.fixed.inset-x-0.z-50.w-full.overflow-y-scroll.bg-white.animate-duration-300.animate-ease-out.sm_hidden(
+      class="top-[20vh] h-[80vh]",
+      x-cloak="invisible",
+      x-show="isShown",
+      x-trap.noscroll.noreturn="isShown",
+      x-on:click.away="toggle(false)",
+      x-transition:enter="animate-fadeIn",
+      x-transition:leave="animate-fadeOut"
+    )
+      div
+        .relative.flex.justify-center.py-4.before_absolute.before_inset-x-1.before_bottom-1.before_h-3.before_border-x-2.before_border-b-2.before_border-cod-gray
+          a.bg-cod-gray.px-6.py-2o5.font-michroma.text-sm.capitalize.text-alabaster(href="#") Track Your Order
+        .flex.items-center.gap-7.overflow-x-auto.bg-flamingo-02.px-1o5.py-6.text-base.font-semibold
+          a.shrink-0.uppercase.text-black.transition-colors.hover_text-white(
+            href="#",
+            tabindex="0"
+          ) Shop racing hear &nbsp;/
+          a.shrink-0.uppercase.text-black.transition-colors.hover_text-white(
+            href="#",
+            tabindex="0"
+          ) Merch &nbsp;/
+          a.shrink-0.uppercase.text-black.transition-colors.hover_text-white(
+            href="#",
+            tabindex="0"
+          ) Pro Racing Tips & Track News &nbsp;/
+          a.shrink-0.uppercase.text-black.transition-colors.hover_text-white(
+            href="#",
+            tabindex="0"
+          ) Contact Us
+        - const dropdownData = require("~views/data/dropdownMenu.js");
+        - const { driver, shop, car, gear } = dropdownData;
+        .relative.p-4.before_absolute.before_inset-x-1.before_top-1.before_h-3.before_border-x-2.before_border-t-2.before_border-cod-gray.after_absolute.after_inset-x-1.after_bottom-1.after_h-3.after_border-x-2.after_border-b-2.after_border-cod-gray(
+          x-data="{ currentTab: '0' }",
+          @open-tab="currentTab = $event.detail"
+        )
+          .tabs-1.grid.grid-cols-2.gap-x-2.gap-y-5.text-base.text-cod-gray
+            mixin btn(btnTitle = '')
+              button.text-left.font-bold.underline(
+                x-id="['subcategory-tab']",
+                :class="currentTab === $id('subcategory-tab').slice(-1) ? 'text-flamingo-01' : ''",
+                @click="$dispatch('open-tab', $id('subcategory-tab').slice(-1))"
+              )&attributes(attributes)= btnTitle
+            +btn(driver.title)(x-init="$nextTick(() => $el.click())")
+            +btn(shop.title)
+            +btn(car.title)
+            +btn(gear.title)
+          mixin item(data, imgTitle)
+            .mt-4o5.grid.grid-cols-2.font-michroma.text-sm.text-cod-gray(
+              x-id="['subcategory']",
+              x-show="currentTab === $id('subcategory').slice(-1)"
+            )
+              .grid.gap-7
+                each item in data
+                  a(href="#")= item.title
+              .relative
+                span.absolute.top-3o5.left-3o5.font-marianina.text-xl.uppercase.text-white The gear you need to#[br]succeed
+                +img('~img/helmets.jpg')
+          +item(driver.children)
+          +item(shop.children)
+          +item(car.children)
+          +item(gear.children)
+        a.sticky.bottom-0.flex.justify-center.bg-white.py-2.text-sm.font-semibold.capitalize.text-flamingo-01(
+          href="#"
+        ) Free shipping when you spend $99+

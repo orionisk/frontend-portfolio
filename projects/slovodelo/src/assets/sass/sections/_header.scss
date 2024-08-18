@@ -1,0 +1,238 @@
+.header {
+  .upheader {
+    min-height: 40.67px;
+
+    @include flex;
+
+    background: #515050;
+
+    color: #9d9d9d;
+    font-weight: 700;
+    font-size: 12px;
+
+    &-content {
+      @include flex(space-between);
+    }
+
+    &-contacts {
+      display: grid;
+      grid-template-columns: max-content auto auto;
+      gap: 32px;
+
+      &__item:hover {
+        color: #fff;
+      }
+    }
+    &-ctext {
+      color: #fff;
+    }
+    &-menu {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      align-items: center;
+
+      &__nav {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+
+        gap: 35px;
+
+        & > li:hover {
+          color: #fff;
+        }
+      }
+      &__socials {
+        margin-left: 33px;
+
+        display: grid;
+        grid-template-columns: repeat(2, min-content);
+        gap: 15px;
+
+        line-height: 0.65;
+      }
+    }
+  }
+
+  .subheader {
+    min-height: 81.33px;
+
+    @include flex;
+
+    background: #ffffff;
+    box-shadow: 0px 7px 28px rgba(0, 0, 0, 0.25);
+
+    font-weight: 700;
+    font-size: 18px;
+
+    &-logo {
+      line-height: 0.65;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    &-menu {
+      padding-left: 10px;
+
+      display: grid;
+      grid-template-columns: repeat(4, max-content);
+      gap: 58px;
+
+      & > li {
+        position: relative;
+        &:hover {
+          color: #d0043c;
+
+          & .dropdown {
+            display: flex;
+          }
+        }
+      }
+    }
+
+    &-content {
+      @include flex(space-between);
+    }
+    &-icons {
+      padding-right: 4px;
+
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      gap: 29.72px;
+
+      a {
+        display: block;
+        line-height: 0.6;
+      }
+    }
+
+    &-icon--bag {
+      position: relative;
+      span {
+        position: absolute;
+
+        right: -4px;
+        bottom: -3px;
+
+        width: 13.64px;
+        height: 13.94px;
+
+        @include flex;
+
+        background: #d0043c;
+        border-radius: 50%;
+
+        color: #fff;
+        font-size: 7px;
+      }
+    }
+  }
+
+  // LG-max
+
+  @media screen and (max-width: $lg-max) {
+    .upheader {
+      &-contacts {
+        display: none;
+      }
+    }
+    .subheader {
+      &-menu {
+        gap: 40px;
+      }
+    }
+  }
+
+  // MD-max
+  @media screen and (max-width: $md-max) {
+    .subheader {
+      &-menu {
+        padding-left: 20px;
+        padding-right: 20px;
+
+        gap: 20px;
+        font-size: 15px;
+      }
+      &-icons {
+        gap: 15px;
+      }
+    }
+  }
+  // SM-max
+  @media screen and (max-width: $sm-max) {
+    .upheader {
+      // display: none;
+      &-ctext {
+        display: none;
+      }
+      &-menu {
+        width: 100%;
+        align-items: center;
+
+        &__nav {
+          gap: 10px;
+        }
+        &__socials {
+          margin-left: 10px;
+          justify-content: flex-end;
+        }
+      }
+    }
+    .subheader {
+      &-menu {
+        padding-top: 20px;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        & > li {
+          width: 100%;
+          height: 50px;
+
+          display: flex;
+          align-items: center;
+        }
+
+        a {
+          padding-left: 20px;
+
+          display: flex;
+          align-items: center;
+
+          width: 100%;
+          height: 100%;
+
+          font-size: 16px;
+        }
+      }
+
+      box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
+      position: relative;
+      &-icons {
+        padding-right: 30px;
+        gap: 30px;
+      }
+    }
+  }
+
+  @media screen and (max-width: $xm-max) {
+    .upheader {
+      min-height: 35px;
+    }
+    .subheader {
+      &-logo {
+        max-width: 200px;
+      }
+      &-content {
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      &-icons {
+        padding-right: 0;
+        padding-bottom: 15px;
+        // gap: 10px;
+      }
+    }
+  }
+}

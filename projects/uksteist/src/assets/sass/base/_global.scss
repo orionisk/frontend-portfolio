@@ -1,0 +1,40 @@
+html,
+body {
+  scrollbar-width: none;
+
+  height: 100%;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &.swal2-shown {
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.page {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  background-color: theme('colors.th-white');
+}
+
+.outer {
+  @apply px-8;
+}
+
+.inner {
+  @apply container mx-auto;
+}
+
+*:focus {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: theme('colors.th-firm2') solid 2px;
+}

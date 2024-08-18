@@ -1,0 +1,27 @@
+.s-subscribe {
+  &-content {
+    position: relative;
+
+    // padding-bottom: 111px;
+    background-color: #dfeeb6;
+  }
+
+  picture {
+    @screen lg {
+      margin-top: -220px;
+    }
+  }
+
+  &-btn {
+    width: 100%;
+    max-width: 188px;
+    height: 60px;
+
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+
+    background-color: theme('colors.rose-bud');
+    border-radius: 5px;
+  }
+}

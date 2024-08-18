@@ -1,0 +1,36 @@
+.discuss2 {
+	min-height: 36rem;
+	.inner {
+		min-height: inherit;
+		display: flex;
+		align-items: center;
+	}
+	&__form {
+		width: 100%;
+	}
+	.form {
+		&__title {
+			font-size: 5.5rem;
+			font-weight: 700;
+		}
+		&__content {
+			width: 100%;
+			grid-template-columns: repeat(3, 1fr);
+		}
+		&__btn {
+			margin-top: 0;
+		}
+	}
+	@media screen and (max-width: $sm-max) {
+		min-height: 472px;
+		.inner {
+			justify-content: center;
+		}
+		.form {
+			max-width: 400px;
+			&__content {
+				grid-template-columns: 1fr;
+			}
+		}
+	}
+}

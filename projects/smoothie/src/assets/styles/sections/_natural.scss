@@ -1,0 +1,55 @@
+.s-natural {
+  // padding-top: 65px;
+  // padding-bottom: 65px;
+
+  &-items {
+    article {
+      position: relative;
+
+      button {
+        pointer-events: all;
+        position: relative;
+        top: 60%;
+        transition: top 0.5s ease-in-out, color 0.15s theme('transitionTimingFunction.DEFAULT'),
+          background-color 0.15s theme('transitionTimingFunction.DEFAULT');
+
+        &:focus {
+          top: 0;
+
+          // transform: translateY(50%);
+        }
+      }
+
+      &:hover {
+        button {
+          top: 0;
+
+          // bottom: 50%;
+          // transform: translateY(50%);
+        }
+      }
+    }
+  }
+
+  &-imgWrapper {
+    position: relative;
+    overflow: hidden;
+    @supports (overflow: clip) {
+      overflow: clip;
+    }
+
+    & > div {
+      @apply inset-0;
+      pointer-events: none;
+
+      position: absolute;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

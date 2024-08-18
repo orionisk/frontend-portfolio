@@ -1,0 +1,37 @@
+.promo-swiper {
+  .swiper {
+    &-lazy-preloader {
+      top: calc(50% + 40px);
+    }
+
+    &-pagination {
+      bottom: 78px;
+      left: 31%;
+      display: flex;
+      gap: 5px;
+
+      @screen sm {
+        bottom: 20px;
+        left: 45%;
+      }
+
+      @screen md {
+        left: 37.2%;
+      }
+
+      &-bullet {
+        width: 10px;
+        height: 10px;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+
+        opacity: 1;
+        background-color: theme('colors.flamingo.02');
+
+        &-active {
+          background-color: theme('colors.cod-gray');
+        }
+      }
+    }
+  }
+}

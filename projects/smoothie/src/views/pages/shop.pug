@@ -1,0 +1,15 @@
+extends ~views/layout/_base
+
+block variables
+  - const title = 'Main';
+  - const active = 'shop';
+
+block content
+  +page-head('~img/shop-bg.jpg?format=webp')
+    block text
+      h1.sec-title Shop
+      p.sec-subtitle Awesome and Tasty
+  section.outer.s-shop.py-24
+    .inner
+      .s-natural-items.flex.justify-center.flex-wrap.gap-x-5.text-center(class='gap-y-[26px]')
+        +natural-items

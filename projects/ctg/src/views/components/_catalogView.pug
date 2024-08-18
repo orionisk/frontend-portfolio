@@ -1,0 +1,89 @@
+mixin catalog-view
+  div(
+    x-data="catalogView({ 1: '!grid-cols-1', 2: '!grid-cols-2', 3: '!grid-cols-2 lg_!grid-cols-3' }, 2)"
+  )
+    .flex.items-center.justify-between.md_mt-7
+      .flex.gap-6.max-md_hidden
+        span.font-bold.capitalize Sort For:
+        button.capitalize Top rated
+        button.capitalize New Additions
+        button.capitalize Price (High to Low)
+        button.capitalize Price (Low to High)
+      .flex.md_gap-2o5
+        button.group.transition-colors.max-lg_hidden(
+          @click="colsView = 3",
+          :class="colsView === 3 && '[&>*>*]_stroke-flamingo-01 max-md_bg-cod-gray'"
+        )
+          +svg('~img/icons/category-view-9.svg?inline')(class="group-hover_[&>*]_stroke-flamingo-01")
+        button.group.flex.items-center.justify-center.transition-colors.max-md_h-10.max-md_w-10(
+          @click="colsView = 2",
+          :class="colsView === 2 && '[&>*>*]_stroke-flamingo-01 max-md_bg-cod-gray'"
+        )
+          +svg('~img/icons/category-view-4.svg?inline')(class="group-hover_[&>*]_stroke-flamingo-01")
+        button.group.flex.items-center.justify-center.transition-colors.max-md_h-10.max-md_w-10.lg_hidden(
+          @click="colsView = 1",
+          :class="colsView === 1 && '[&>*>*]_stroke-flamingo-01 max-md_bg-cod-gray'"
+        )
+          +svg('~img/icons/category-view-1.svg?inline')(class="group-hover_[&>*]_stroke-flamingo-01")
+      span.text-silver.md_hidden(class="text-[10px]") products 124
+      button.mr-2.flex.items-center.gap-2.md_hidden(
+        x-data,
+        @click="$dispatch('open-modal-filters')"
+      )
+        span.text-sm.font-semibold.uppercase Filters
+        .flex.h-6.w-6.items-center.justify-center
+          +svg('~img/icons/filters-trigger.svg')(width=16, height=15)
+    .grid.items-start.gap-2o5.md_mt-7(class="md_grid-cols-[45fr,92fr]")
+      //- +catalog-filters
+      +filtersModal
+      .grid.gap-1o5.max-md_px-1o5.md_gap-2o5(
+        class="grid-cols-2",
+        :class="`${colsCn(colsView)} group/v v-${colsView}`"
+      )
+        mixin item
+          .group.relative.border.border-alto.transition-all.hover_border-cod-gray(
+            class="hover_shadow-[0px_4px_22px_rgba(0,0,0,0.14)]"
+          )
+            a.absolute.bg-cod-gray.py-3.pl-3.pr-5o5.text-white.opacity-0.transition-opacity.group-hover_opacity-100(
+              href="/product"
+            )
+              span.relative.text-sm.before_absolute.before_-bottom-1o5.before_h-px.before_bg-white(
+                class="before_w-[74px]"
+              ) View Details #[span.icm.icm-chevron-right.ml-3]
+            +img('~img/sparco.png').mx-auto
+            .flex.flex-col.justify-center.text-center.max-md_px-2.md_mt-3(
+              class="group-[.v-1]/v_max-md_px-14"
+            )
+              p(class="group-[.v-2]/v_max-md_text-sm group-[.v-1]/v_max-md_text-lg") Alpine stars Stratos Racing #[br.max-md_hidden]Suit Bootcut
+              .mt-2.flex.flex-col.gap-1.md_mt-3.md_gap-3
+                .flex.justify-center.gap-2(class="group-[.v-2]/v_max-md_order-1")
+                  .flex.items-center.gap-1o5.text-lg.text-mustard
+                    .icm.icm-star
+                    .icm.icm-star
+                    .icm.icm-star
+                    .icm.icm-star
+                    .icm.icm-star
+                  a(class="group-[.v-2]/v_max-md_hidden", href="#") 24 reviews
+                span.group.text-xl.font-semibold.md_text-2xl(class="group-[.v-1]/v_max-md_hidden") $599.00
+            a.mt-3.flex.items-center.justify-center.gap-5.px-3.py-5.transition-colors.group-hover_bg-cod-gray.group-hover_text-white.xl_py-6.xl_px-5(
+              href="#"
+            )
+              span.font-michroma.uppercase.tracking-widest.md_text-base(
+                class="group-[.v-2]/v_max-md_text-xs group-[.v-2]/v_max-md_tracking-[3px]"
+              ) Add to cart
+              .hidden.items-center.gap-4(class="group-[.v-1]/v_max-md_flex")
+                span.bg-white-03.flex.h-5.w-px.bg-boulder.group-hover_bg-white
+                span.text-2xl.font-semibold $599.00
+        +item
+        +item
+        +item
+        +item
+        +item
+        +item
+        //- +item
+        //- +item
+        //- +item
+        //- +item
+        //- +item
+        //- +item
+        //- +item

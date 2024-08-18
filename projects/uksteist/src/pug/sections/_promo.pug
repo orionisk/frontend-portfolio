@@ -1,0 +1,11 @@
+mixin promo
+  section.s-promo.outer
+    .inner
+      .s-promo-content
+        .s-promo-11
+          +img('~img/11.png', { w: 487, lazy: false })#promo-11.initial-opacity-0(alt="11")
+        .mt-16.md_mt-0.pb-8.font-light(x-data)
+          h1#promo-h1.h2.initial-opacity-0 Viimsi elamurajoon
+          #promo-h3.initial-opacity-0
+            h3.mt-7.lg_mt-8.ml-3.text-lg.leading-tight Üksteist privaatset metsaga kaetud krunti
+            button.btn1.mt-10.ml-3(x-data, @click="$scroll('#krundid', { duration: 1000 })") Krundid

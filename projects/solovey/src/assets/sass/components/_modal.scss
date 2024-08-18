@@ -1,0 +1,29 @@
+.modal {
+	font-family: 'Proxima Nova';
+	&__container {
+		padding: 9rem;
+		max-width: 52.6rem;
+		width: 100%;
+		min-height: 46.5rem;
+
+		position: relative;
+	}
+	&__close {
+		&:before {
+			content: '\2715';
+
+			font-size: 20px;
+			color: #0b1324;
+
+			position: absolute;
+			top: 15px;
+			right: 15px;
+		}
+	}
+	.form {
+		&__content {
+			margin-top: 0;
+			gap: 1.5rem;
+		}
+	}
+}

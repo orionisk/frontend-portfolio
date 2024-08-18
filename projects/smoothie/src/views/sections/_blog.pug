@@ -1,0 +1,11 @@
+mixin s-blog
+  section.s-blog.outer.py-5.xl_pt-14.xl_pb-20
+    .inner
+      .text-center.leading-tight
+        h2.sec-title.text-matterhorn Recent from Blog
+        p.sec-subtitle.text-rose-bud.dsm_mt-2 Read and follow our latest posts
+      .mt-5.grid.gap-5.xs_grid-cols-2.sm_mt-11.sm_grid-cols-3
+        block items
+          +blog-article({ img: '~img/blog-1.jpg', date: '2022-02-02', title: 'Lorem ipsum dolor sit amet', p: 'Quisque vitae cursus orci, ac dignissim odio. Ut dapibus aliquam neque tempus aliquet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', postedIn: 'Smoothies', postedBy: 'Admin' })
+          +blog-article({ img: '~img/blog-2.jpg', date: '2022-02-01', title: 'Lorem ipsum dolor sit', p: 'Quisque vitae cursus orci, ac dignissim odio. Ut dapibus aliquam neque tempus aliquet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', postedIn: 'Smoothies', postedBy: 'Admin' })
+          +blog-article({ img: '~img/blog-3.jpg', date: '2022-02-02', title: 'Lorem ipsum dolor sit amet', p: 'Quisque vitae cursus orci, ac dignissim odio. Ut dapibus aliquam neque tempus aliquet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', postedIn: 'Smoothies', postedBy: 'Admin' })

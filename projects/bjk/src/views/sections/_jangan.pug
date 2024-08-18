@@ -1,0 +1,11 @@
+section.outer.pt-11.pb-36.lg_pt-20.lg_pb-44
+  .inner
+    - const bg = require('~img/jangan-bg.png?format=webp');
+    .lazy.grid.justify-items-center.rounded.bg-darkslateblue-03.bg-contain.bg-center.bg-no-repeat.p-9.xs_py-20.sm_rounded-xl.sm_bg-cover.sm_py-32(
+      data-bg=bg
+    )
+      h2.mx-auto.text-center.text-xl.font-semibold.text-white.sm_text-2xl.lg_text-3xl(
+        class='bg- max-w-[528px]'
+      ) Jangan takut untuk memulai
+      - const cln = 'h-11 max-w-[273px] w-full';
+      button.mt-5.sm_mt-11(class=cvaButton({ type: 'button', class: cln })) Mulai Sekarang

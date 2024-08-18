@@ -1,0 +1,16 @@
+extends ~views/layout/_base
+
+block variables
+  - const title = 'Home';
+
+block content
+  +s-promo
+  +s-promo2
+    block decor
+      +img('~img/kiwi.png', { cn: 'promo2-decor --1' })
+      +img('~img/straw.png', { cn: 'promo2-decor --2' })
+  +s-natural
+  +s-subscribe
+  +s-blog
+  +s-our-menu
+  +s-testimonials

@@ -1,0 +1,150 @@
+.slider h2 {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 35px;
+	text-transform: uppercase;
+	color: #2c2c2c;
+}
+.swiper-slide {
+	@include flex;
+	width: calc(365 / 1200 * 100%);
+
+	background: #fff;
+
+	text-align: center;
+	font-size: 18px;
+
+	picture {
+		width: 100%;
+		display: flex;
+
+		img {
+			display: block;
+			height: 300px;
+			object-fit: cover;
+			object-position: left;
+		}
+		color: transparent;
+	}
+
+	&--left {
+		picture {
+			justify-content: flex-start;
+			img {
+				max-width: 220px;
+			}
+		}
+	}
+
+	&--center {
+		width: calc(450 / 1200 * 100%);
+		picture img {
+			width: 100%;
+		}
+	}
+
+	&--right {
+		picture {
+			justify-content: flex-end;
+
+			img {
+				max-width: 220px;
+			}
+		}
+	}
+}
+.jc-start {
+	justify-content: flex-start;
+}
+.jc-end {
+	justify-content: flex-end;
+}
+.swiper-container {
+	width: 100%;
+}
+
+.mySwiper {
+	margin-top: 60px;
+}
+
+.swiper-button {
+	&-next-custom,
+	&-prev-custom {
+		margin-top: 10px;
+
+		position: relative;
+		z-index: 15;
+		cursor: pointer;
+	}
+}
+
+.slider__buttons {
+	margin-top: 20px;
+
+	display: flex;
+	justify-content: space-between;
+}
+.slider__count {
+	width: unset;
+
+	font-family: Source Sans Pro;
+	font-size: 25px;
+	text-transform: uppercase;
+	color: #035635;
+	letter-spacing: -0.05em;
+
+	.swiper-pagination-total {
+		color: #888;
+	}
+}
+
+// SM-max
+@media screen and (max-width: $sm-max) {
+	.mySwiper {
+		margin-top: 30px;
+	}
+	.swiper-slide {
+		width: 100%;
+		picture {
+			img {
+				width: 100%;
+				max-width: 100%;
+				height: 300px;
+				object-position: center center;
+			}
+		}
+	}
+}
+
+// XM-max
+@media screen and (max-width: $xm-max) {
+	.slider {
+		h2 {
+			font-size: 18px;
+			line-height: 21px;
+		}
+
+		&__buttons {
+			margin-top: 0;
+		}
+
+		&__buttons {
+			align-items: center;
+		}
+
+		&__count {
+			font-size: 18px;
+			line-height: 21px;
+		}
+	}
+
+	.swiper-button-prev-custom,
+	.swiper-button-next-custom {
+		margin-top: 5px;
+		img {
+			max-width: 33px;
+		}
+	}
+}

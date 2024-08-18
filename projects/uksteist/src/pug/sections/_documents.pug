@@ -1,0 +1,21 @@
+mixin documents
+  - const bg = require("~img/bg-docs.jpg?quality=50");
+  section#dokumendid.s-docs.outer.lazy(
+    data-bg-multi=`linear-gradient(0deg, rgb(0 0 0 / 60%), rgb(0 0 0 / 60%)), url(${bg})`
+  )
+    .inner
+      h2.h2(x-data, x-intersect-class.once="animate-fadeInDown") Dokumendid
+      h3.h3.s-docs-h3.animate-delay-200(x-data, x-intersect-class.once="animate-fadeInDown") Laadi vajalikud dokumendid alla
+      .mt-14(
+        class="lg_mt-[137px]",
+        x-data="docModalTrigger",
+        @docmodal-second.window="showSecondModal",
+        @docmodal-close.window="close"
+      )
+        ul.s-docs-list
+          li: button(@click="showModal(1)"): span Geodeesia
+          li: button(@click="showModal(2)"): span Geoloogia
+          li: button(@click="showModal(3)"): span Dendroloogia
+          li: button(@click="showModal(4)"): span Hoonestusplaan
+          li: button(@click="showModal(5)"): span Üldesitlus
+          li: button(@click="showModal(6)"): span Firmastiil

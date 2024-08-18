@@ -1,0 +1,3 @@
+mixin css-defer(href)
+  //- link(rel='preload', href=href, as='style')
+  link(rel="stylesheet", href=href, media="print", onload="this.media=\"all\"")

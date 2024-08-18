@@ -1,0 +1,18 @@
+mixin s-subscribe
+  section.pt-5.md_pt-10.xl_pt-20.s-subscribe.outer
+    .py-28.s-subscribe-content.top-pattern.bottom-pattern
+      .inner.relative
+        .gap-5.lg_grid-cols-2.xl_gap-10(class='md_grid md_grid-cols-[1fr,2fr]')
+          +img('~img/skinnypeach-smoothie.png', {cn: 'hidden md_block'})(
+            alt='skinnypeach smoothie'
+          )
+          .pl-3.flex.flex-col.justify-center.self-center.leading-tight
+            h2.sec-title Subscribe here
+            span.sec-subtitle.text-rose-bud.dsm_mt-2 to our news and sale promotions
+            form.mt-5.grid.gap-3.sm_gap-7(
+              class='sm_grid-cols-[minmax(0,1.55fr),1fr]',
+              x-data,
+              @submit.prevent
+            )
+              input(class=cvaInput(), type='text', placeholder='Your email')
+              button(class=cvaButton()) Subscribe

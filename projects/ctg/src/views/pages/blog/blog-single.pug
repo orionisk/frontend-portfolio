@@ -1,0 +1,13 @@
+extends ~views/layout/default
+include ~views/components/_breadcrumbs
+include ./_blog
+
+block append variables
+  - title = "Blog";
+
+block content
+  +breadcrumbs(['Pro racing tips & track news', 'Articles', 'Pro Tip: Four Simple Rules to tell if its the Driver or the Chassis']).pt-40.max-md_hidden.lg_pt-32
+  +s-blog
+
+//- block prepend script
+  script(src=require("./blog.js"), defer)

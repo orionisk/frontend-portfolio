@@ -1,0 +1,22 @@
+include ./_product-slider
+include ./_product-form
+include ~views/components/_accordion
+
+mixin s-product
+  section.outer.pb-10.pt-40.md_pt-0.lg_pb-20
+    .inner.relative
+      .absolute.-top-10.-bottom-16.bg-no-repeat.max-xl_hidden(
+        class="-left-60 w-[50vw] bg-[url(~img/product-bg.svg)]"
+      )
+      .gap-5.pt-5o5.md_grid(class="xl_grid-cols-[minmax(0,2fr),minmax(0,1fr)]")
+        +product-slider
+        +product-form
+      .relative.z-10.mt-11.grid.gap-4.md_max-xl_ml-28(class="xl_grid-cols-[2fr,1fr]")
+        .capitalize.xl_ml-32(class="max-w-[712px]") The classic Slalom+ Suede racing shoe by Sparco is all new for 2020. It has a mid-top design that features a suede upper with the signature Sparco logo as well as a contrasting striped inlay. The result is a clean-looking shoe with a comfortable fit. The Slalom+ also has a cushioned inner sole and an all-new slim rubber outer sole that is anti-slip, anti-static, and oil and fuel resistant. The Slalom + is SFI 3.3/5 and FIA approved.
+        .grid.gap-9.max-xl_max-w-screen-xs.xl_pr-3
+          +accordion("Have any questions?", { titleCn: "font-semibold", btnCn: 'border-b border-cod-gray pb-2o5' }).grid
+            .pt-2 Let our team of professionals help answer any questions you may have on the purchase of a premier road racing shock by contacting us at #[span.underline info@calltogrid.com].
+          +accordion("Reviews (2)", { titleCn: "font-semibold", btnCn: 'border-b border-cod-gray pb-2o5' }).grid
+            .pt-2 Reviews (2)
+          +accordion("Shipping Information", { titleCn: "font-semibold", btnCn: 'border-b border-cod-gray pb-2o5' }).grid
+            .pt-2 Shipping Information

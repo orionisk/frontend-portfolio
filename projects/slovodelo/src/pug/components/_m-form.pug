@@ -1,0 +1,21 @@
+mixin mForm
+	.m-form-wrapper
+		.m-form-left
+			.m-form-left__email E-mail:<br><a href='mailto:#'>info@slovodelo.ru</a>
+			.m-form-left__phone Телефон:<br><a href='tel:#'>8 (495) 990 4 990</a>
+			.m-form-left__logo: img(src=`${img}/form-logo.png`, alt="logo")
+		form(action="#").m-form
+			.m-form-inputs
+				.m-form-inputs--top
+					.m-form-input-wrapper: input.m-form-input(type="text", name="name" placeholder="Ваше имя")
+					.m-form-input-wrapper: input.m-form-input(type="text", name="phone" placeholder="Номер телефона")
+					.m-form-input-wrapper: input.m-form-input(type="email", name="email" placeholder="Адрес электронной почты")
+				.m-form-input-wrapper.m-form-input-textarea-wrapper
+					textarea.m-form-input-textarea(placeholder="Описание проекта" name="descr", cols="30", rows="8")
+			.m-form-input-file-wrapper
+				label.input-file.m-form-input-file
+					span Прикрепить макет для нанесения
+					input(type="file", name="file")
+			.m-form-submit
+				.m-form-submit__text Нажимая на кнопку «Отправить заявку», Вы соглашаетесь на обработку персональных данных.
+				button(type="submit").m-form-submit__btn Оставить заявку

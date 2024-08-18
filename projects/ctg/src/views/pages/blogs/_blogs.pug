@@ -1,0 +1,62 @@
+mixin s-blogs
+  section.outer.pt-7.pb-14.max-md_pt-40
+    .inner
+      .grid.gap-2(class="lg_grid-cols-[1fr,3fr] xl_grid-cols-[1fr,5.15fr]")
+        aside(x-data="{ isShown: false, toggle(){this.isShown=!this.isShown} }")
+          .flex.items-center.justify-between.border-flamingo-01.max-lg_border-b.max-lg_pb-3
+            h1.font-marianina.text-3xl.font-bold.uppercase.tracking-tighter.text-flamingo-01.sm_text-4xl(
+              class="lg_text-[40px]"
+            ) Articles & Videos
+            button.relative.flex.w-6.items-center.justify-center.pr-4.text-flamingo-02.lg_hidden(
+              @click="toggle"
+            )
+              span(
+                :class="isShown ? 'translate-y-0 rotate-45' : '-translate-y-2'",
+                class="absolute h-px w-full transform bg-current transition"
+              )
+              span(
+                :class="isShown ? 'opacity-0' : 'opacity-100'",
+                class="absolute h-px w-full transform bg-current transition"
+              )
+              span(
+                :class="isShown ? 'translate-y-0 -rotate-45' : 'translate-y-2'",
+                class="absolute h-px w-full transform bg-current transition"
+              )
+          +accordion('', { expanded: false, arrow: false, btn: false, wrapperCn: 'lg_!block lg_!h-auto', wrapperCloak: 'max-lg_x-cloak' })(
+            x-modelable="expanded",
+            x-model="isShown"
+          )
+            nav.mt-5.grid.gap-2o5.gap-y-4o5.pl-2.capitalize.max-lg_grid-cols-2.max-lg_pb-8.lg_mt-0o5.lg_gap-0o5
+              a.border-b.border-alto.py-3(href="#") All
+              a.border-b.border-flamingo-01.py-3.font-bold.text-flamingo-01(href="#") In The Garage
+              a.border-b.border-alto.py-3(href="#") Repairs
+              a.border-b.border-alto.py-3(href="#") Track Tips
+              a.border-b.border-alto.py-3(href="#") Additional Category
+              a.border-b.border-alto.py-3(href="#") Additional Category
+              a.border-b.border-alto.py-3(href="#") Additional Category
+        .mt-2.grid.gap-2o5
+          mixin articleBlock(images = [1,2,3])
+            .flex.gap-2o5(class="[&:nth-of-type(even)>div]_order-1")
+              .grid.gap-2o5
+                mixin article(image = '~img/article-1.jpg')
+                  article.grid.border.border-black.transition-shadow.sm_grid-cols-2(
+                    class="hover_shadow-[0px_4px_32px_rgba(245,123,63,0.34)] [&:nth-of-type(even)>section]_order-1"
+                  )
+                    section.p-2.max-sm_order-1.md_py-5.md_pl-7.md_pr-5
+                      header
+                        h2.font-michroma.text-flamingo-01 Quick and Easy Adjustments for Oversteer or Understeer
+                      p.mt-4.pr-2.text-sm.lg_text-base This allows ourselves more time to develop a plan. We may see that a car is disabled on the racing surface up ahead and we need to develop a plan as we approach the area...
+                      .text-right.leading-tight.max-lg_m-3
+                        a.inline-flex.items-center.gap-7.text-sm(href="/blog-single")
+                          span.underline.underline-offset-8 Read More
+                          .icm.icm-chevron-right
+                    figure
+                      +img(image).h-full.w-full.object-cover
+                each image in images
+                  +article(`~img/article-${image}.jpg`)
+              +img('~img/article-img-placeholder.jpg', {cn: 'max-xl_hidden'}).object-cover(
+                class="min-w-[215px]"
+              )
+          +articleBlock([1,2,3])
+          +articleBlock([4,5,6])
+          button.mx-auto.font-bold.uppercase View More

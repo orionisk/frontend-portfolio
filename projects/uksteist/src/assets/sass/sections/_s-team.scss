@@ -1,0 +1,48 @@
+.s-team {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  color: theme('colors.th-white');
+
+  background-color: theme('colors.th-firm');
+
+  &-list {
+    display: grid;
+    gap: 20px;
+
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.25;
+    list-style: decimal;
+
+    span {
+      display: block;
+
+      margin-top: 5px;
+
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+
+  &-11bg {
+    position: absolute;
+    top: -80px;
+    left: 144px;
+  }
+  @screen lg {
+    padding-top: 141px;
+    padding-bottom: 290px;
+
+    &-list {
+      gap: 4px;
+
+      font-size: 18px;
+
+      span {
+        font-size: 18px;
+      }
+    }
+  }
+}

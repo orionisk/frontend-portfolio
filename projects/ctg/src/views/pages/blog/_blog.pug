@@ -1,0 +1,50 @@
+mixin s-blog
+  section.outer.pt-7.pb-7.max-md_pt-36.lg_pb-16
+    .inner
+      .relative
+        //- +img('~img/blog-single.jpg')
+        .absolute.-top-10.-bottom-16.bg-no-repeat(class="-left-60 w-[50vw] bg-[url(~img/product-bg.svg)]")
+        - const bg = require("~img/blog-single.jpg?format=webp");
+        .relative.grid.max-md_grid-cols-2
+          .lazy.relative.bg-black.bg-cover.bg-center.bg-no-repeat(class="md_min-h-[500px]", data-bg=bg)
+          .inset-0.grid.items-end.md_absolute(class="max-w-[1244px]")
+            .grid.gap-2.py-2o5.pl-5.pr-1o5.pb-6.backdrop-blur-sm.md_gap-3.md_px-14.md_pt-12(
+              class="bg-cod-gray md_bg-cod-gray/60 md_clip-path-polygon-[0%_0%,_92%_36%,_100%_100%,_0_100%]"
+            )
+              - const fDate = Intl.DateTimeFormat("en-US", { day: "numeric", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit" }).format(new Date("2020-12-01T10:42:00"));
+              time.text-silver.max-md_order-1.md_text-white.lg_text-xl= fDate
+              h1.font-inter.text-base.text-white.max-md_font-semibold.md_font-michroma.md_uppercase.md_text-flamingo-01.lg_text-2xl(
+                class="max-w-[966px]"
+              ) Pro Tip: Four Simple Rules to tell if its the Driver or the Chassis
+        .bg-alabaster
+          article.relative.px-1.py-4o5.md_py-9(class="md_px-[60px]")
+            p Whether you are a relatively new driver to the sport, or a seasoned racer, you have encountered some corners that have given you some trouble. Maybe not resulting in a spin or an off-track excursion, but you’ve had a handling issue that had to be addressed.
+            br
+            p The following are some rules to help us determine if it’s you, the driver, or a setup issue that needs to be addressed.
+            ul.list-disc.pl-6
+              li If the handling issue is inconsistent, that is, it varies from corner to corner, it is most likely a result of driver input.
+              li If the handling issue occurs at one specific corner, it is also most likely a result of driver input.
+              li If the handling issue occurs at one type of corner. Such as a carousel, or high speed corner, the issue is most likely a setup issue.
+              li If the handling issue occurs on left or right turns only, the issue is also likely a setup issue.
+            br
+            p Keeping our focus on improving the driver. The driver affects the timing of weight transfer. In previous content (Shock Tuning Demystified), we’ve described how the driver affects HOW MUCH, WHEN and HOW FAST weight is transferred. Being most effective at the use of our available driver inputs, steering, brakes, and throttle can help us minimize speed scrub and attain lower lap times.
+            br
+            h2.font-bold Corner Transitions
+            p The transitions are where we need to direct out focus to enable us to begin to identify issues and start to formulate a plan to correct for them.
+            p The transitions are:
+            ul.list-disc.pl-6
+              li from the completion of straight line braking to beginning turn-in.
+              li The transition from turn-in to mid-corner and beginning of maintenance throttle.
+              li And lastly, the transition from mid-corner to exit and application of full throttle.
+            br
+            p If handling issues occur during any of these transitions, then we need to look to make some adjustments to the timing and smoothness of our driver inputs.
+            br
+            h2.font-bold It's All About Tire, Tires, Tires!
+            br
+            p In previous content (Getting The Most From Our Tires), we’ve discussed how everything we do on track involves making the maximum use of our tires available grip. The best drivers are able to keep heat in the tires, maintain a consistent slip angle through all phases of the corner, and care for their tires. Handling issues arise because the available grip from the tires has been exceeded.
+            ul.list-disc.pl-6
+              li Understeer results when the available grip on the front tires has been exceeded, or there is not enough load on the front tires.
+              li Oversteer occurs when the available grip from the rear tires has been exceeded, or there is not enough load on the rear tires.
+            br
+            br
+            p {This is just an example of what the blog content may look like. The blog content can be bolded, underlined, etc. as seen fit when adding the text to the blog page}.

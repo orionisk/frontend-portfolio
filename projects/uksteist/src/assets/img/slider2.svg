@@ -1,0 +1,93 @@
+<svg width="1140" height="151" viewBox="0 0 1140 151" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="82" y="66" width="904" height="2" fill="#C4C4C4"/>
+<rect class="st-bar-process" x="82" y="66" width="413" height="2" fill="#314C51"/>
+<rect class="st-circle --c1" x="46" y="49" width="38" height="38" rx="19" fill="#858685"/>
+<text fill="#F8F8F8" font-size="14" font-weight="500">
+  <tspan x="62.4092" y="73.019">1</tspan>
+</text>
+<rect class="st-circle --c2" x="358" y="48" width="38" height="38" rx="19" fill="#858685"/>
+<text fill="#F8F8F8" font-size="14" font-weight="500">
+  <tspan x="372.98" y="72.019">2</tspan>
+</text>
+<rect x="670" y="49" width="38" height="38" rx="19" fill="#858685"/>
+<text fill="#F8F8F8" font-size="14" font-weight="500">
+  <tspan x="684.994" y="73.019">3</tspan>
+</text>
+<rect x="982" y="49" width="38" height="38" rx="19" fill="#858685"/>
+<text fill="#F8F8F8" font-size="14" font-weight="500">
+  <tspan x="996.317" y="73.019">4</tspan>
+</text>
+<g>
+  <text fill="#1D1F1D" font-size="18" font-weight="500">
+    <tspan x="46" y="124.453">Ettevalmistustööd</tspan>
+  </text>
+  <text fill="#1D1F1D" font-size="18" font-weight="500">
+    <tspan x="358" y="124.453">Teede</tspan>
+    <tspan x="358" y="146.453">projekteerimine</tspan>
+  </text>
+  <text fill="#1D1F1D" font-size="18" font-weight="500">
+    <tspan x="670" y="124.453">Teede ja</tspan>
+    <tspan x="670" y="146.453">kommunikatsioonide ehitus</tspan>
+  </text>
+  <text fill="#1D1F1D" font-size="18" font-weight="500">
+    <tspan x="982" y="124.453">Taristu on valmis</tspan>
+  </text>
+</g>
+<g class="st-tip">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M466 14C463.239 14 461 16.2386 461 19V41C461 43.7614 463.239 46 466 46H490.6L495.143 53.5708C495.531 54.2182 496.469 54.2182 496.857 53.5708L501.4 46H525C527.761 46 530 43.7614 530 41V19C530 16.2386 527.761 14 525 14H466Z" fill="#314C51"/>
+  <text fill="#F8F8F8" font-size="14" font-weight="bold">
+    <tspan x="480.414" y="35.519">48%</tspan>
+  </text>
+</g>
+<circle class="st-circlet --c1" cx="145" cy="67" r="6" fill="#858685"/>
+<circle class="st-circlet --c2" cx="221" cy="67" r="6" fill="#858685"/>
+<circle class="st-circlet --c3"  cx="297" cy="67" r="6" fill="#858685"/>
+<circle class="st-circlet --c4" cx="496" cy="67" r="6" fill="#858685"/>
+<circle cx="761" cy="67" r="6" fill="#858685"/>
+<circle cx="837" cy="67" r="6" fill="#858685"/>
+<circle cx="913" cy="67" r="6" fill="#858685"/>
+<g>
+  <text fill="#1D1F1D" font-size="10" font-weight="300">
+    <tspan x="120" y="45.868">Geoloogia</tspan>
+  </text>
+  <text fill="#1D1F1D" font-size="10" font-weight="300">
+    <tspan x="195" y="88.868">Geodeesia</tspan>
+  </text>
+  <text fill="#1D1F1D" font-size="10" font-weight="300">
+    <tspan x="265" y="45.868">Dendroloogia</tspan>
+  </text>
+  <text fill="#1D1F1D" font-size="10" font-weight="300">
+    <tspan x="450" y="88.868">Kommunikatsioonide</tspan>
+    <tspan x="464" y="98.868">projekteerimine</tspan>
+  </text>
+  <text fill="#1D1F1D" font-size="10" font-weight="300">
+    <tspan x="558" y="45.868">Teede</tspan>
+    <tspan x="538" y="55.868">projekteerimine</tspan>
+  </text>
+  <text fill="#1D1F1D" font-size="10" font-weight="300">
+    <tspan x="742" y="45.868">Kruntide</tspan>
+    <tspan x="730" y="55.868">ettevalmistus</tspan>
+  </text>
+  <text fill="#1D1F1D" font-size="10" font-weight="300">
+    <tspan x="820" y="88.868">Teede</tspan>
+    <tspan x="820" y="98.868">ehitus</tspan>
+  </text>
+  <text fill="#1D1F1D" font-size="10" font-weight="300">
+    <tspan x="865" y="45.868">Kommunikatsioonide</tspan>
+    <tspan x="900" y="55.868">ehitus</tspan>
+  </text>
+</g>
+<circle cx="572" cy="67" r="6" fill="#858685"/>
+<text fill="#1D1F1D" font-size="18" font-weight="500">
+  <tspan x="978.078" y="39.453">100%</tspan>
+</text>
+<text fill="#1D1F1D" font-size="18" font-weight="500">
+  <tspan x="51.4121" y="39.453">0%</tspan>
+</text>
+<text fill="#858685" font-size="12" font-weight="500">
+  <tspan x="970.309" y="11.802">01.02.2023</tspan>
+</text>
+<text fill="#858685" font-size="12" font-weight="500">
+  <tspan x="35.2461" y="11.802">01.06.2021</tspan>
+</text>
+</svg>

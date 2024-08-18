@@ -1,0 +1,19 @@
+html {
+	scroll-behavior: smooth;
+	font-size: 10px; /*for using REM units*/
+	@media screen and (max-width: $lg-max) {
+		font-size: 8px;
+	}
+	@media screen and (max-width: $md-max) {
+		font-size: 8px;
+	}
+	@media screen and (max-width: $xm-max) {
+		font-size: 7px;
+	}
+}
+body {
+	font-family: 'Proxima Nova', sans-serif;
+	font-size: 1.6rem;
+	font-weight: 400;
+	line-height: 1.2 !important;
+}

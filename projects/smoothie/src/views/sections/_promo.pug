@@ -1,0 +1,10 @@
+mixin s-promo
+  section.outer.promo
+    .promo-swiper.swiper
+      .swiper-wrapper
+        .swiper-slide
+          +img("~img/promo-slide-1.jpg", { lazy: false })
+        .swiper-slide
+          +img("~img/promo-slide-2.jpg", { lazy: false })
+      button.swiper-nav.swiper-button-prev
+      button.swiper-nav.swiper-button-next

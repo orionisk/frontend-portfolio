@@ -1,0 +1,23 @@
+.lightbox-modal {
+  // position: absolute;
+  &__overlay {
+    z-index: 999;
+  }
+  &__container {
+    padding: 0;
+
+    width: 100%;
+    max-width: 1290px;
+    height: 100%;
+    max-height: 769px;
+
+    position: relative;
+    right: 9px;
+  }
+
+  @media screen and (max-width: $xm-max) {
+    &__container {
+      max-height: 80vh;
+    }
+  }
+}

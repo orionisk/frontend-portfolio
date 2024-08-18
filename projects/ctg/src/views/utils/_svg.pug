@@ -1,0 +1,5 @@
+mixin svg(url)
+  -
+    const imgUrl = require(url);
+    const defaultAttrs = url.includes('?inline') ? {} : { width: 50, height: 50 };
+  img(src=imgUrl, alt="")&attributes({...defaultAttrs, ...attributes })

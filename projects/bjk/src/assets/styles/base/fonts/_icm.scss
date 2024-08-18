@@ -1,0 +1,131 @@
+@font-face {
+  font-family: icomoon;
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+  src: url('~fonts/icomoon.woff') format('woff');
+}
+
+.icm {
+  speak: never;
+
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: icomoon !important;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-transform: none;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icm-add::before {
+  content: '\e900';
+}
+
+.icm-arrow-down::before {
+  content: '\e901';
+}
+
+.icm-arrow-left::before {
+  content: '\e902';
+}
+
+.icm-arrow-right::before {
+  content: '\e903';
+}
+
+.icm-arrow-up::before {
+  content: '\e904';
+}
+
+.icm-box::before {
+  content: '\e905';
+}
+
+.icm-checkbox-alt::before {
+  content: '\e906';
+}
+
+.icm-checkbox::before {
+  content: '\e907';
+}
+
+.icm-circle-checklist-alt::before {
+  content: '\e908';
+}
+
+.icm-circle-checklist::before {
+  content: '\e909';
+}
+
+.icm-close::before {
+  content: '\e90a';
+}
+
+.icm-danger-alt::before {
+  content: '\e90b';
+}
+
+.icm-danger::before {
+  content: '\e90c';
+}
+
+.icm-info-alt::before {
+  content: '\e90d';
+}
+
+.icm-info::before {
+  content: '\e90e';
+}
+
+.icm-menu::before {
+  content: '\e90f';
+}
+
+.icm-pause-alt::before {
+  content: '\e910';
+}
+
+.icm-pause::before {
+  content: '\e911';
+}
+
+.icm-play-alt::before {
+  content: '\e912';
+}
+
+.icm-play::before {
+  content: '\e913';
+}
+
+.icm-question-alt::before {
+  content: '\e914';
+}
+
+.icm-question::before {
+  content: '\e915';
+}
+
+.icm-search::before {
+  content: '\e916';
+}
+
+.icm-user-alt::before {
+  content: '\e917';
+}
+
+.icm-user::before {
+  content: '\e918';
+}
+
+.icm-warning-alt::before {
+  content: '\e919';
+}
+
+.icm-warning::before {
+  content: '\e91a';
+}

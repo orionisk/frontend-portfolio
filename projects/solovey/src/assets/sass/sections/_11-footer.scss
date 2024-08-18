@@ -1,0 +1,13 @@
+.footer {
+	min-height: 70px;
+	background-color: #e4e5ee;
+	.inner {
+		min-height: inherit;
+		@include flex;
+	}
+	&__conf {
+		color: #808080;
+		font-family: Montserrat, 'Proxima Nova';
+		font-size: 13px;
+	}
+}

@@ -1,0 +1,52 @@
+.breadcrumb {
+  &-wrapper {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30px, max-content));
+  gap: 11px;
+
+  color: #828282;
+  font-size: 10px;
+  letter-spacing: -0.04em;
+
+  & > li {
+    position: relative;
+    text-decoration: underline;
+
+    &:last-of-type {
+      text-decoration: none;
+      &::after {
+        display: none;
+      }
+    }
+
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: '';
+
+      display: block;
+      margin-left: 10px;
+
+      width: 5px;
+      height: 9px;
+
+      background: url('#{$imgPath}/icons/breadcrumb-arrow.svg') 50% / contain no-repeat;
+    }
+  }
+
+  // XM
+  @media screen and (max-width: $xm-max) {
+    &-wrapper {
+      padding-top: 30px;
+      padding-bottom: 20px;
+    }
+    & > li {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+section.outer.gradient-bg-1.py-7.lg_py-10
+  .inner
+    .grid.items-center.gap-6.sm_gap-x-0.md_grid-cols-2.lg_gap-x-5
+      .lg_pr-5.lg_pb-10.lg_pl-3
+        h1.text-xl.font-medium.sm_text-2xl.lg_text-3xl Raih client pertamamu sebagai #[span.font-semibold.text-lightsalmon-03 Freelancer] bersama Bebas Jam Kerja
+        p.mt-3.lg_mt-8.lg_pr-2 Menjadi talenta digital sebagai #[span.font-semibold Remote Worker] yang memiliki kebebasan jam kerja
+        .mt-5.flex.flex-wrap.gap-3.max-sm_justify-between.lg_mt-9.lg_gap-x-6
+          - const linkCn = cn('px-2 lg_px-5 w-full sm_w-44 lg_w-48');
+          a(href='#', class=cvaButton({ class: linkCn })) Mulai Sekarang
+          a(href='#', class=cvaButton({ intent: 'tertiary', class: linkCn })) Lihat Selengkapnya>
+      img(
+        src=require('~img/work-time.svg'),
+        alt='',
+        width=626,
+        height=626,
+        style='aspect-ratio: 1 / 1'
+      )

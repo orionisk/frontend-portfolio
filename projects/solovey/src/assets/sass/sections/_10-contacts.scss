@@ -1,0 +1,42 @@
+.contacts {
+	min-height: 18.3rem;
+	background: #f4f4fa;
+
+	.inner {
+		min-height: inherit;
+		display: flex;
+		align-items: center;
+	}
+
+	&__items {
+		width: 100%;
+
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 3rem;
+
+		font-family: Montserrat, 'Proxima Nova';
+	}
+	&-item {
+		&__title {
+			color: #808080;
+			font-size: 18px;
+		}
+		&__text {
+			font-size: 18px;
+			font-weight: 600;
+			line-height: 25px;
+		}
+	}
+
+	@media screen and (max-width: $sm-max) {
+		min-height: 358px;
+		.inner {
+			justify-content: center;
+		}
+		&__items {
+			grid-template-columns: 1fr;
+			gap: 38px;
+		}
+	}
+}

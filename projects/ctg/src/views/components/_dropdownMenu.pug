@@ -1,0 +1,56 @@
+mixin dropdown-menu
+  - const dropdownData = require("~views/data/dropdownMenu.js");
+  mixin sub2(data)
+    each item in data
+      div(x-data="tippySubmenu([0, 0], { preventOverflow: false, flip: false })", class="group/2")
+        a.block.whitespace-pre-line.max-sm_text-sm.max-sm_text-cod-gray(
+          href="#",
+          tabindex="0",
+          class="group-focus-within/2_text-flamingo-01 group-hover/2_text-flamingo-01"
+        )= item.title
+        .invisible.absolute.inset-0(
+          x-tooltip.placement.right-start.interactive.arrowless.html.theme.menu2.border.5="tooltip"
+        )
+        template
+          .h-80.w-44.pl-4.max-lg_pt-8.max-sm_pt-4.sm_h-80.sm_w-80.sm_pl-6.md_pl-12
+            a.relative.block.h-full.w-full(href="#")
+              span.absolute.top-2.left-1.font-marianina.text-2xl.uppercase.italic.sm_top-5.sm_left-3.sm_w-52= item.title
+              +img(item.img, { lazy: false, cn: 'w-full h-full' }).h-full.w-full.object-cover(
+                alt=item.title
+              )
+  mixin sub1({ title, children })
+    div(x-data="tippySubmenu([0, 0], { rootBoundary: 'clippingParents' })", class="group/1")
+      button.w-full.text-left.text-base.font-bold.italic.underline.underline-offset-4.sm_text-lg(
+        aria-label="double click link to category",
+        @dblclick="window.location = '/catalog'",
+        class="group-focus-within/1_text-flamingo-01 group-hover/1_text-flamingo-01",
+        tabindex="0"
+      )= title
+      .invisible.absolute.inset-0(
+        x-tooltip.placement.right-start.interactive.arrowless.html.theme.menu2.border.10="tooltip"
+      )
+      template
+        .relative.flex.w-40.flex-col.gap-7.font-michroma.text-base.max-lg_pt-5.sm_w-max.sm_gap-1o5.lg_pl-10(
+          x-data="tippyFocusfix",
+          @focusout="focusfix",
+          class="min-h-[250px]"
+        )
+          +sub2(children)
+  .group.shrink-0(x-data="tippyMenu")
+    button.uppercase.transition-colors.group-focus-within_text-white.group-hover_text-white.sm_group-focus-within_text-flamingo-01.sm_group-hover_text-flamingo-01(
+      x-tooltip.max-width.none.arrowless.html.interactive.placement.bottom-start.theme.menu.border.30="tooltip",
+      aria-label="open dropdown menu"
+    ) Shop Racing Gear &nbsp;/
+    template
+      .p-4.pb-28.max-lg_before_hidden.max-lg_after_hidden.lg_px-9.lg_py-10(
+        x-ref="boundary",
+        class="h-[450px] lg_h-[650px]",
+        x-data="tippyFocusfix",
+        @focusout="focusfix",
+        class="w-screen bg-white backdrop-blur-[7x] before_left-5 before_-top-5 before_bottom-0 before_h-5 before_w-10 before_border-t before_border-l before_border-flamingo-01 after_pointer-events-none after_absolute after_top-0 after_left-5 after_h-72 after_w-56 after_border-l after_border-b after_border-flamingo-01 max-2xl_max-w-screen-md max-2xl_before_hidden sm_bg-cod-gray/90 2xl_w-[calc(50vw+10px)] 2xl_before_absolute"
+      )
+        .relative.grid.w-full.justify-start.gap-6.max-lg_grid-cols-2.max-sm_text-cod-gray.lg_w-max
+          +sub1(dropdownData.driver)
+          +sub1(dropdownData.shop)
+          +sub1(dropdownData.car)
+          +sub1(dropdownData.gear)

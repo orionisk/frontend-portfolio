@@ -1,0 +1,29 @@
+{
+  "folders": [
+    {
+      "path": ".."
+    },
+    {
+      "path": "../../../../../../Lando/lemp/www"
+    }
+  ],
+  "settings": {
+    "path-intellisense.mappings": {
+      "/": "${workspaceFolder}/public",
+      "~src": "${workspaceFolder}/src",
+      "~js": "${workspaceFolder}/src/assets/js",
+      "~views": "${workspaceFolder}/src/views",
+      "~img": "${workspaceFolder}/src/assets/img",
+      "~fonts": "${workspaceFolder}/src/assets/fonts",
+      "~locales": "${workspaceFolder}/src/locales",
+      "~cva": "${workspaceFolder}/src/views/components/cva",
+      "src": "${workspaceFolder}/src",
+      "js": "${workspaceFolder}/src/assets/js",
+      "views": "${workspaceFolder}/src/views",
+      "img": "${workspaceFolder}/src/assets/img",
+      "fonts": "${workspaceFolder}/src/assets/fonts",
+      "locales": "${workspaceFolder}/src/locales",
+      "cva": "${workspaceFolder}/src/views/components/cva"
+    }
+  }
+}

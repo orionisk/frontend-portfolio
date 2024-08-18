@@ -1,0 +1,23 @@
+mixin swiperLightbox
+	#lightbox-modal.modal.micromodal-slide.lightbox-modal(aria-hidden="true")
+		.modal__overlay.lightbox-modal__overlay(tabindex='-1', data-micromodal-close)
+			.modal__container.lightbox-modal__container(role='dialog', aria-modal='true')
+				.swiper-container.product-view-lightbox-container
+					.swiper-wrapper
+						.swiper-slide
+							.swiper-zoom-container
+								img(src=`${img}/product-1-big.png`)
+						.swiper-slide
+							.swiper-zoom-container
+								img(src=`${img}/product-1-big.png`)
+						.swiper-slide
+							.swiper-zoom-container
+								img(src=`${img}/product-1-big.png`)
+						.swiper-slide
+							.swiper-zoom-container
+								img(src=`${img}/product-1-big.png`)
+						.swiper-slide
+							.swiper-zoom-container
+								img(src=`${img}/product-1-big.png`)
+					.swiper-no-swiping.sl-nav.sl-nav--next.product-view-lightbox-next
+					.swiper-no-swiping.sl-nav.sl-nav--prev.product-view-lightbox-prev

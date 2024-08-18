@@ -1,0 +1,8 @@
+{
+  "path-intellisense.mappings": {
+    "/": "${workspaceFolder}/public",
+    "~img": "${workspaceFolder}/src/assets/img",
+    "~fonts": "${workspaceFolder}/src/assets/fonts"
+  },
+  "css.customData": [".vscode/css.json"]
+}

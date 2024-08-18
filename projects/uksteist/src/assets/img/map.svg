@@ -1,0 +1,65 @@
+<svg preserveAspectRatio="xMidYMid slice" viewBox="0 0 1200 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M613 61.8267L603.962 96L581 74.5248L585.321 60L613 61.8267Z" fill="#314C51" stroke="#F8F8F8"/>
+<path d="M595.096 68V79H593.518V69.3671H591V68H595.096Z" fill="white"/>
+<path d="M601 68V79H599.422V69.3671H596.904V68H601Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M606.246 54.305C612.595 51.3739 617 44.9514 617 37.5C617 27.2827 608.717 19 598.5 19C588.283 19 580 27.2827 580 37.5C580 44.9514 584.405 51.3739 590.754 54.305L597.615 67.3219C597.99 68.0334 599.01 68.0334 599.385 67.3219L606.246 54.305Z" fill="#77833F"/>
+<ellipse cx="598.5" cy="37.5" rx="10.5" ry="11.5" fill="white"/>
+<rect x="607" y="64" width="155" height="38" rx="15" fill="#F8F8F8"/>
+<text fill="#1D1F1D" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="18" font-weight="bold" letter-spacing="0em"><tspan x="620.111" y="89.453">Piirikivi tee 15</tspan></text>
+<a href="https://www.google.com/maps?saddr=My+Location&amp;daddr=59.5416504,24.877599", target="_blank" tabindex="0" class="s-place-mapBtn" role="link" aria-label="link to google maps">
+  <rect x="772" y="64" width="112" height="38" rx="15" fill="#314C51"/>
+  <text fill="#F8F8F8" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="14" font-weight="bold" letter-spacing="0em"><tspan x="794.593" y="88.019">Marsruut</tspan></text>
+</a>
+<g filter="url(#filter0_d_2596_816)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M367 211C358.716 211 352 217.716 352 226V252C352 260.284 358.716 267 367 267H471C479.284 267 486 260.284 486 252V244.774L494.5 239.866C495.167 239.481 495.167 238.519 494.5 238.134L486 233.226V226C486 217.716 479.284 211 471 211H367Z" fill="#F8F8F8"/>
+</g>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="12" font-weight="500" letter-spacing="0em"><tspan x="412" y="252.802">18.2 km</tspan></text>
+<text fill="#77833F" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="12" font-weight="500" letter-spacing="0em"><tspan x="412" y="233.802">22-26 min</tspan></text>
+<path d="M368.706 238.361C368.978 236.44 370.793 235 372.943 235H395.057C397.207 235 399.022 236.44 399.294 238.361L399.986 243.268C400.116 244.187 399.32 245 398.291 245H369.709C368.68 245 367.884 244.187 368.014 243.268L368.706 238.361Z" fill="#314C51"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M390.094 225.7H377.906C376.176 225.7 374.705 227.004 374.449 228.766L373.662 234.166C373.345 236.343 374.982 238.3 377.12 238.3H390.88C393.018 238.3 394.655 236.343 394.338 234.166L393.551 228.766C393.295 227.004 391.824 225.7 390.094 225.7ZM377.906 223C374.878 223 372.305 225.281 371.856 228.365L371.069 233.765C370.514 237.574 373.379 241 377.12 241H390.88C394.621 241 397.486 237.574 396.931 233.765L396.144 228.365C395.695 225.281 393.122 223 390.094 223H377.906Z" fill="#314C51"/>
+<path d="M377 239C377 240.657 375.657 242 374 242C372.343 242 371 240.657 371 239C371 237.343 372.343 236 374 236C375.657 236 377 237.343 377 239Z" fill="#F8F8F8"/>
+<path d="M396 239C396 240.657 394.657 242 393 242C391.343 242 390 240.657 390 239C390 237.343 391.343 236 393 236C394.657 236 396 237.343 396 239Z" fill="#F8F8F8"/>
+<path d="M368 247C368 246.448 368.566 246 369.263 246H398.737C399.434 246 400 246.448 400 247V247C400 247.552 399.434 248 398.737 248H369.263C368.566 248 368 247.552 368 247V247Z" fill="#314C51"/>
+<path d="M370 250.714C370 249.768 370.64 249 371.429 249H373.571C374.36 249 375 249.768 375 250.714V253.286C375 254.232 374.36 255 373.571 255H371.429C370.64 255 370 254.232 370 253.286V250.714Z" fill="#314C51"/>
+<path d="M393 250.714C393 249.768 393.64 249 394.429 249H396.571C397.36 249 398 249.768 398 250.714V253.286C398 254.232 397.36 255 396.571 255H394.429C393.64 255 393 254.232 393 253.286V250.714Z" fill="#314C51"/>
+<g filter="url(#filter1_d_2596_816)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M783 166C791.284 166 798 172.716 798 181V207C798 215.284 791.284 222 783 222H679C670.716 222 664 215.284 664 207V199.774L655.5 194.866C654.833 194.481 654.833 193.519 655.5 193.134L664 188.226V181C664 172.716 670.716 166 679 166H783Z" fill="#F8F8F8"/>
+</g>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="12" font-weight="500" letter-spacing="0em"><tspan x="729" y="206.802">22.9 km</tspan></text>
+<text fill="#77833F" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="12" font-weight="500" letter-spacing="0em"><tspan x="729" y="188.802">30 min</tspan></text>
+<path d="M685.706 192.361C685.978 190.44 687.793 189 689.943 189H712.057C714.207 189 716.022 190.44 716.294 192.361L716.986 197.268C717.116 198.187 716.32 199 715.291 199H686.709C685.68 199 684.884 198.187 685.014 197.268L685.706 192.361Z" fill="#314C51"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M707.094 179.7H694.906C693.176 179.7 691.705 181.004 691.449 182.766L690.662 188.166C690.345 190.343 691.982 192.3 694.12 192.3H707.88C710.018 192.3 711.655 190.343 711.338 188.166L710.551 182.766C710.295 181.004 708.824 179.7 707.094 179.7ZM694.906 177C691.878 177 689.305 179.281 688.856 182.365L688.069 187.765C687.514 191.574 690.379 195 694.12 195H707.88C711.621 195 714.486 191.574 713.931 187.765L713.144 182.365C712.695 179.281 710.122 177 707.094 177H694.906Z" fill="#314C51"/>
+<path d="M694 193C694 194.657 692.657 196 691 196C689.343 196 688 194.657 688 193C688 191.343 689.343 190 691 190C692.657 190 694 191.343 694 193Z" fill="#F8F8F8"/>
+<path d="M713 193C713 194.657 711.657 196 710 196C708.343 196 707 194.657 707 193C707 191.343 708.343 190 710 190C711.657 190 713 191.343 713 193Z" fill="#F8F8F8"/>
+<path d="M685 201C685 200.448 685.566 200 686.263 200H715.737C716.434 200 717 200.448 717 201V201C717 201.552 716.434 202 715.737 202H686.263C685.566 202 685 201.552 685 201V201Z" fill="#314C51"/>
+<path d="M687 204.714C687 203.768 687.64 203 688.429 203H690.571C691.36 203 692 203.768 692 204.714V207.286C692 208.232 691.36 209 690.571 209H688.429C687.64 209 687 208.232 687 207.286V204.714Z" fill="#314C51"/>
+<path d="M710 204.714C710 203.768 710.64 203 711.429 203H713.571C714.36 203 715 203.768 715 204.714V207.286C715 208.232 714.36 209 713.571 209H711.429C710.64 209 710 208.232 710 207.286V204.714Z" fill="#314C51"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M349.246 467.305C355.595 464.374 360 457.951 360 450.5C360 440.283 351.717 432 341.5 432C331.283 432 323 440.283 323 450.5C323 457.951 327.405 464.374 333.754 467.305L340.615 480.322C340.99 481.033 342.01 481.033 342.385 480.322L349.246 467.305Z" fill="#77833F"/>
+<ellipse cx="341.5" cy="451.5" rx="10.5" ry="11.5" fill="white"/>
+<g>
+<rect x="246" y="464" width="91" height="38" rx="15" fill="#F8F8F8"/>
+<text fill="#1D1F1D" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="18" font-weight="bold" letter-spacing="0em"><tspan x="261.062" y="489.453">Tallinn</tspan></text>
+</g>
+<defs>
+<filter id="filter0_d_2596_816" x="348" y="211" width="151" height="64" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2596_816"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2596_816" result="shape"/>
+</filter>
+<filter id="filter1_d_2596_816" x="651" y="166" width="151" height="64" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2596_816"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2596_816" result="shape"/>
+</filter>
+</defs>
+</svg>

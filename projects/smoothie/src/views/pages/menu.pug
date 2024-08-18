@@ -1,0 +1,13 @@
+extends ~views/layout/_base
+
+block variables
+  - const title = 'Main';
+
+block content
+  +page-head('~img/our-menu-bg2.jpg')
+    block text
+      h1.sec-title Our Menu
+      p.sec-subtitle Tasty and Natural
+  +s-om-promo
+  +s-our-menu
+  +s-pricing

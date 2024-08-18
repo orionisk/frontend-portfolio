@@ -1,0 +1,115 @@
+mixin catalog-filters
+  form(@submit.prevent)
+    .grid.content-start.gap-6.bg-alabaster.px-4.pt-4o5.pr-5.pb-12.md_gap-3o5.md_px-5(
+      class="[&>:not(:last-of-type)]_border-b [&>:not(:last-of-type)]_border-alto"
+    )
+      - const radioCn = cn("grid h-4o5 w-4o5 appearance-none place-content-center rounded-full border border-cod-gray before_opacity-0 hover_bg-cod-gray/10 before_h-2 before_w-2 before_rounded-full before_bg-flamingo-01 checked_bg-cod-gray checked_hover_bg-cod-gray checked_before_opacity-100");
+      - const checkboxCn = cn('grid h-5 w-5 appearance-none place-content-center rounded-md border-2 border-cod-gray before_h-3 before_w-3 before_rounded-full before_bg-[url("~img/icons/check.svg")] before_bg-center before_bg-no-repeat before_opacity-0 checked_border-flamingo-01 checked_before_opacity-100 hover_bg-cod-gray/5');
+      //- input(
+      //-   type='checkbox',
+      //-   class='grid h-[18.5px] w-[18.5px] appearance-none place-content-center rounded-md border-[1.5px] border-cod-gray before_h-3 before_w-3 before_rounded-full before_bg-[url("~img/icons/check.svg")] before_bg-center before_bg-no-repeat before_opacity-0 checked_border-flamingo-01 checked_before_opacity-100 hover_bg-cod-gray/5'
+      //- )
+      mixin sort
+        +accordion('Sort For', { expanded: false, btnCn: 'w-full border-b border-flamingo-01 pb-1o5' }).md_hidden
+          .grid.gap-4o5.pt-5
+            - const labelCn = cn("flex items-center gap-2 pb-3 border-b border-silver");
+            label(class=labelCn)
+              input(class=radioCn, value="1", type="radio", name="product_demonstration", checked)
+              span Rated
+            label(class=labelCn)
+              input(class=radioCn, value="2", type="radio", name="product_demonstration")
+              span Discount
+            label(class=labelCn)
+              input(class=radioCn, value="3", type="radio", name="product_demonstration")
+              span New Ones First
+            label(class=labelCn)
+              input(class=radioCn, value="3", type="radio", name="product_demonstration")
+              span From Cheap to Expensive
+            label(class=labelCn)
+              input(class=radioCn, value="3", type="radio", name="product_demonstration")
+              span From Expensive to Cheap
+      +sort
+      .grid.gap-3o5.pb-4o5.md_gap-2o5.md_pb-3o5
+        h3.text-lg.font-bold Features
+        div Full-Face
+        div Open
+      +accordion('product demonstration', { expanded: false }).grid.pb-4o5.capitalize.md_pb-3o5
+        .grid.pt-2o5(class="gap-[15px]")
+          label.flex.items-center.gap-4
+            input(class=radioCn, value="1", type="radio", name="product_demonstration", checked)
+            span all
+          label.flex.items-center.gap-4
+            input(class=radioCn, value="2", type="radio", name="product_demonstration")
+            span in stock
+          label.flex.items-center.gap-4
+            input(class=radioCn, value="3", type="radio", name="product_demonstration")
+            span Out of Stock
+      +accordion('special offer', { expanded: false }).grid.pb-4o5.capitalize.md_pb-3o5
+        .grid.pt-2o5(class="gap-[15px]")
+          label.flex.items-center.gap-4
+            input(class=checkboxCn, value="1", type="checkbox", name="special_offer")
+            span Clearance
+          label.flex.items-center.gap-4
+            input(class=checkboxCn, value="2", type="checkbox", name="special_offer")
+            span New
+      +accordion('brand', { expanded: false }).grid.pb-4o5.capitalize.md_pb-3o5
+        .grid.pt-2o5(class="gap-[15px]")
+          label.flex.items-center.gap-4
+            input(class=checkboxCn, value="1", type="checkbox", name="brand")
+            span arai
+          label.flex.items-center.gap-4
+            input(class=checkboxCn, value="2", type="checkbox", name="brand")
+            span simpson
+          label.flex.items-center.gap-4
+            input(class=checkboxCn, value="3", type="checkbox", name="brand")
+            span bell
+          label.flex.items-center.gap-4
+            input(class=checkboxCn, value="4", type="checkbox", name="brand")
+            span Sparco
+          label.flex.items-center.gap-4
+            input(class=checkboxCn, value="5", type="checkbox", name="brand")
+            span Stilo
+      +accordion('size', { expanded: false }).grid.pb-4o5.capitalize.md_pb-3o5
+        - const shoeSizes = require("~views/data/shoeSizes.js");
+        .grid.grid-cols-3.place-content-center.pt-2o5(class="gap-x-[17px] gap-y-2o5")
+          each item in shoeSizes
+            button.flex.justify-center.border.border-cod-gray.bg-white(class="h-[30px]")= item
+      +accordion('color', { expanded: false }).grid.pb-4o5.capitalize.md_pb-3o5
+        - const shoeColors = require("~views/data/shoeColors.js");
+        .grid.grid-cols-3.gap-2.pt-2o5.lg_justify-between.xl_grid-cols-5(class="gap-x-[17px] gap-y-2o5")
+          each item in shoeColors
+            .grid.justify-items-center
+              button.rounded-full(
+                class="h-[30px] w-[30px]",
+                style=`background-color: ${item.color}; border: 1px solid transparent; ${ item.border ? `border-color: ${item.border}` : ''}`
+              )
+              span.mt-1o5= item.title
+      .grid.pb-4o5.capitalize.md_pb-3o5
+        h3.text-lg.font-bold Price
+        .relative.mt-7.w-full(x-data={ min: 10, max: 2999, loaded: false })
+          .app-preloader.swiper-lazy-preloader.x-cloak-invisible(x-show="!loaded")
+          .x-cloak-invisible(
+            ax-load,
+            x-ignore,
+            x-cloak="invisible",
+            x-data="rangeSlider($refs.slider, { range: { min, max }, step: 1, start: [min, max] })",
+            x-init="loaded = true",
+            @open-modal-filters.window="update"
+          )
+            //- @open-modal-filters.window="console.log($refs.modal)"
+            //- ↑↑↑ watch shown state from modal and trigger range slider update for updating popper positions
+            .range-slider.w-full.px-2(x-ref="slider")
+            .mt-8.flex.justify-between
+              button.text-silver(
+                x-text="'$' + min",
+                @click="slider.set([min, null])",
+                aria-label="set min",
+                :class="+positions[0] < 20 && 'invisible'"
+              )
+              button.text-silver(
+                x-text="'$' + max",
+                @click="slider.set([null, max])",
+                aria-label="set max",
+                :class="+positions[1] > 72 && 'invisible'"
+              )
+    button.sticky.bottom-0.z-10.w-full.bg-cod-gray.px-2.py-5.uppercase.text-white.md_hidden Filter

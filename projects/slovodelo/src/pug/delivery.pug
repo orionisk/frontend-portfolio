@@ -1,0 +1,49 @@
+extends ./layout/_base
+
+//- include ./utils/_mixins.pug
+include ./components/_m-form.pug
+//- include ./components/_product-tile.pug
+//- include ./components/_catalog-block.pug
+include ./components/_breadcrumb.pug
+include ./components/_text-example.pug
+
+block append variables
+	- const title = 'Оплата и доставка'
+
+block content
+	+breadcrumb(['Главная страница', 'Оплата и доставка'])
+	section.outer.delivery
+		.inner
+			.s-title.s-title--2 Оплата и доставка
+			.s-subtitle.s-subtitle--2 Aliquam neque orci, porta at finibus eget, lacinia in quam. Ut pretium purus leo, quis condimentum lorem dignissim in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec sit amet feugiat nisl, et aliquam orci. Cras vitae mattis nisl. Phasellus id mauris sed diam blandit aliquam ac vel eros. Integer a sapien vel massa accumsan ornare.
+			.tab-container.delivery-block
+				.tab-buttons.delivery-buttons
+					button.tab-button.delivery-btn.active Условия оплаты
+					button.tab-button.delivery-btn Способы доставки
+					button.tab-button.delivery-btn Гарантия и возврат
+				.tab-contents.delivery-contents
+					.tab-content.active
+						p.text-p Aliquam neque orci, porta at finibus eget, lacinia in quam. Ut pretium purus leo, quis condimentum lorem dignissim in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec sit amet feugiat nisl, et aliquam orci. Cras vitae mattis nisl. Phasellus id mauris sed diam blandit aliquam ac vel eros. Integer a sapien vel massa accumsan ornare.
+						p.text-p Aliquam neque orci, porta at finibus eget, lacinia in quam. <u>Ut pretium purus leo</u>, quis condimentum lorem dignissim in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec sit amet feugiat nisl, et aliquam orci. Cras vitae mattis nisl. Phasellus id mauris sed diam blandit aliquam ac vel eros. Integer a sapien vel massa accumsan ornare.
+
+						h4.text-h.text-h--2 Сonsectetur adipiscing elit
+						p.text-p Aliquam neque orci, porta at finibus eget, lacinia in quam. Ut pretium purus leo, quis condimentum lorem dignissim in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec sit amet feugiat nisl, et aliquam orci. Cras vitae mattis nisl. Phasellus id mauris sed diam blandit aliquam ac vel eros. Integer a sapien vel massa accumsan ornare.
+						p.text-p Aliquam neque orci, porta at finibus eget, lacinia in quam. <u>Ut pretium purus leo</u>, quis condimentum lorem dignissim in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec sit amet feugiat nisl, et aliquam orci. Cras vitae mattis nisl. Phasellus id mauris sed diam blandit aliquam ac vel eros. Integer a sapien vel massa accumsan ornare.
+
+						ul.text-ul
+							li Ut pretium purus leo, quis condimentum lorem dignissim in
+							li Ut pretium purus leo, quis condimentum lorem dignissim in
+							li Ut pretium purus leo, quis condimentum lorem dignissim in
+							li Ut pretium purus leo, quis condimentum lorem dignissim in
+
+						p.text-p Aliquam neque orci, porta at finibus eget, lacinia in quam. Ut pretium purus leo, quis condimentum lorem dignissim in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec sit amet feugiat nisl, et aliquam orci. Cras vitae mattis nisl. Phasellus id mauris sed diam blandit aliquam ac vel eros. Integer a sapien vel massa accumsan ornare.
+					.tab-content 222
+					.tab-content 333
+
+	section.outer.request
+		.inner
+			h1.s-title.s-title--1 Оставить заявку
+			h2.s-subtitle.s-subtitle--1 Предлагаем нашим Клиентам широкий спектр услуг по производству <br>
+				| печатной и сувенирной продукции. Мы воплотим в жизнь проекты любого уровня сложности <br>
+				| в кратчайшие сроки. Подробную информацию Вы можете получить в соответсвующих разделах сайта.
+			+mForm

@@ -1,0 +1,39 @@
+.top-pattern {
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+
+    width: 100%;
+    height: 100px;
+
+    background: url('~img/top-pattern.svg') 50% / cover no-repeat;
+    @screen lg {
+      height: 146px;
+    }
+  }
+}
+
+.bottom-pattern {
+  &::after {
+    content: '';
+
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    height: 90px;
+
+    background: url('~img/bottom-pattern.svg') 50% / cover no-repeat;
+    @screen lg {
+      height: 111px;
+    }
+  }
+
+  &.--v1 {
+    &::after {
+      width: 1200px;
+    }
+  }
+}

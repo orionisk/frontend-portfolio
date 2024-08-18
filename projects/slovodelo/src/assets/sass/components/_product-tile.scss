@@ -1,0 +1,127 @@
+.product-tile {
+  margin: 0 auto;
+
+  max-width: 300px;
+  width: 100%;
+
+  border-radius: 15px;
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: 0px 0px 28px rgba(0, 0, 0, 0.25);
+  }
+
+  &__view {
+    padding: 30px 30px 0;
+
+    position: relative;
+    height: 260px;
+
+    &.item-hit::before {
+      content: '';
+      width: 36px;
+      height: 48px;
+
+      position: absolute;
+      left: 30px;
+      top: 30px;
+
+      background: url('#{$imgPath}/icons/hit.svg') 50% / contain no-repeat;
+    }
+    &.item-discount::before {
+      content: '';
+      width: 48px;
+      height: 48px;
+
+      position: absolute;
+      left: 30px;
+      top: 30px;
+
+      background: url('#{$imgPath}/icons/discount.svg') 50% / contain no-repeat;
+    }
+  }
+  &__star {
+    width: 25px;
+    height: 25px;
+
+    position: absolute;
+    top: 30px;
+    right: 30px;
+
+    background: url('#{$imgPath}/icons/star2.svg') 50% / contain;
+
+    &:hover {
+      background-image: url('#{$imgPath}/icons/star2-active.svg');
+    }
+    &.active {
+      background-image: url('#{$imgPath}/icons/star2-active.svg');
+    }
+  }
+  &__img {
+    @include flex;
+    img {
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  &__info {
+    padding: 24px 30px 30px;
+    font-size: 12.23px;
+  }
+  &__price {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    font-weight: 700;
+    font-size: 30px;
+
+    &-old {
+      font-size: 16px;
+      font-weight: 400;
+      text-decoration: line-through;
+
+      margin-right: 20px;
+    }
+  }
+  &__name {
+    margin-top: 15px;
+
+    font-weight: 700;
+    color: #cd2152;
+  }
+  &__code {
+    margin-top: 15px;
+  }
+  &__btn {
+    display: block;
+    margin: 28px auto 0;
+
+    height: 40px;
+    width: 240px;
+
+    border: 1px solid #d0043c;
+    border-radius: 15px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    &:hover {
+      background-color: #d0043c;
+      color: #fff;
+    }
+  }
+  &-color-items {
+    padding-top: 7px;
+    justify-content: center;
+
+    display: flex;
+    flex-wrap: wrap;
+    @include flex-gap-p(16px);
+    & > * {
+      @include flex-gap-c(16px);
+    }
+  }
+}

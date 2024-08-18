@@ -1,0 +1,35 @@
+html,
+body {
+  height: 100%;
+
+  // &::-webkit-scrollbar {
+  //   display: none;
+  // }
+}
+
+.page {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.outer {
+  @apply px-2;
+
+  @screen sm {
+    @apply px-4;
+  }
+
+  @screen md {
+    @apply px-6;
+  }
+
+  @screen xl {
+    @apply px-[50px];
+  }
+}
+
+.inner {
+  @apply container mx-auto px-2.5;
+}

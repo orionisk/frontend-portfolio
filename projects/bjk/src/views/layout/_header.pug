@@ -1,0 +1,43 @@
+mixin header
+  header.header.py-5.lg_py-3
+    .outer
+      .inner
+        .flex.items-center.justify-between.gap-5
+          .flex.items-center.gap-2.xl_gap-11
+            +img('~img/logo-bjk.png', { lazy: false, cn: 'max-lg_w-12 max-xs_w-8 flex-shrink-0]'})(
+              alt='logo'
+            )
+              source(
+                type='image/webp',
+                media='(max-width: 425px)',
+                srcset=require('~img/logo-bjk-orange.png?format=webp')
+              )
+            .flex.items-center.gap-2.font-medium.text-black-03.max-lg_hidden.xl_gap-4
+              button
+                span Kategori
+                span.vertical-rl >
+              a(href='#') Pelatihan Prakerja
+              a(class=cvaBadge(), href='#') Kode Voucher
+          .flex.items-center.gap-2.xl_gap-3
+            .relative
+              input(class=cvaTextInput.input(), placeholder='Cari disini')
+              .absolute.right-4.top-0.flex.h-full.items-center
+                button.flex.items-center(aria-label='Search'): span.icm.icm-search.text-lg
+            button.max-lg_hidden(class=cvaButton()) Daftar
+            .min-h-full.w-px.self-stretch.bg-white-03.max-lg_hidden
+            button.max-lg_hidden(class=cvaButton({ intent: 'tertiary' })) Masuk
+          button.flex-shrink-0.p-1.py-1o5.lg_hidden(
+            x-data,
+            aria-label='Open mobile menu',
+            @click='$dispatch("open-mobile-menu")'
+          )
+            img(
+              src=require('~img/icons/burger.svg'),
+              alt='',
+              width=24,
+              height=19,
+              style='aspect-ratio: 24 / 19'
+            )
+    .border-b.border-white-03.pt-5.lg_pt-3
+    //- Mobile Menu
+    +mobileMenu

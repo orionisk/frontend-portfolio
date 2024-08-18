@@ -1,0 +1,28 @@
+include ~views/components/components.pug
+include ~views/utils/_mixins.pug
+//- globals: cn, t
+include ~views/partials/partials.pug
+include ~views/sections/sections.pug
+
+block variables
+  - const title = 'Home';
+  //- - const page = 'home';
+
+doctype html
+html(lang='en')
+  head
+    link(rel='stylesheet', href=require('~styles/vendors/vendors.scss'))
+    link(rel='stylesheet', href=require('~styles/main.scss'))
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    //- if noindex
+    meta(name='robots', content='noindex, nofollow')
+    title #{ title }
+  body
+    .page
+      +header(self.page)
+      main.content
+        block content
+      +footer
+    block script
+      script(src=require('~js/main.js'))

@@ -1,0 +1,13 @@
+extends ~views/layout/default
+include ~views/components/_breadcrumbs
+include ./_product
+
+block append variables
+  - title = "Product";
+
+block content
+  +breadcrumbs(['shop racing gear', 'for the driver', 'racing shoes', 'Alpinestars Tech-1 T Racing Shoe']).pt-40.max-md_hidden.lg_pt-32
+  +s-product
+
+block prepend script
+  script(src=require("./product.js"), defer)

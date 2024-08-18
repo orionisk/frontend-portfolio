@@ -1,0 +1,8 @@
+@use 'sweetalert2/src/sweetalert2' with (
+  $swal2-html-container-margin: 0,
+  $swal2-container-padding: 0,
+  $swal2-padding: 0,
+  $swal2-color: theme('colors.black.02'),
+  $swal2-html-container-font-size: theme('fontSize.base'),
+  $swal2-font: theme('fontFamily.poppins')
+);

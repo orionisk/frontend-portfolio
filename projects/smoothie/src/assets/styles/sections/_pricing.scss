@@ -1,0 +1,11 @@
+.s-pricing {
+  &-items {
+    & > * {
+      background-color: theme('colors.caper');
+
+      &:nth-child(2n) {
+        background-color: #c9e3f4;
+      }
+    }
+  }
+}

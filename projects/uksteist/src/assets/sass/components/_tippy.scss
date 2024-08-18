@@ -1,0 +1,57 @@
+.tippy {
+  &-box[data-theme~='main'] {
+    background-color: rgb(152 152 152 / 25%);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    box-shadow: 0 6px 6px rgb(0 0 0 / 15%);
+
+    @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+      // background-color: rgb(47 76 30 / 90%);
+      background-color: rgb(93 106 82 / 90%);
+    }
+
+    .tippy-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 24px;
+      height: 24px;
+
+      background: rgb(152 152 152 / 25%);
+      backdrop-filter: blur(15px);
+      border-radius: 50%;
+      box-shadow: 0 6px 6px rgb(0 0 0 / 15%);
+
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        content: '';
+
+        width: 10px;
+        height: 10px;
+
+        background: theme('colors.th-white');
+        border-radius: 50%;
+      }
+    }
+
+    .tippy-content {
+      padding: 0;
+    }
+
+    // &[data-placement^='top'] {
+    //   .tippy-arrow {
+    //     bottom: -33%;
+    //   }
+    // }
+
+    // &[data-placement^='bottom'] {
+    //   .tippy-arrow {
+    //     top: -33%;
+    //   }
+    // }
+  }
+}

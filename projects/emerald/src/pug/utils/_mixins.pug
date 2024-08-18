@@ -1,0 +1,16 @@
+mixin sliderItems(num1 = 12, num2 = 1, num3 = 3)
+	.swiper-slide.swiper-slide--left
+		picture
+			source(data-srcset=`${img}/slide-${num1}.webp` type='image/webp')
+			img.swiper-lazy(data-src=`${img}/slide-${num1}.jpg` alt='slide')
+		.swiper-lazy-preloader
+	.swiper-slide.swiper-slide--center
+		picture
+			source(data-srcset=`${img}/slide-${num2}.webp` type='image/webp')
+			img.swiper-lazy(data-src=`${img}/slide-${num2}.jpg` alt='slide')
+		.swiper-lazy-preloader
+	.swiper-slide.swiper-slide--right
+		picture
+			source(data-srcset=`${img}/slide-${num3}.webp` type='image/webp')
+			img.swiper-lazy(data-src=`${img}/slide-${num3}.jpg` alt='slide')
+		.swiper-lazy-preloader

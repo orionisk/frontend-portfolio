@@ -1,0 +1,25 @@
+// Path
+$path: '';
+@if global-variable-exists(publicPath) {
+  $path: $publicPath;
+}
+
+$fontPath: '#{$path}/assets/fonts';
+$imgPath: '#{$path}/assets/img';
+
+// Colors
+
+// Sizes
+
+$xm-min: 320px;
+$sm-min: 576px;
+$md-min: 768px;
+$lg-min: 1024px;
+$xl-min: 1280px;
+$xxl-min: 1536px;
+
+$xm-max: 575px;
+$sm-max: 767px;
+$md-max: 1023px;
+$lg-max: 1279px;
+$xl-max: 1535px;

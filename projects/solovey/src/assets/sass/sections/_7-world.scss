@@ -1,0 +1,174 @@
+.world {
+	padding-top: 10.5rem;
+	padding-bottom: 9rem;
+	min-height: 1020px;
+
+	&__subtitle {
+		margin-top: 40px;
+		max-width: 61rem;
+
+		color: #808080;
+		font-size: 18px;
+		line-height: 24px;
+		span {
+			color: #000;
+		}
+	}
+	&__slider {
+		overflow: visible;
+	}
+	&__items {
+		margin-top: 8rem;
+		max-height: 589px;
+
+		display: grid;
+		// grid-template-columns: repeat(3, calc(100% / 3));
+		grid-template-columns: repeat(3, 1fr);
+		gap: 9px;
+	}
+	&-item {
+		&__descr {
+			margin-top: 1.5rem;
+
+			color: #808080;
+			font-size: 1.8rem;
+			line-height: 2.4rem;
+
+			&--2 {
+				margin-top: 1rem;
+			}
+			&--3 {
+				margin-top: 2rem;
+			}
+		}
+		&__percent {
+			margin-top: 5rem;
+			font-size: 50px;
+			font-weight: 700;
+			span {
+				@include g-text(linear-gradient(-69deg, #ff40f8 0%, #a740ff 35%, #4045ff 70%, #40e6ff 100%));
+			}
+		}
+		&__text {
+			margin-bottom: 4.5rem;
+
+			max-width: 365px;
+
+			font-size: 18px;
+			font-weight: 600;
+			line-height: 24px;
+
+			position: relative;
+			&::before {
+				content: '';
+
+				width: 7px;
+				height: 7px;
+
+				background: url('#{$imgPath}/world-text-img.png') no-repeat;
+
+				position: absolute;
+				top: 10px;
+				left: -15px;
+			}
+		}
+		&__advice {
+			margin-top: 12rem;
+			padding: 25px;
+
+			max-width: 90%;
+			width: 346px;
+			height: 141px;
+
+			background-color: #e4e5ee;
+
+			position: relative;
+			&--mobile {
+				display: none;
+				max-width: 350px;
+			}
+			&-text {
+				max-width: 185px;
+
+				font-size: 18px;
+				line-height: 24px;
+
+				position: relative;
+				z-index: 100;
+			}
+			&-bird {
+				width: 137px;
+				min-height: 114px;
+
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				z-index: 99;
+			}
+		}
+	}
+
+	@media screen and (max-width: $md-max) {
+		&__items {
+			// gap: 18px;
+			display: flex;
+			gap: unset;
+		}
+		&-item {
+			&__text {
+				font-size: 14px;
+
+				&::before {
+					display: none;
+				}
+			}
+			&__advice {
+				overflow: hidden;
+				display: none;
+
+				&--mobile {
+					display: block;
+					margin-top: 20px;
+					padding: 30px;
+
+					width: 100%;
+					height: 140px;
+				}
+				&-bird {
+					right: -18px;
+					bottom: -10px;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: $sm-max) {
+		padding-top: 80px;
+		&__subtitle {
+			margin-top: 50px;
+		}
+		&__items {
+			display: flex;
+			gap: unset;
+		}
+		&-item {
+			padding: 35px 28px;
+
+			width: 90%;
+			height: 589px;
+
+			background-color: #e4e5ee;
+		}
+	}
+	@media screen and (max-width: $xm-max) {
+		min-height: 1210px;
+		&-item {
+			&__advice {
+				display: none;
+				&--mobile {
+					display: block;
+				}
+			}
+		}
+	}
+}

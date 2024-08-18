@@ -1,0 +1,30 @@
+.tour {
+	&-subtitle {
+		margin-bottom: 60px;
+	}
+}
+
+// SM-max
+@media screen and (max-width: $sm-max) {
+	.tour {
+		&-subtitle {
+			margin-bottom: 15px;
+		}
+		// iframe {
+		// max-height: 300px;
+		// }
+	}
+}
+
+// XM-max
+@media screen and (max-width: $xm-max) {
+	.tour {
+		&-subtitle {
+			margin-bottom: 15px;
+		}
+
+		iframe {
+			max-height: 300px;
+		}
+	}
+}

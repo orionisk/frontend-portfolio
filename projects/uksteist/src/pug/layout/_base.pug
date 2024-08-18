@@ -1,0 +1,33 @@
+include ../components/_header.pug
+include ../components/_footer.pug
+include ../utils/_mixins.pug
+
+block variables
+
+doctype html
+html(lang="en")
+  block head
+    head
+      link(
+        rel="preload",
+        href=require("~fonts/Montserrat/MontserratRegular.woff2"),
+        crossorigin="anonymous",
+        as="font"
+      )
+      link(rel="stylesheet", href=require("/src/assets/sass/vendors/vendors.scss"))
+      link(rel="stylesheet", href=require("/src/assets/sass/main.scss"))
+      meta(charset="UTF-8")
+      meta(name="viewport", content="width=device-width, initial-scale=1.0")
+      meta(name="robots", content="noindex, nofollow")
+      title #{ title }
+      style.
+        .initial-opacity-0 {
+          opacity: 0;
+        }
+  body
+    .page
+      +header
+      main.content
+        block content
+      +footer
+    script(src=require("~src/js/main.js"))

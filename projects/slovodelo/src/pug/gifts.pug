@@ -1,0 +1,73 @@
+extends ./layout/_base
+
+include ./utils/_mixins.pug
+include ./components/_m-form.pug
+include ./components/_catalog-block.pug
+//- include ./components/_product-tile.pug
+//- include ./components/_text-example.pug
+include ./components/_breadcrumb.pug
+include ./components/_advantages-slider.pug
+
+block append variables
+	- const title = 'Сувениры и подарки'
+
+block content
+	+breadcrumb(['Главная страница', 'Услуги', 'Сувениры и подарки'])
+	section.outer.gifts
+		.inner
+			h1.s-title.s-title--2 Сувениры и подарки
+			h2.s-subtitle.s-subtitle--2 Aliquam neque orci, porta at finibus eget, lacinia in quam. <u>Ut pretium purus leo</u>, quis condimentum lorem dignissim in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec sit amet feugiat nisl, et aliquam orci. Cras vitae mattis nisl. Phasellus id mauris sed diam blandit aliquam ac vel eros. Integer a sapien vel massa accumsan ornare. <u>Ut pretium purus leo</u>, quis condimentum lorem dignissim in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec sit amet feugiat nisl, et aliquam orci. Cras vitae mattis nisl. Phasellus id mauris sed diam blandit aliquam ac vel eros. Integer a sapien vel massa accumsan ornare.
+			+bigSlider(5)
+	section.outer.find-gift
+		.inner
+			h1.s-title.s-title--1 Давайте подберем вам подарок?
+			h2.s-subtitle.s-subtitle--1 Предлагаем Вашему вниманию наши готовые наборы подарочной продукции к любому мероприятию.
+				| <br>Мы собрали комплекты идеально подходящие как для небольшого корпоратива в честь юбилея компании так и для того что бы поздравить ключевых Клиентов с важными праздниками и памятными датами.
+			.find-gift-block
+				.find-gift-block__title Готовые наборы:
+				.find-gift-filters
+					.find-gift-filter
+						.find-gift-filter__text Для какого праздника или мероприятия?
+						.find-gift-filter__arrow
+					.find-gift-filter
+						.find-gift-filter__text Что в нем должно быть по составу?
+						.find-gift-filter__arrow
+				.find-gift-items
+						+findGiftItem
+						+findGiftItem
+						+findGiftItem
+						+findGiftItem
+						+findGiftItem
+						+findGiftItem
+						+findGiftItem
+						+findGiftItem
+				.content-nav.find-gift-nav
+					a(href="#").content-nav-arrow.content-nav-arrow--prev
+					ul.content-nav-items
+						li: a(href="#")  1
+						li: a(href="#")  2
+						li.active: a(href="#")  3
+						li: a(href="#")  4
+						li: a(href="#")  5
+						li: a(href="#")  6
+					a(href="").content-nav-arrow.content-nav-arrow--next
+
+	section.outer.catalog
+		.inner
+			h1.s-title.s-title--1 Каталог
+			h2.s-subtitle.s-subtitle--1 Предлагаем нашим Клиентам широкий спектр услуг по производству <br>
+				| печатной и сувенирной продукции. Мы воплотим в жизнь проекты любого уровня сложности <br>
+				| в кратчайшие сроки. Подробную информацию Вы можете получить в соответсвующих разделах сайта.
+			+catalogBlock
+			a(href="#").section-btn Посмотреть весь каталог
+	section.outer.quiz
+		.inner
+			.quiz-block Система помощи в подборе набора (КВИЗ) - В разработке
+
+	section.outer.request
+		.inner
+			h1.s-title.s-title--1 Оставить заявку
+			h2.s-subtitle.s-subtitle--1 Предлагаем нашим Клиентам широкий спектр услуг по производству <br>
+				| печатной и сувенирной продукции. Мы воплотим в жизнь проекты любого уровня сложности <br>
+				| в кратчайшие сроки. Подробную информацию Вы можете получить в соответсвующих разделах сайта.
+			+mForm

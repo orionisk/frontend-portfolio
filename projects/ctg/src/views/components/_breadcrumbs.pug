@@ -1,0 +1,10 @@
+mixin breadcrumbs(data = ['shop racing gear', 'for the driver', 'racing shoes'])
+  .outer&attributes(attributes)
+    .inner
+      .flex.items-center.gap-1o5.text-alto
+        each item, i in data
+          - const isLast = i === data.length - 1;
+          - const isPreLast = i === data.length - 2;
+          a.text-sm.capitalize(class=`${isLast && 'text-cod-gray'}`, href="#")= item
+          if (!isLast)
+            .icm.icm-arrow-right.text-2xl(class=isPreLast && "text-cod-gray")

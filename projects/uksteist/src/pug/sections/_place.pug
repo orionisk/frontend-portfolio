@@ -1,0 +1,20 @@
+mixin place
+  section.s-place.outer
+    .inner
+      .flex.justify-between
+        h2.h2(x-data, x-intersect-class.once="animate-fadeInDown") Koht
+        button.flex.items-center.self-end.gap-1o5.text-lg.lg_text-2xl(
+          x-data,
+          x-intersect-class.once="animate-fadeInDown"
+        )
+          img(src=require("~img/icons/pin.svg"), alt="")
+          a.shrink-0.font-bold.underline(
+            href="https://www.google.com/maps?saddr=My+Location&amp;daddr=59.5416504,24.877599",
+            target="_blank"
+          ) Piirikivi tee 15
+      .hidden.sm_block.s-place-mapWrapper.mt-16.sm_mt-10
+        +img('~img/map2.jpg').s-place-mapImg(alt="map image")
+        img.s-place-mapSvg(src=require("~img/map.svg?inline"), aria-label="map marks")
+      .s-place-mapWrapper.--m.mt-16.lg_mt-10.sm_hidden
+        +img('~img/map-m.jpg').s-place-mapImg(alt="map image")
+        img.s-place-mapSvg(src=require("~img/map-m.svg?inline"), aria-label="map marks")

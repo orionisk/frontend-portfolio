@@ -1,0 +1,75 @@
+include ~views/components/_dropdownMenu
+include ~views/components/_mobileMenu2
+
+mixin header
+  header.absolute.inset-x-0.z-50
+    .relative.z-50.bg-cod-gray(class="backdrop-blur-[6px]")
+      .inner
+        .flex.items-center.justify-between.gap-2.py-2o5.pl-1.pr-2o5.text-sm.text-white.sm_p-2o5.lg_gap-3
+          .flex.items-center.gap-24
+            a(href="/")
+              +img('~img/logo.png', { lazy: false })(class="max-w-[168px] xs_max-w-full")
+            span.font-semibold.text-flamingo-01.max-xl_hidden Free shipping when you spend $99+
+          .flex.items-center.gap-2.lg_gap-7.lg_pl-11
+            a.font-semibold.max-lg_hidden(href="#") Track Your Order
+            span.bg-white-03.flex.min-h-full.w-px.self-stretch.bg-boulder.max-lg_hidden
+            span.max-sm_hidden
+              span.font-semibold= "Need Help? Call Us: "
+              a.phone-box.relative.p-1.text-base.font-bold.tracking-wider(href="#") 918-512-1281
+          .flex.items-center.gap-7.sm_gap-2.lg_gap-6
+            button.flex.items-center
+              span.icm.icm-search.h-5.w-5.text-xl
+            button.flex.items-center.gap-2
+              span.icm.icm-basket.h-5.w-5.text-xl
+              span 2
+            .sm_hidden(x-data="{ state: false }")
+              button.flex.items-center(
+                @click="$dispatch('open-menu')",
+                :class="state ? 'text-flamingo-01' : 'text-white'"
+              )
+                .grid.w-5.gap-1
+                  span.h-0o5.rounded.bg-current
+                  span.h-0o5.rounded.bg-current
+                  span.h-0o5.rounded.bg-current
+              +mobile-menu(x-modelable="state")
+    .z-50.border-flamingo-01.sm_border-b(class="bg-white sm_bg-white/50 sm_backdrop-blur-[6px]")
+      .inner
+        .flex.items-center.justify-between.py-1o5.text-sm.max-lg_flex-wrap.max-lg_gap-3.sm_px-2o5.lg_gap-10
+          .flex.items-center.justify-between.max-sm_flex-wrap.max-sm_px-3.sm_gap-10(
+            class="w-full lg_max-w-[542px]"
+          )
+            +img('~img/for-passionate.png', { lazy: false, cn: 'max-xs_max-w-[168px]' })
+            .flex.items-end.justify-between.gap-5.max-sm_w-full.max-sm_px-3
+              .flex.shrink-0.gap-3.2xs_gap-6.sm_gap-5
+                a(href="#")
+                  +svg('~img/icons/yt.svg').max-sm_h-8.max-sm_w-8(
+                    alt="youtube icon",
+                    width=32,
+                    height=32
+                  )
+                a(href="#")
+                  +svg('~img/icons/tt.svg').max-sm_h-8.max-sm_w-8(
+                    alt="twitter icon",
+                    width=32,
+                    height=32
+                  )
+                a(href="#")
+                  +svg('~img/icons/inst.svg').max-sm_h-8.max-sm_w-8(
+                    alt="instagram icon",
+                    width=32,
+                    height=32
+                  )
+              span.grid.sm_hidden
+                span.text-sm.font-semibold.text-silver= "Need Help? Call Us: "
+                a.phone-box-2.relative.text-lg.font-bold.tracking-widest(href="#") 918-512-1281
+          .flex.shrink-0.items-center.gap-2.text-sm.font-semibold.max-sm_hidden.xl_gap-6
+            +dropdown-menu
+            a.shrink-0.uppercase.transition-colors.hover_text-flamingo-01(href="#", tabindex="0") Merch &nbsp;/
+            a.shrink-0.uppercase.transition-colors.hover_text-flamingo-01(
+              href="/blogs",
+              tabindex="0"
+            ) Pro Racing Tips & Track News &nbsp;/
+            a.shrink-0.uppercase.transition-colors.hover_text-flamingo-01(
+              href="/contact",
+              tabindex="0"
+            ) Contact Us

@@ -1,0 +1,125 @@
+extends ./layout/_base
+include ./utils/_mixins.pug
+include ./components/_m-form.pug
+include ./components/_catalog-block.pug
+include ./components/_product-tile.pug
+include ./components/_text-example.pug
+include ./components/_advantages-slider.pug
+
+block append variables
+	- const title = 'Главная'
+
+block content
+	section.outer.promo
+		.inner
+			.promo-slider-wrapper
+				.swiper-container.promo-slider
+					.swiper-wrapper.promo-items
+						.swiper-slide.promo-item-wrapper
+							.promo-item
+								img(src=`${img}/promo-slide.jpg`, alt="slide").promo-item__img
+								.promo-item__text За словом дело!
+						.swiper-slide.promo-item-wrapper
+							.promo-item
+								img(src=`${img}/promo-slide.jpg`, alt="slide").promo-item__img
+								.promo-item__text За словом дело!
+						.swiper-slide.promo-item-wrapper
+							.promo-item
+								img(src=`${img}/promo-slide.jpg`, alt="slide").promo-item__img
+								.promo-item__text За словом дело!
+						.swiper-slide.promo-item-wrapper
+							.promo-item
+								img(src=`${img}/promo-slide.jpg`, alt="slide").promo-item__img
+								.promo-item__text За словом дело!
+						.swiper-slide.promo-item-wrapper
+							.promo-item
+								img(src=`${img}/promo-slide.jpg`, alt="slide").promo-item__img
+								.promo-item__text За словом дело!
+					.sl-pag.promo-slider-pagination
+				.sl-nav.sl-nav--next.promo-slider-next
+				.sl-nav.sl-nav--prev.promo-slider-prev
+	section.outer.services
+		.inner
+			h1.s-title.s-title--1 Услуги 
+			h2.s-subtitle.s-subtitle--1 Предлагаем нашим Клиентам широкий спектр услуг по производству <br>
+				| печатной и сувенирной продукции. Мы воплотим в жизнь проекты любого уровня сложности <br>
+				| в кратчайшие сроки. Подробную информацию Вы можете получить в соответсвующих разделах сайта.
+			.services-items
+				a(href="#").services-item
+					img(src=`${img}/services-1.jpg`, alt="item").services-item__img
+					.services-item__text Сувениры<br>и подарки
+				a(href="#").services-item
+					img(src=`${img}/services-1.jpg`, alt="item").services-item__img
+					.services-item__text Полиграфия<br>и дизайн
+				a(href="#").services-item
+					img(src=`${img}/services-1.jpg`, alt="item").services-item__img
+					.services-item__text Наружная реклама<br>и мобильные стенды
+				a(href="#").services-item
+					img(src=`${img}/services-1.jpg`, alt="item").services-item__img
+					.services-item__text Производство
+			a(href="#").section-btn Перейти в услуги
+	section.outer.catalog
+		.inner
+			h1.s-title.s-title--1 Каталог
+			h2.s-subtitle.s-subtitle--1 Предлагаем нашим Клиентам широкий спектр услуг по производству <br>
+				| печатной и сувенирной продукции. Мы воплотим в жизнь проекты любого уровня сложности <br>
+				| в кратчайшие сроки. Подробную информацию Вы можете получить в соответсвующих разделах сайта.
+			+catalogBlock
+			a(href="#").section-btn Посмотреть весь каталог
+
+	section.outer.bestseller
+		.inner
+			h1.s-title.s-title--1 Хиты продаж
+			h2.s-subtitle.s-subtitle--1 Предлагаем нашим Клиентам широкий спектр услуг по производству <br>
+				| печатной и сувенирной продукции. Мы воплотим в жизнь проекты любого уровня сложности <br>
+				| в кратчайшие сроки. Подробную информацию Вы можете получить в соответсвующих разделах сайта.
+
+			.products-small-slider
+				.products-small-slider-wrapper
+					.swiper-container.products-small-slider-container
+						.swiper-wrapper
+							+productTile(['item-discount'], 200)
+							+productTile(['item-hit'], null, true)
+							+productTile(['item-hit'])
+							+productTile(['item-hit'])
+							+productTile(['item-hit'])
+				.swiper-no-swiping.sl-nav.sl-nav--next.products-small-slider-next
+				.swiper-no-swiping.sl-nav.sl-nav--prev.products-small-slider-prev
+
+	section.outer.portfolio
+		.inner
+			h1.s-title.s-title--1 Портфолио
+			h2.s-subtitle.s-subtitle--1 Предлагаем нашим Клиентам широкий спектр услуг по производству <br>
+				| печатной и сувенирной продукции. Мы воплотим в жизнь проекты любого уровня сложности <br>
+				| в кратчайшие сроки. Подробную информацию Вы можете получить в соответсвующих разделах сайта.
+			.portfolio-items
+				a(href="#").portfolio-item
+					img.portfolio-item__img(src=`${img}/portfolio-1.jpg`, alt="portfolio-1")
+					.portfolio-item__text сувениры<br>и подарки
+				a(href="#").portfolio-item
+					img.portfolio-item__img(src=`${img}/portfolio-1.jpg`, alt="portfolio-2")
+					.portfolio-item__text полиграфия<br>и дизайн
+				a(href="#").portfolio-item
+					img.portfolio-item__img(src=`${img}/portfolio-1.jpg`, alt="portfolio-3")
+					.portfolio-item__text наружная реклама<br>и стенды
+			a(href="#").section-btn Перейти в портфолио
+
+	section.outer.advantages
+		.inner
+			h1.s-title.s-title--1 Наши преимущества
+			h2.s-subtitle.s-subtitle--1 Предлагаем нашим Клиентам широкий спектр услуг по производству <br>
+				| печатной и сувенирной продукции. Мы воплотим в жизнь проекты любого уровня сложности <br>
+				| в кратчайшие сроки. Подробную информацию Вы можете получить в соответсвующих разделах сайта.
+			+bigSlider(3)
+			a(href="#").section-btn О компании
+
+	section.outer.request
+		.inner
+			h1.s-title.s-title--1 Оставить заявку
+			h2.s-subtitle.s-subtitle--1 Предлагаем нашим Клиентам широкий спектр услуг по производству <br>
+				| печатной и сувенирной продукции. Мы воплотим в жизнь проекты любого уровня сложности <br>
+				| в кратчайшие сроки. Подробную информацию Вы можете получить в соответсвующих разделах сайта.
+			+mForm
+	section.outer.text-example
+		.inner
+			+textExampleBlock

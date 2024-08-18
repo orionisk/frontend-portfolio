@@ -1,0 +1,10 @@
+.page-head {
+  &-content {
+    position: relative;
+
+    // padding-top: 145px;
+    // padding-bottom: 145px;
+    background: url('~img/about-us-bg.jpg?prop=placeholder&placeholder=true&emitFile=false&placeholderSize=10')
+      50% / cover no-repeat;
+  }
+}

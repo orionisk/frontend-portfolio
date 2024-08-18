@@ -1,0 +1,26 @@
+section.outer.pt-16.pb-20.lg_pt-32.lg_pb-44
+  .inner
+    .mx-auto.text-center(class='max-w-[693px]')
+      h2.text-xl.font-semibold.sm_text-2xl.lg_text-3xl Bebas pilih sesuai apa yang kamu mau pelajari
+      p.mt-6 Bebasjamkerja akan membantu kamu untuk membangun karir dari nol sampai kamu bisa #[span.font-semibold mendapatkan project pertamamu]
+    //- .mt-24.flex.justify-between.gap-5
+    .bebas-swiper.swiper.mt-24
+      .swiper-wrapper
+        mixin item(n, title, cln)
+          .swiper-slide.relative.flex-shrink-0(class='max-w-[195px]')
+            img.pointer-events-none(
+              src=require('~img/catalog-bg.svg'),
+              alt='',
+              width=196,
+              height=254,
+              style='aspect-ratio: 196 / 254'
+            )
+            .absolute.inset-0.flex.items-center.justify-center.pl-2
+              +img(`~img/catalog-${n}.png`, { cn: cln })
+              span.absolute.bottom-3.text-center.font-semibold.text-white= title
+        +item(1, 'Programmer')
+        +item(2, 'Marketing', 'mt-4 ml-2')
+        +item(3, 'Musik', 'ml-2')
+        +item(4, 'Design')
+        +item(5, 'Bisnis', 'mr-5 mb-5')
+        +item(6, 'Fashion')

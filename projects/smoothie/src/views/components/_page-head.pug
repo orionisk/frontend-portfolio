@@ -1,0 +1,6 @@
+mixin page-head(img)
+  - const bg = require(img);
+  section.outer.page-head
+    .page-head-content.top-pattern.bottom-pattern.lazy.py-32.lg_py-36(data-bg=bg)
+      span.text-center.text-white.leading-tight
+        block text

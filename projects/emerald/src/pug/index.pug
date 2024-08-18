@@ -1,0 +1,463 @@
+extends ./layout/_base
+
+include ./utils/_mixins
+
+block append variables
+	- const title = 'Изумрудный город'
+
+block content
+	section.outer.info#about
+		.container
+			.info__wrap
+				button.btn-info(data-micromodal-trigger='modal-form-6') скачать презентацию
+				.info__wrap__first
+					h2.section__title О посёлке
+					p.section__subtitle
+						| Коттеджный поселок «Изумрудный город» – это благоустроенная коттеджная жизнь в приятном окружении
+						| экологически чистого района Краснодара. Посёлок расположен в черте города и окружен природой. Уединенность,
+						| свежий воздух и тишина - главные составляющие спокойной жизни. При этом городская инфраструктура в пешей
+						| доступности.
+					button(data-micromodal-trigger='modal-form-1').green-transparent-button.form-1 записаться на экскурсию
+				.info__wrap__second
+					h2.section__title Инфраструктура
+					ul.info__wrap__second__items
+						li
+							picture
+								source(data-srcset=`${img}/eco.svg` type='image/webp')
+								img.lazyload(data-src=`${img}/eco.svg` alt='icon')
+							span экологичный район
+						li
+							picture
+								source(data-srcset=`${img}/house.svg` type='image/webp')
+								img.lazyload(data-src=`${img}/house.svg` alt='icon')
+							span единый европейский стиль
+						li
+							picture
+								source(data-srcset=`${img}/guard.svg` type='image/webp')
+								img.lazyload(data-src=`${img}/guard.svg` alt='icon')
+							span Охраняемая территория
+						li
+							picture
+								source(data-srcset=`${img}/gaz.svg` type='image/webp')
+								img.lazyload(data-src=`${img}/gaz.svg` alt='icon')
+							span центральный газ
+						li
+							picture
+								source(data-srcset=`${img}/curse.svg` type='image/webp')
+								img.lazyload(data-src=`${img}/curse.svg` alt='icon')
+							span детские сады и школы
+						li
+							picture
+								source(data-srcset=`${img}/build.svg` type='image/webp')
+								img.lazyload(data-src=`${img}/build.svg` alt='icon')
+							span предчистовая отделка
+	section.outer.section__house#offers
+		.container
+			.info__wrap.house__wrap
+				.info__wrap__first
+					h2.section__title Более 10 видов домов
+					p.section__subtitle.house-subtitle
+						| Мы готовы предложить вам готовые планировки одноэтажных и двухэтажных домов. А
+						| кроме того, у вас есть возможность самостоятельно придумать дом своей мечты. А мы его построим!
+				.info__wrap__second.house__wrap__second#promotions
+					ul.info__wrap__second__items.houses__wrap
+						li
+							span В стоимость строительства входят:
+						li
+							span электрические ворота
+						li
+							span кирпичный забор
+						li
+							span радиаторы
+						li
+							span газовый котел
+						li
+							span отсыпной двор
+			.house__title
+				hr
+				h2.h2-title <span>ВНИмание ! Акция! </span>Выгода 500 000 рублей при наличном расчете!
+				hr
+			.house__items__wrap
+				.house__item
+					h3 Дом 6,6 х 12 м, 3 сотки
+					picture
+						source(data-srcset=`${img}/house1.webp` type='image/webp')
+						img.lazyload(data-src=`${img}/house1.jpg` alt='house')
+					span 2 этажа. Малый эркер
+					button(data-micromodal-trigger='modal-form-2').check-price Узнать стоимость
+				.house__item
+					h3 Дом 6,6 х 12 м, 3 сотки
+					picture
+						source(data-srcset=`${img}/house2.webp` type='image/webp')
+						img.lazyload(data-src=`${img}/house2.jpg` alt='house')
+					span 2 этажа. Большой эркер
+					button(data-micromodal-trigger='modal-form-2').check-price Узнать стоимость
+				.house__item
+					h3 Дом 6,6 х 12 м, 3 сотки
+					picture
+						source(data-srcset=`${img}/house3.webp` type='image/webp')
+						img.lazyload(data-src=`${img}/house3.jpg` alt='house')
+					span 2 этажа. Эркер
+					button(data-micromodal-trigger='modal-form-2').check-price Узнать стоимость
+				.house__item
+					h3 Дом 8 х 13 м, 3 сотки
+					picture
+						source(data-srcset=`${img}/house4.webp` type='image/webp')
+						img.lazyload(data-src=`${img}/house4.jpg` alt='house')
+					span 1 этаж. Эркер
+					button(data-micromodal-trigger='modal-form-2').check-price Узнать стоимость
+				.house__item
+					h3 Дом 11 х 11 м, 3 сотки
+					picture
+						source(data-srcset=`${img}/house5.webp` type='image/webp')
+						img.lazyload(data-src=`${img}/house5.jpg` alt='house')
+					span 1 Этаж. Эркер
+					button(data-micromodal-trigger='modal-form-2').check-price Узнать стоимость
+				.house__item
+					h3 Дом 9 х 11 м, 3 сотки
+					picture
+						source(data-srcset=`${img}/house6.webp` type='image/webp')
+						img.lazyload(data-src=`${img}/house6.jpg` alt='house')
+					span 1 этаж. Эркера нет
+					button(data-micromodal-trigger='modal-form-2').check-price Узнать стоимость
+				.house__item
+					h3 Дом 9 х 11 м.,3 сотки
+					picture
+						source(data-srcset=`${img}/house7.webp` type='image/webp')
+						img.lazyload(data-src=`${img}/house7.jpg` alt='house')
+					span 1 этаж. Малый эркер
+					button(data-micromodal-trigger='modal-form-2').check-price Узнать стоимость
+				.house__item.hidden
+					h3 Дом 7 х 13 м, 3 сотки
+					picture
+						source(data-srcset=`${img}/house8.webp` type='image/webp')
+						img.lazyload(data-src=`${img}/house8.jpg` alt='house')
+					span 2 этажа. Малый эркер
+					button(data-micromodal-trigger='modal-form-2').check-price Узнать стоимость
+				.house__item.hidden
+					h3 Дом 7 х 12 м, 3 сотки
+					picture
+						source(data-srcset=`${img}/house9.webp` type='image/webp')
+						img.lazyload(data-src=`${img}/house9.jpg` alt='house')
+					span 1 Этаж. Эркера нет
+					button(data-micromodal-trigger='modal-form-2').check-price Узнать стоимость
+				.house__item.hidden
+					h3 Дом 7 х 10 м, 3 сотки
+					picture
+						source(data-srcset=`${img}/house10.webp` type='image/webp')
+						img.lazyload(data-src=`${img}/house10.jpg` alt='house')
+					span 1 этаж. Эркера нет
+					button(data-micromodal-trigger='modal-form-2').check-price Узнать стоимость
+			.show-more-btn-wrapper
+				button.show-more-btn.house-show-more-btn Показать ещё
+			.main-form-wrapper.house-form-wrapper
+				.modal-title.house-form-title Закажите обратный звонок и получите консультацию
+				form.main-form
+					input(type="hidden", name="origin", value='Виды домов, "Закажите обратный звонок и получите консультацию"')
+					.main-form-inputs
+						.main-form-input.main-form-input-field
+							input(type='text' placeholder='имя' name="name")
+						.main-form-input.main-form-input-field
+							input(type='text' placeholder='телефон' name="phone")
+					button.modal-btn Заказать звонок
+					.main-form-check.main-form-input
+						label
+							input(type='checkbox' name='check')
+							span.check-mark
+							span.check-text Даю согласие на обработку персональных данных
+							
+	section.outer.tour
+		.container
+			.tour__inner
+				h2.section__title 3D тур
+				p.section__subtitle.tour-subtitle
+					| Для вас мы приготовили обзор панорам Коттеджный поселок
+					br 
+					| Изумрудный Город. Ощутите все пространство вокруг себя.
+				iframe.lazyload#tour_frame(data-src='https://stred.ru/panorama/nedvizhimost/izumrudnyi-gorod/' border='0' width='100%' height='662' frameborder='0')
+	section.outer.buys#buys
+		.container
+			h2.section__title.buys__title Способы покупки
+			.buys__inner
+				.buys__item
+					h2.buys__item__first
+						| 01
+					.buys__item__last
+						.buys__item__last-title
+							span 01
+							h3 Наличный расчет
+						//- span.line
+						p
+							| Выгода 500 000 рублей при
+							br
+							|  расчете наличными
+							br
+							|  средствами
+						button(data-micromodal-trigger='modal-form-3-1').modal-btn Узнать стоимость
+				.buys__item
+					h2.buys__item__first
+						| 02
+					.buys__item__last
+						.buys__item__last-title
+							span 02
+							h3 Рассрочка
+						//- span.line
+						p
+							| Рассрочка от 3 до 6
+							br
+							|  месяцев. Первоначальный
+							br
+							|  взнос от 50 000 рублей
+						button(data-micromodal-trigger='modal-form-3-2').modal-btn Оформить рассрочку
+				.buys__item
+					h2.buys__item__first
+						| 03
+					.buys__item__last
+						.buys__item__last-title
+							span 03
+							h3 Ипотека
+						//- span.line
+						p
+							| Дом вашей мечты
+							br
+							|  можно купить в ипотеку на выгодных условиях
+						button(data-micromodal-trigger='modal-form-3-3').modal-btn Одобрить ипотеку
+	section.outer.calculate
+		.container
+			h3.calculate__title
+				| Ремонт “под ключ” от
+				br
+				|  500 000 рублей
+			.calculate__inner
+				.calculate__text
+					.calculate__text__block
+						p Плитка во дворе
+					.calculate__text__block
+						p ламинат и теплый пол
+					.calculate__text__block
+						p Итальянские обои и натяжной потолок
+					.calculate__text__block
+						p Межкомнатные двери и плинтусы
+					.calculate__text__block
+						p Электрические розетки и выключатели
+					.calculate__text__block
+						p люк с мансардной лестницей
+					.calculate__text__block
+						p напольный кафель (прихожая, кухня, с/у)
+					.calculate__text__block
+						p кафель в с/у (стены)
+					button(data-micromodal-trigger='modal-form-4').calculate-btn Рассчитать ремонт
+				.calculate__gallery
+					.calculate__gallery--img
+						picture
+							source(data-srcset=`${img}/gallery-1.webp` type='image/webp')
+							img.lazyload(data-src=`${img}/gallery-1.png` alt='gallery')
+					.calculate__gallery--img
+						picture
+							source(data-srcset=`${img}/gallery-2.webp` type='image/webp')
+							img.lazyload(data-src=`${img}/gallery-2.png` alt='gallery')
+					.calculate__gallery--img
+						picture
+							source(data-srcset=`${img}/gallery-3.webp` type='image/webp')
+							img.lazyload(data-src=`${img}/gallery-3.png` alt='gallery')
+					.calculate__gallery--img
+						picture
+							source(data-srcset=`${img}/gallery-4.webp` type='image/webp')
+							img.lazyload(data-src=`${img}/gallery-4.png` alt='gallery')
+	section.outer.settings
+		.container
+			.settings-form-wrapper
+				h2 Подберите свободный дом
+				form.settings-form
+					.settings-form-group-items
+						.settings-form-group-item
+							h3 Этажность дома. Один или два?
+							.settings__inner.settings-form-group-inputs
+								label.settings__btn
+									input(type="radio", name="floors" value='1' checked)
+									span 1 этаж
+								label.settings__btn
+									input(type="radio", name="floors" value='2')
+									span 2 этаж
+						.settings-form-group
+							h3 Количество комнат в доме?
+							.settings__inner.settings-form-group-inputs
+								label.settings__btn
+									input(type="radio", name="rooms" value='1' checked)
+									span 1 комната
+								label.settings__btn
+									input(type="radio", name="rooms" value='2')
+									span 2 комнаты
+								label.settings__btn
+									input(type="radio", name="rooms" value='3')
+									span 3 комнаты
+								label.settings__btn
+									input(type="radio", name="rooms" value='4')
+									span 4 комнаты
+						.settings-form-group
+							h3 Желаете пристроить дополнительно:
+							.settings__inner.settings-form-group-inputs
+								label.settings__btn
+									input(type="checkbox", name="additional_options" value='Баня')
+									span Баня
+								label.settings__btn
+									input(type="checkbox", name="additional_options" value='Терраса')
+									span Терраса
+								label.settings__btn
+									input(type="checkbox", name="additional_options" value='Мансарда')
+									span Мансарда
+								label.settings__btn
+									input(type="checkbox", name="additional_options" value='Погреб')
+									span Погреб
+					button(type="submit" data-micromodal-trigger='modal-form-5').calculate-btn.settings-form-btn Сделать расчет
+	section.outer.recomend
+		.container
+			h2 Рекомендуем заказать дополнительно
+			.recomend__inner
+				.recomend__item
+					h3 Теплый пол
+					picture
+						source(data-srcset=`${img}/rec1.webp` type='image/webp')
+						img.lazyload(data-src=`${img}/rec1.jpg` alt='recomend')
+					p 2000 рублей м2
+					span Работа + материалы
+				.recomend__item
+					h3 Тротуарная плитка
+					picture
+						source(data-srcset=`${img}/rec2.webp` type='image/webp')
+						img.lazyload(data-src=`${img}/rec2.jpg` alt='recomend')
+					p 2000 рублей м2
+					span Работа + материалы
+				.recomend__item
+					h3 Баня
+					picture
+						source(data-srcset=`${img}/rec3.webp` type='image/webp')
+						img.lazyload(data-src=`${img}/rec3.jpg` alt='recomend')
+					p 400 000 рублей 
+					span Работа + материалы
+				.recomend__item.hidden
+					h3 терраса
+					picture
+						source(data-srcset=`${img}/rec4.webp` type='image/webp')
+						img.lazyload(data-src=`${img}/rec4.jpg` alt='recomend')
+					p 200 000 рублей м2
+					span 2,5х7 метров
+				.recomend__item.hidden
+					h3 навес
+					picture
+						source(data-srcset=`${img}/rec5.webp` type='image/webp')
+						img.lazyload(data-src=`${img}/rec5.jpg` alt='recomend')
+					p 2000 рублей м2
+					span Работа + материалы
+				.recomend__item.hidden
+					h3 балкон/погреб
+					picture
+						source(data-srcset=`${img}/rec6.webp` type='image/webp')
+						img.lazyload(data-src=`${img}/rec6.jpg` alt='recomend')
+					p 100 000 рублей 
+					span Работа + материалы
+				.recomend__item.hidden
+					h3 Подвал
+					picture
+						source(data-srcset=`${img}/rec7.webp` type='image/webp')
+						img.lazyload(data-src=`${img}/rec7.jpg` alt='recomend')
+					p 150 000 рублей 
+					span Работа + материалы
+				.recomend__item.hidden
+					h3 поднятие конька
+					picture
+						source(data-srcset=`${img}/rec8.webp` type='image/webp')
+						img.lazyload(data-src=`${img}/rec8.jpg` alt='recomend')
+					.flex-other
+						.flex-other-price
+							p 50 000 рублей 
+							p.flex-other-price-bottom 100 000 рублей 
+						.flex-other-size
+							p 7х12 метров
+							p.flex-other-price-bottom 11х11 метров
+				.recomend__item.hidden
+					h3 мансардный этаж
+					picture
+						source(data-srcset=`${img}/rec9.webp` type='image/webp')
+						img.lazyload(data-src=`${img}/rec9.jpg` alt='recomend')
+					.flex-other
+						.flex-other-price
+							p 500 000 рублей 
+							p.flex-other-price-bottom 500 000 рублей 
+						.flex-other-size
+							p 7х12 метров
+							p.flex-other-price-bottom 6,6х12 метров
+			.show-more-btn-wrapper
+				button.show-more-btn.recomend-show-more-btn Показать ещё
+	section.outer.plus
+		.container
+			h2 Группа компаний НВМ
+			.plus__inner
+				.plus__text
+					.plus__text__item
+						.plus__text__top
+							h3 10
+							span лет на рынке
+						p
+							| С каждым сдаваемым домом мы прислушивались к мнениям и пожеланиям наших жильцов. Именно поэтому сегодня с
+							| уверенностью можем сказать, что наши дома построены с учетом всех предпочтений современной семьи.
+					.plus__text__item
+						.plus__text__top
+							h3 5000
+							span домов
+						p
+							| Если Вы решите купить коттедж в Краснодаре от застройщика и выберите КП «Изумрудный город», будьте
+							| уверены, вы приобретаете надежное жилье для всей семьи и будущего поколения
+					.plus__text__item
+						.plus__text__top
+							h3 350.000 м<sup>2</sup> 
+							span жилья
+						p
+							| В наши активы входят собственные бетонный, кирпичный и кровельные заводы, своя строительная техника.
+							| Поэтому мы можем обеспечить более низкую себестоимость своим проектам.
+				.plus__video
+					iframe.lazyload(data-src='https://www.youtube.com/embed/Ppda86rl0g4' title='YouTube video player' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='' width='100%' height='500' frameborder='0')
+	section.outer.slider
+		.container
+			h2 ход строительства
+			.swiper-container.mySwiper
+				.swiper-wrapper
+					+sliderItems(12, 1, 3)
+					+sliderItems(2, 4, 5)
+					+sliderItems(6, 7, 8)
+					+sliderItems(9, 10, 11)
+					+sliderItems(13, 14, 15)
+					+sliderItems(16, 17, 18)
+			.slider__buttons
+				.swiper-button-prev-custom
+					picture
+						source(data-srcset=`${img}/Vector-prev.webp` type='image/webp')
+						img.lazyload(data-src=`${img}/Vector-prev.png` alt='')
+				.slider__count
+				.swiper-button-next-custom
+					picture
+						source(data-srcset=`${img}/Vector-next.webp` type='image/webp')
+						img.lazyload(data-src=`${img}/Vector-next.png` alt='')
+	section.outer.form__map
+		.container
+			.form__map__inner
+				.main-form-wrapper.form__map__text
+					h2
+						| Запишитесь на экскурсию в
+						br
+						|  КП Изумрудный город
+					form.main-form
+						input(type="hidden", name="origin" value='Запишитесь на экскурсию в КП Изумрудный город')
+						.main-form-inputs
+							.main-form-input.main-form-input-field.form__map-input
+								input(type='text' placeholder='имя' name='name')
+							.main-form-input.main-form-input-field.form__map-input
+								input(type='text' placeholder='телефон' name='phone')
+						button.modal-btn.form__map-btn Заказать звонок
+						.main-form-check.main-form-input
+							label
+								input(type='checkbox' name='check')
+								span.check-mark
+								span.check-text Даю согласие на обработку персональных данных
+				.form__map__map
+					iframe.lazyload(data-src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1408.272630799961!2d39.01843495828146!3d45.09501378823579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40f045a88d728677%3A0x1ee763253ec13fd1!2z0JrQnyDQmNC30YPQvNGA0YPQtNC90YvQuSDQk9C-0YDQvtC0!5e0!3m2!1sru!2sby!4v1620561324633!5m2!1sru!2sby' style='border:0;' allowfullscreen='' loading='lazy' width='100%' height='615')

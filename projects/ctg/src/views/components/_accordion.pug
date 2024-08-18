@@ -1,0 +1,36 @@
+mixin accordion(title = 'title', opts = {})
+  -
+    const {
+      accTitle = true,
+      titleCn = 'text-lg font-bold',
+      btn = true,
+      btnCn = '',
+      arrow = true,
+      arrowCn = '',
+      wrapperCn = '',
+      wrapperCloak = 'x-cloak',
+      expanded = false,
+      activeCn = '',
+      ariaLabel = attributes['aria-label'] || 'accordion'
+    } = opts;
+  - const data = { "x-data": `accordion(${expanded})`, ...attributes };
+  - const active = activeCn ? { ":class": `{['${activeCn}']: expanded}` } : {};
+  div&attributes(Object.assign({}, active, data))
+    if btn
+      button.flex.items-center.justify-between.text-left.capitalize(
+        type="button",
+        class=btnCn,
+        @click="expanded = !expanded",
+        :aria-expanded="expanded",
+        aria-controls=attributes.id,
+        aria-label=ariaLabel
+      )
+        if accTitle
+          h3(class=titleCn)= title
+        if arrow
+          span.icm.icm-chevron-down.text-lg.transition-transform(
+            class=arrowCn,
+            :class="{ 'rotate-180': expanded }"
+          )
+    div(id=attributes.id, class=[wrapperCn, wrapperCloak], x-show="expanded", x-collapse.duration.300ms, x-cloak)
+      block

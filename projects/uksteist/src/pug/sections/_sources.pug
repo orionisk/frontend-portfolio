@@ -1,0 +1,57 @@
+mixin sources
+  - const bg = require("~img/bg-sources.jpg?quality=50");
+  section.s-sources.outer.lazy.relative(
+    data-bg-multi=`linear-gradient(0deg, rgb(0 0 0 / 60%), rgb(0 0 0 / 60%)), url(${bg})`
+  )
+    .inner.text-th-white
+      h2.h2 Algus
+      .mt-16.flex.justify-end.leading-tight(class="w-[87%]")
+        p.font-medium.text-lg.leading-tight(class="sm_text-[22px]") AlgusSelle maatüki kujunemiseks kulus üle 11 miljardi aasta.<br>11 peret ehitavad siia 11 kaasaegset maja.
+        button.s-sources-btn(
+          x-data="sourcesModalTrigger",
+          @click="showModal",
+          aria-label="Open secret popup"
+        )
+    template#modal-sources
+      swal-html
+        .flex.w-full
+          .s-sources-modal
+            article.grid.gap-4.sm_gap-2.whitespace-pre-line
+              p 
+                | Universumi väljade avarustes\n
+                | Lendab ta valgusenergia voos\n
+                | Sooviga saada nähtavaks\n
+                | Muinasjuttu täis päevade loos.
+              p 
+                | Maailmaruumil aga seinu ei ole,\n
+                | Kuid kitsas ja ahas on kest,\n
+                | Mis tõotab olla tunnetest tulvil\n
+                | Ja pakkuda talle igavest huvi.
+              p 
+                | Suveööde sumedas vaikuses\n
+                | Laskub ere komeedina\n
+                | Okste pehmesse rüppe\n
+                | Ja kaob hetkega kuhugi.\n
+              p 
+                | Sel ajal metsaradadel jalutab\n
+                | Mõtteisse vajunud rändur.\n
+                | Ja muinasjutt langeb ta õlule\n
+                | Kui nähtamatu udune loor.
+              p 
+                | Kesköö tsikaadide sirina saatel,\n
+                | Väsides metsas uitamisest\n
+                | Laskub me kangelane uniselt pehmele värskele murule.
+              p 
+                | Unes kuuleb ta hääli,\n
+                | Mis sosistavad, et ehitaks siia\n
+                | Üksteist parimat maja,\n
+                | Teed milleni valgustab majakas.
+              p Ksenia Vain
+            //- img(src=require("~img/sources-modal.png"), alt="Forest")
+            +img("~img/sources-modal.png")(alt="Forest")
+        figure.mt-7.grid.text-th-firm
+          p.font-medium: q: i „Iga inimese elu on maagiline, Jumala kirjutatud muinasjutt.“
+          figcaption: i Hans Christian Andersen
+        article.mt-7 Taustal:
+          br
+          | „Kaugete maailmade piiramatutes avarustes, kus ei ole ei aega ega ruumi, elas muinasjutt. Ta oli kõigest üks võimalikkuse laine. Kuid nagu teisedki potentsiaalse maailma elanikud, tahtis muinasjutt sattuda materiaalsesse maailma. See lubaks tal kogu oma säras avaneda. Muinasjutt teadis, et ükski osake ei saa tegelikkusesse ilmuda enne, kui inimese mõistus sellele tähelepanu pöörab. Korduvalt üritas ta pääseda erinevate inimeste teadvusse, kuid suutis edastada ainult väikseid katkendeid oma maagilisest loost. Ühel päeval sai muinasjutt signaali, et kellegi mõistus avanes. Vaja oli ainult kutsele vastata. Avati portaal, mille kaudu muinasjutt sai nüüd voolata jõena inimese teadvusesse. Nii algas muinasjutu teekond potentsiaalsest maailmast reaalsesse maailma...“

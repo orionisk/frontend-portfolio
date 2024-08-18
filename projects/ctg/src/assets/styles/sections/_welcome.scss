@@ -1,0 +1,82 @@
+.s-welcome {
+  background: none;
+  background-repeat: no-repeat;
+  background-position: 70% 0;
+
+  &-top-line {
+    &::before {
+      content: '';
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+
+      height: 21px;
+
+      background: url('~img/welcome-top-line.svg') 50% / cover no-repeat;
+    }
+  }
+
+  @media screen and (max-width: 424.98px) {
+    background: none !important;
+  }
+
+  @screen sm {
+    background: url('~img/welcome-bg.png?prop=placeholder&placeholder=true&emitFile=false&placeholderSize=10');
+    background-position: 68% 0;
+  }
+  @screen md {
+    background-position: 60% 0;
+  }
+  @screen xl {
+    background-position: 50%;
+    background-size: cover;
+  }
+}
+
+.s-welcome2 {
+  &-layout {
+    grid-template-areas:
+      'suits shocks'
+      'shop shop'
+      'shoes underwear'
+      'shoes gloves'
+      'helmets helmets';
+    @screen sm {
+      grid-template-areas:
+        'suits suits helmets helmets shoes underwear'
+        'shocks shop shop shop shoes gloves';
+    }
+  }
+
+  .g-area {
+    &-suits {
+      grid-area: suits;
+    }
+
+    &-helmets {
+      grid-area: helmets;
+    }
+
+    &-shoes {
+      grid-area: shoes;
+    }
+
+    &-underwear {
+      grid-area: underwear;
+    }
+
+    &-shocks {
+      grid-area: shocks;
+    }
+
+    &-shop {
+      grid-area: shop;
+    }
+
+    &-gloves {
+      grid-area: gloves;
+    }
+  }
+}

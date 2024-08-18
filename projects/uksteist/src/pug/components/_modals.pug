@@ -1,0 +1,32 @@
+mixin modals
+  template#modal-doc
+    swal-html
+      form.docForm(
+        x-data="docForm",
+        x-validate,
+        @docmodal-open.window="setFormName",
+        @submit.prevent="submit",
+        @click.outside="$v.$reset()"
+      )
+        //- button(@click.prevent="close") Close
+        label.mb-5.text-2xl.font-medium.leading-tight Saatke dokumendid<br>oma meilile
+        input.docForm-input.mt-10(
+          type="text",
+          name="email",
+          autocomplete="off",
+          placeholder="Sinu email",
+          x-model="email",
+          @input="$v.$reset('email')",
+          @blur="email.length > 0 && $v.$touch('email')",
+          @focus="$v.$reset('email')",
+          :class="{ '--error': $v.email.error }"
+        )
+        p.mt-10.text-th-gray.text-xs.font-light
+          | Klõpsates nuppu "Esita", nõustute
+          br
+          u.text-th-firm teie isikuandmete töötlemisele
+        button.btn3.mt-3o5.w-full(type="submit") Saada meilile
+  template#modal-doc-2
+    swal-icon(type="success", color="#77833F")
+    swal-html
+      p.text-2xl Документ отправлен

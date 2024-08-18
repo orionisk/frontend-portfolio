@@ -1,0 +1,76 @@
+mixin footer
+  footer.footer
+    - const bg = require('~img/footer-bg2.jpg');
+    .pt-8.pb-8.footer-main.lazy.lg_pt-16(
+      class='lg_pb-[71px]',
+      data-bg-multi=`linear-gradient(0deg, rgba(67, 56, 64, 0.85), rgba(67, 56, 64, 0.85)), url(${bg})`
+    )
+      .inner
+        .flex.flex-wrap.gap-2.gap-y-4.justify-between.lg_px-5
+          div
+            h4.text-3xl.font-bold Opening hours
+            .grid.mt-4.lg_mt-8(class='gap-[5px]')
+              span= 'Monday / '
+                span.text-caper
+                  time 9:00
+                  span= ' – '
+                  time 20:00
+              span= 'Tuesday / '
+                span.text-caper
+                  time 9:00
+                  span= ' – '
+                  time 20:00
+              span= 'Wednesday / '
+                span.text-caper
+                  time 9:00
+                  span= ' – '
+                  time 20:00
+              span= 'Thursday / '
+                span.text-caper
+                  time 9:00
+                  span= ' – '
+                  time 20:00
+              span= 'Friday / '
+                span.text-caper
+                  time 9:00
+                  span= ' – '
+                  time 20:00
+              span= 'Saturday / '
+                span.text-caper
+                  time 9:00
+                  span= ' – '
+                  time 20:00
+              span= 'Sunday / '
+                |
+                span.text-caper CLOSED
+          .lg_pl-12
+            h4.text-3xl.font-bold Contact Info
+            address.grid.pl-2.mt-3.not-italic.gap-1o5.lg_pt-2.lg_mt-8
+              - const linkCn = 'flex items-center gap-1';
+              a(class=linkCn, href='#')
+                span.icm.icm-phone= ' '
+                span.font-bold +38 899 4320 32
+              a(class=linkCn, href='#')
+                span.icm.icm-share= ' '
+                span.underline hai@aletheme.com
+              a(class=linkCn, href='#')
+                span.icm.icm-map-marker= ' '
+                span France, Paris, Lille de la Cite 1p
+          div
+            h4.text-3xl.font-bold Instagram feed
+            .grid.grid-cols-3.gap-3.mt-5o5.sm_gap-4(class='lg_gap-[26px]')
+              +img('~img/inst-feed-1.png')
+              +img('~img/inst-feed-2.png')
+              +img('~img/inst-feed-3.png')
+              +img('~img/inst-feed-4.png')
+              +img('~img/inst-feed-5.png')
+              +img('~img/inst-feed-6.png')
+    .footer-sub
+      .inner
+        .flex.justify-between.items-center.px-4.leading-tight
+          span(class='text-[15px]') Copyrights 2022
+          .flex.gap-3o5
+            span.icm.icm-facebook
+            span.icm.icm-youtube
+            span.icm.icm-instagram
+            span.icm.icm-twitter

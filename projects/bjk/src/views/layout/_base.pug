@@ -1,0 +1,42 @@
+include ~views/components/components
+include ~views/utils/_mixins
+//- globals: cn, t
+include ~views/partials/partials
+//- include ~views/sections/sections
+
+block variables
+  //- Default variables
+  - let title = 'Title';
+  - let colorScheme = 'light';
+  - let meta = [];
+
+- const metaData = require('./data/meta.js');
+- const customMeta = metaData.concat(self.meta);
+
+doctype html
+html(lang='id', dir='ltr')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+    //- Color scheme
+    meta(name='color-scheme', content=colorScheme)
+    meta(
+      name='theme-color',
+      content='#ffffff',
+      media='(prefers-color-scheme: light) or (prefers-color-scheme: no-preference)'
+    )
+    meta(name='theme-color', content='#000000', media='(prefers-color-scheme: dark)')
+
+    //- Additional meta data
+    each attrs in customMeta
+      meta&attributes(attrs)
+
+    title= title
+    block style
+
+    block head
+  body
+    block body
+
+    block script

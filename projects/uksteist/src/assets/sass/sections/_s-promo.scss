@@ -1,0 +1,54 @@
+.s-promo {
+  padding-bottom: 120px;
+  @screen md {
+    padding-bottom: 0;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0 75px;
+    align-items: center;
+
+    padding-top: 118px;
+
+    text-align: center;
+    @screen sm {
+      padding-top: 80px;
+
+      // padding-top: 0;
+    }
+    @screen md {
+      flex-direction: row;
+
+      padding-top: 130px;
+
+      text-align: left;
+    }
+  }
+
+  &-11 {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+
+    picture {
+      max-width: 62%;
+    }
+
+    @screen sm {
+      picture {
+        max-width: 320px;
+      }
+    }
+
+    @screen md {
+      width: unset;
+
+      picture {
+        max-width: unset;
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+mixin product-slider
+  .product-swipers.relative(
+    ax-load,
+    x-ignore,
+    x-data=`productSwiper(
+      [$refs.main, {
+        navigation: {
+          nextEl: $refs.next,
+          prevEl: $refs.prev
+        }
+      }],
+      [$refs.thumbs]
+    )`
+  )
+    .app-preloader.swiper-lazy-preloader(x-show="!loaded")
+    .flex.opacity-50.max-md_flex-col.md_gap-3.lg_gap-4.2xl_pl-5o5(
+      x-init="$el.classList.remove('opacity-50')"
+    )
+      .flex.shrink-0.gap-3.max-md_order-1.md_flex-col
+        button.swiper-button-prev.max-md_hidden(x-ref="prev")
+          .icm.icm-chevron-up.text-3xl.text-flamingo-01
+        .swiper(x-ref="thumbs", class="max-md_max-w-md md_max-h-[468px]")
+          .swiper-wrapper.md_flex-col
+            mixin item(url)
+              //- add and after init remove mb to minimize CLS
+              .swiper-slide(class="lg_mb-[9px]", x-init="$el.classList.remove('lg_mb-[9px]')")
+                .flex
+                  +img(url).h-full.w-full.object-cover(class="h-[68px] w-[68px] xs_h-[87px] xs_w-[87px]")
+            +item('~img/slider-thumb1.png')
+            +item('~img/slider-thumb2.png')
+            +item('~img/slider-thumb3.png')
+            +item('~img/slider-thumb4.png')
+            +item('~img/slider-thumb5.png')
+            +item('~img/slider-thumb1.png')
+            +item('~img/slider-thumb2.png')
+        button.swiper-button-next.max-md_hidden(x-ref="next")
+          .icm.icm-chevron-down.text-3xl.text-flamingo-01
+      .mt-2
+        .swiper.border.border-alto(class="md_max-w-[640px] lg_max-w-[712px]", x-ref="main")
+          .swiper-wrapper
+            mixin item(url)
+              .swiper-slide
+                +img(url)
+            +item('~img/sparco-big.jpg')
+            +item('~img/sparco-big.jpg')
+            +item('~img/sparco-big.jpg')
+            +item('~img/sparco-big.jpg')
+            +item('~img/sparco-big.jpg')
+            +item('~img/sparco-big.jpg')
+            +item('~img/sparco-big.jpg')

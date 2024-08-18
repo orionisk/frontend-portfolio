@@ -1,0 +1,25 @@
+.page {
+  font-family: QuicksandVariable, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: theme('colors.matterhorn');
+}
+
+.sec-title {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: theme('lineHeight.none');
+  @screen sm {
+    line-height: theme('lineHeight.normal');
+  }
+}
+
+.sec-subtitle {
+  font-family: 'Waiting for the Sunrise';
+  font-size: 30px;
+  font-weight: 300;
+  line-height: theme('lineHeight.none');
+  @screen sm {
+    line-height: theme('lineHeight.4');
+  }
+}

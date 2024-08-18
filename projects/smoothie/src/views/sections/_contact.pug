@@ -1,0 +1,16 @@
+mixin s-contact
+  section.outer.s-contact.py-4.xl_py-12
+    .inner
+      +img('~img/map.jpg')
+      .mt-10.flex.justify-between.gap-7.dsm_flex-col.lg_mt-20.lg_gap-14
+        article.flex-1
+          h2.text-3xl.font-medium Get in touch with us
+          .mt-4(class='text-[15px] leading-relaxed')
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dui ante, consectetur non scelerisque a, ultricies id justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dui ante, consectetur non scelerisque a, ultricies id justo.
+            br
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dui ante, consectetur non scelerisque a, ultricies id justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dui ante, consectetur non scelerisque a, ultricies id justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dui ante, consectetur non scelerisque a, ultricies id justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dui ante, consectetur non scelerisque a, ultricies id justo.
+        form.pt-3.flex-1.flex.flex-col.gap-3.md_gap-6(x-data, @submit.prevent)
+          input(class=cvaInput(), placeholder='Your name')
+          input(class=cvaInput(), placeholder='Your email')
+          textarea.mt-1(class=cvaInput({ type: 'textarea' }), placeholder='Your Message')
+          button(class=cvaButton()) Send

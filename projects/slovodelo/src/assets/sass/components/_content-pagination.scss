@@ -1,0 +1,42 @@
+.content-nav {
+  margin-top: 35px;
+  @include flex;
+  &-items {
+    display: flex;
+
+    & > li {
+      margin: 0 6px;
+
+      &.active {
+        color: #d0043c;
+      }
+    }
+  }
+  &-arrow {
+    width: 20px;
+    height: 20px;
+
+    position: relative;
+
+    &::before {
+      content: '';
+
+      position: absolute;
+
+      width: 6px;
+      height: 10px;
+
+      left: 50%;
+      top: 50%;
+
+      transform: translate(-50%, -50%);
+
+      background: url('#{$imgPath}/icons/slider-arrow-left.svg') 50% / contain
+        no-repeat;
+    }
+
+    &--next::before {
+      transform: translate(-50%, -50%) rotateY(180deg);
+    }
+  }
+}

@@ -1,0 +1,118 @@
+.settings {
+	padding-top: 131px;
+}
+.settings h2 {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 35px;
+	text-transform: uppercase;
+	color: #2c2c2c;
+}
+.settings h3 {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 35px;
+	color: #2c2c2c;
+}
+
+.settings__btn {
+	max-width: 180px;
+	width: 100%;
+	height: 60px;
+
+	border: 1px solid #035635;
+
+	input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+
+		&:checked ~ span {
+			transition: 0.3s all ease;
+			background: #035635;
+			color: #fff;
+		}
+	}
+
+	span {
+		@include flex;
+		width: 100%;
+		height: 100%;
+
+		font-family: Source Sans Pro;
+		font-size: 18px;
+		color: #035635;
+		text-align: center;
+
+		cursor: pointer;
+		user-select: none;
+	}
+}
+
+.settings-form {
+	margin-top: 50px;
+
+	&-group {
+		&-items {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 60px;
+			grid-gap: 60px;
+		}
+		&-inputs {
+			margin-top: 33px;
+
+			display: grid;
+			grid-template-columns: repeat(auto-fill, 180px);
+			gap: 25px 60px;
+			grid-gap: 25px 60px;
+		}
+	}
+	&-btn {
+		margin-top: 60px;
+	}
+}
+
+// XM-max
+@media screen and (max-width: $xm-max) {
+	.settings {
+		h2 {
+			font-size: 18px;
+			line-height: 21px;
+		}
+		h3 {
+			font-size: 18px;
+			line-height: 21px;
+		}
+
+		&-form {
+			margin-top: 30px;
+
+			&-group {
+				&-items {
+					gap: 31px;
+					grid-gap: 31px;
+				}
+				&-inputs {
+					margin-top: 14px;
+
+					grid-template-columns: repeat(auto-fill, 120px);
+					gap: 15px;
+					grid-gap: 15px;
+					justify-content: space-between;
+				}
+			}
+			&-btn {
+				margin-top: 30px;
+			}
+		}
+
+		&__btn {
+			height: 40px;
+		}
+	}
+}

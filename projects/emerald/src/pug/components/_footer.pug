@@ -1,0 +1,171 @@
+mixin footer
+	footer.outer.footer
+		.container
+			.footer__inner
+				.footer__inner__first
+					.footer__logo
+						picture
+							source(srcset=`${img}/header__logo.webp` type='image/webp')
+							img(src=`${img}/header__logo.png` alt='logo')
+					a.header__number(href='tel:8 (800) 550 60 40 ')
+						picture
+							source(srcset=`${img}/Viber.svg` type='image/webp')
+							img(src=`${img}/Viber.svg` alt='whatsap')
+						|             8 (800) 550 60 40
+				nav.footer__nav
+					a.footer__nav--link.active(href='#about') О проекте
+					a.footer__nav--link(href='#offers') Предложения
+					a.footer__nav--link(href='#buys') Как купить
+					a.footer__nav--link(href='#promotions') Акции
+	.modal.micromodal-slide.modal-form#modal-form-1(aria-hidden="true")
+		.modal__overlay(data-micromodal-close tabindex='-1')
+			.modal__container(role='dialog', aria-modal='true')
+				.main-form-wrapper
+					.modal-title Наш менеджер свяжется с вами в течение 5 минут
+					form.main-form
+						input(type="hidden", name="origin", value='О посёлке, Записаться на экскурсию')
+						.main-form-inputs
+							.main-form-input.main-form-input-field
+								input(type='text' placeholder='имя' name='name')
+							.main-form-input.main-form-input-field
+								input(type='text' placeholder='телефон' name='phone')
+						button.modal-btn Записаться
+						.main-form-check.main-form-input
+							label
+								input(type='checkbox' name='check')
+								span.check-mark
+								span.check-text Даю согласие на обработку персональных данных
+	.modal.micromodal-slide.modal-form#modal-form-2(aria-hidden="true")
+		.modal__overlay(data-micromodal-close tabindex='-1')
+			.modal__container(role='dialog', aria-modal='true')
+				.main-form-wrapper
+					.modal-title Наш менеджер свяжется с вами в течение 5 минут
+					form.main-form
+						.main-form-inputs
+							input(type="hidden", name="origin", value='виды домов, Узнать стоимость')
+							.main-form-input.main-form-input-field
+								input(type='text' placeholder='имя' name='name')
+							.main-form-input.main-form-input-field
+								input(type='text' placeholder='телефон' name='phone')
+						button.modal-btn Узнать стоимость
+						.main-form-check.main-form-input
+							label
+								input(type='checkbox' name='check')
+								span.check-mark
+								span.check-text Даю согласие на обработку персональных данных
+	.modal.micromodal-slide.modal-form#modal-form-3-1(aria-hidden="true")
+		.modal__overlay(data-micromodal-close tabindex='-1')
+			.modal__container(role='dialog', aria-modal='true')
+				.main-form-wrapper
+					.modal-title Наш менеджер свяжется с вами в течение 5 минут
+					form.main-form
+						input(type="hidden", name="origin" value='способы покупки, наличный расчет')
+						.main-form-inputs
+							.main-form-input.main-form-input-field
+								input(type='text' placeholder='имя' name='name')
+							.main-form-input.main-form-input-field
+								input(type='text' placeholder='телефон' name='phone')
+						button.modal-btn Получить консультацию
+						.main-form-check.main-form-input
+							label
+								input(type='checkbox' name='check')
+								span.check-mark
+								span.check-text Даю согласие на обработку персональных данных
+	.modal.micromodal-slide.modal-form#modal-form-3-2(aria-hidden="true")
+		.modal__overlay(data-micromodal-close tabindex='-1')
+			.modal__container(role='dialog', aria-modal='true')
+				.main-form-wrapper
+					.modal-title Наш менеджер свяжется с вами в течение 5 минут
+					form.main-form
+						input(type="hidden", name="origin" value='способы покупки, рассрочка')
+						.main-form-inputs
+							.main-form-input.main-form-input-field
+								input(type='text' placeholder='имя' name='name')
+							.main-form-input.main-form-input-field
+								input(type='text' placeholder='телефон' name='phone')
+						button.modal-btn Получить консультацию
+						.main-form-check.main-form-input
+							label
+								input(type='checkbox' name='check')
+								span.check-mark
+								span.check-text Даю согласие на обработку персональных данных
+	.modal.micromodal-slide.modal-form#modal-form-3-3(aria-hidden="true")
+		.modal__overlay(data-micromodal-close tabindex='-1')
+			.modal__container(role='dialog', aria-modal='true')
+				.main-form-wrapper
+					.modal-title Наш менеджер свяжется с вами в течение 5 минут
+					form.main-form
+						input(type="hidden", name="origin" value='способы покупки, ипотека')
+						.main-form-inputs
+							.main-form-input.main-form-input-field
+								input(type='text' placeholder='имя' name='name')
+							.main-form-input.main-form-input-field
+								input(type='text' placeholder='телефон' name='phone')
+						button.modal-btn Получить консультацию
+						.main-form-check.main-form-input
+							label
+								input(type='checkbox' name='check')
+								span.check-mark
+								span.check-text Даю согласие на обработку персональных данных
+	.modal.micromodal-slide.modal-form#modal-form-4(aria-hidden="true")
+		.modal__overlay(data-micromodal-close tabindex='-1')
+			.modal__container(role='dialog', aria-modal='true')
+				.main-form-wrapper
+					.modal-title Наш менеджер свяжется с вами в течение 5 минут
+					form.main-form
+						input(type="hidden", name="origin" value='Рассчитать ремонт')
+						.main-form-inputs
+							.main-form-input.main-form-input-field
+								input(type='text' placeholder='имя' name='name')
+							.main-form-input.main-form-input-field
+								input(type='text' placeholder='телефон' name='phone')
+						button.modal-btn Рассчитать ремонт
+						.main-form-check.main-form-input
+							label
+								input(type='checkbox' name='check')
+								span.check-mark
+								span.check-text Даю согласие на обработку персональных данных
+	.modal.micromodal-slide.modal-form#modal-form-5(aria-hidden="true")
+		.modal__overlay(data-micromodal-close tabindex='-1')
+			.modal__container(role='dialog', aria-modal='true')
+				.main-form-wrapper
+					.modal-title Наш менеджер свяжется с вами в течение 5 минут
+					form.main-form
+						input(type="hidden", name="origin" value='Подберите свободный дом')
+						.main-form-inputs
+							.main-form-input.main-form-input-field
+								input(type='text' placeholder='имя' name='name')
+							.main-form-input.main-form-input-field
+								input(type='text' placeholder='телефон' name='phone')
+						button.modal-btn Подобрать дом
+						.main-form-check.main-form-input
+							label
+								input(type='checkbox' name='check')
+								span.check-mark
+								span.check-text Даю согласие на обработку персональных данных
+	.modal.micromodal-slide.modal-form#modal-form-6(aria-hidden="true")
+		.modal__overlay(data-micromodal-close tabindex='-1')
+			.modal__container(role='dialog', aria-modal='true')
+				.main-form-wrapper
+					.modal-title Укажите номер Whatsapp, куда выслать форму
+					form.main-form
+						input(type="hidden", name="origin", value='Скачать презентацию')
+						.main-form-inputs
+							.main-form-input.main-form-input-field
+								input(type='text' placeholder='имя' name='name')
+							.main-form-input.main-form-input-field
+								input(type='text' placeholder='телефон' name='phone')
+						button.modal-btn Отправить
+						.main-form-check.main-form-input
+							label
+								input(type='checkbox' name='check')
+								span.check-mark
+								span.check-text Даю согласие на обработку персональных данных
+	.modal.micromodal-slide#modal-done.modal-done(aria-hidden="true")
+		.modal__overlay(data-micromodal-close tabindex='-1')
+			.modal__container(role='dialog', aria-modal='true')
+				.modal-done-content
+					picture
+						source(srcset=`${img}/done.svg` type='image/webp')
+						img(src=`${img}/done.svg` alt='done')
+					h2.modal-done-title Спасибо за обращение! Мы свяжемся с вами в течение 5 минут

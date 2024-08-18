@@ -1,0 +1,17 @@
+.footer {
+  color: #fff;
+
+  &-main {
+    // padding-bottom: 71px;
+    font-size: 20px;
+    background: linear-gradient(0deg, rgb(67 56 64 / 85%), rgb(67 56 64 / 85%)),
+      url('~img/footer-bg2.jpg?prop=placeholder&placeholder=true&emitFile=false&placeholderSize=50')
+        50% / cover no-repeat;
+  }
+
+  &-sub {
+    padding-top: 23px;
+    padding-bottom: 20px;
+    background: theme('colors.matterhorn');
+  }
+}

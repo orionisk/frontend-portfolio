@@ -1,0 +1,23 @@
+.page {
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-weight: 400;
+  color: theme('colors.th-black');
+}
+
+.h2 {
+  font-size: 36px;
+  line-height: 1;
+  @screen lg {
+    font-size: 64px;
+    line-height: 58px;
+  }
+}
+
+.h3 {
+  font-size: 18px;
+  @screen lg {
+    font-size: 22px;
+    line-height: 26px;
+  }
+}

@@ -1,0 +1,15 @@
+extends ~views/layout/default
+include ~views/sections/_catalog
+include ~views/components/_breadcrumbs
+include ~views/components/_accordion
+include ~views/components/_catalogFilters
+
+block append variables
+  - title = "Catalog";
+
+block content
+  +breadcrumbs.pt-40.max-md_hidden.lg_pt-32
+  +s-catalog
+
+block prepend script
+  script(src=require("./catalog.js"), defer)

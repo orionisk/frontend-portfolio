@@ -1,0 +1,12 @@
+mixin walk
+  - const bg = require("~img/bg-walk.jpg?quality=50");
+  section#jalutuskaik.s-walk.outer.lazy(
+    data-bg-multi=`linear-gradient(0deg, rgb(0 0 0 / 60%), rgb(0 0 0 / 60%)), url(${bg})`
+  )
+    .inner
+      h2.h2.mb-4o5.lg_mb-9(x-data, x-intersect-class.once="animate-fadeInDown") Jalutuskäik
+      h3.s-walk-h3.h3.mb-14.ml-1.leading-tight.animate-delay-300(
+        x-data,
+        x-intersect-class.once="animate-fadeInDown"
+      ) Planeeri nädalavahetusel iseseisev<br>jalutuskäik selles imelises kohas
+      button.s-walk-btn.btn2.animate-delay-500(x-data, x-intersect-class.once="animate-fadeInDown") Koostada marsruut

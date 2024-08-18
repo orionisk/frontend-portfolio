@@ -1,0 +1,19 @@
+mixin homePlace
+  section#koht.s-homePlace.outer
+    .inner
+      h2.h2(x-data, x-intersect-class.once="animate-fadeInDown") Koht Sinu kodu jaoks:
+      .s-homePlace-content
+        .grid.animate-delay-700(
+          class="animate-distance-1/5",
+          x-data,
+          x-intersect-class.once="animate-fadeInLeftBig"
+        )
+          +img('~img/home-place.jpg', {w: 1500, ar: false}).rounded-2xl(
+            alt="Home place with roads in forest"
+          )
+        ul.s-homePlace-list(x-data, x-intersect-class.once="animate-fadeInDown")
+          li Võib-olla ehitate siia oma maja
+          li Kaitse all oleva metsa keskel
+          li Vaikses ja rahulikus kohas
+          li 22 minuti kaugusel Tallinnast
+          li 311 meetri kaugusel merest

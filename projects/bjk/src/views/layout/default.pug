@@ -1,0 +1,28 @@
+extends _base
+
+block append variables
+
+block append head
+
+block append style
+  link(rel='stylesheet', href=require('~styles/vendors/vendors.scss'))
+  link(rel='stylesheet', href=require('~styles/main.scss'))
+
+block append head
+
+include _footer
+include _header
+
+block body
+  .page
+    //- App header
+    +header
+
+    //- Main content
+    main.content
+      block content
+
+    //- App footer
+    +footer
+block append script
+  script(src=require('~js/main.js'))

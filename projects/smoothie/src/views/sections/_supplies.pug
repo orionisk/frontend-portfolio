@@ -1,0 +1,23 @@
+mixin s-supplies
+  section.outer.s-supplies
+    .s-supplies-content.top-pattern.bottom-pattern.pt-36.pb-32.md_py-44
+      .inner
+        .mx-auto.grid.gap-5.xs_grid-cols-2.lg_grid-cols-4
+          - const numCn = cn('mt-2 text-6xl text-caper font-wfts font-light');
+          - const nameCn = cn('text-xl text-white font-bold leading-4');
+          .grid.justify-items-center
+            img.lazy(data-src=require('~img/cherry.svg'), class='h-[135px]')
+            span(class=numCn) 4832
+            p(class=nameCn) Cherry smoothies
+          .grid.justify-items-center
+            img.lazy(data-src=require('~img/apple.svg'), class='h-[135px]')
+            span(class=numCn) 2531
+            p(class=nameCn) Apple smoothies
+          .grid.justify-items-center
+            img.lazy(data-src=require('~img/pineapple.svg'), class='h-[135px] max-w-[120px]')
+            span(class=numCn) 1939
+            p(class=nameCn) Ananas smoothies
+          .grid.justify-items-center
+            img.lazy(data-src=require('~img/banana.svg'), class='h-[135px]')
+            span(class=numCn) 7812
+            p(class=nameCn) Bananas smoothies

@@ -1,0 +1,12 @@
+extends ~views/layout/default
+include ~views/components/_breadcrumbs
+include ./_contact
+
+block append variables
+  - title = "Contact Us";
+
+block content
+  +breadcrumbs(['Contact Us']).pt-40.max-md_hidden.lg_pt-32
+  +s-contact
+//- block prepend script
+  script(src=require("./contact.js"), defer)

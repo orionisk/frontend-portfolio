@@ -1,0 +1,34 @@
+mixin infra
+  - const { slides, tabs } = require("~pug/data/pug-infra.js");
+  section.s-infra.outer
+    .inner(x-data="infraSwiper")
+      h2.h2.mb-5(class="lg_mb-[75px]") Taristu:
+      ul.s-infra-list.mb-12(class="lg_mb-[100px]", x-ref="list")
+        each item, i in slides
+          li
+            button(
+              data-key=i,
+              role="tab",
+              aria-controls=`infraSlide-${i}`,
+              :aria-selected="activeIndex === +$el.dataset.key",
+              :class="activeIndex === +$el.dataset.key && 's-infra-tab--active'",
+              @click="slideTo($el.dataset.key)"
+            ) #{ item.title }
+      #my-gallery.infra-swiper.swiper.swiper-fade(x-ref="swiper")
+        .swiper-wrapper
+          each item, i in slides
+            .swiper-slide.infra-swiper-slide(id=`infraSlide-${i}`)
+              .relative.infra-swiper-img
+                +img(item.img, { lazyCn: i <= 1 ? 'lazy' : 'swiper-lazy', pswp: true}).rounded-2xl(
+                  alt=item.title
+                )
+                if i > 1
+                  .swiper-lazy-preloader
+              .swiper-no-swiping
+                p.lg_text-2xl.mb-1o5(class="text-[22px]") #{ item.title }
+                p.font-light.lg_text-lg(class="min-h-[60px]") #{ item.descr }
+        .infra-swiper-nav
+          button.infra-swiper-prev(aria-label="prev slide")
+            img(src=require("~img/infra-swiper/nav-left.svg"), alt="")
+          button.infra-swiper-next(aria-label="next slide")
+            img(src=require("~img/infra-swiper/nav-right.svg"), alt="")

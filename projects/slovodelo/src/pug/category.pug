@@ -1,0 +1,226 @@
+extends ./layout/_base
+include ./utils/_mixins.pug
+include ./components/_m-form.pug
+include ./components/_product-tile.pug
+include ./components/_catalog-block.pug
+include ./components/_breadcrumb.pug
+
+block append variables
+	- const title = 'Категория'
+
+block content
+	+breadcrumb(['Главная страница', 'Каталог', 'Автомобильные аксессуары'])
+	section.outer.products
+		.overlay.overlay--catalog
+		.inner
+			h1.s-title.s-title--2 Автомобильные аксессуары
+			h2.s-subtitle.s-subtitle--2 Aliquam neque orci, porta at finibus eget, lacinia in quam. <u>Ut pretium purus leo</u>, quis condimentum lorem dignissim in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec sit amet feugiat nisl, et aliquam orci. Cras vitae mattis nisl. Phasellus id mauris sed diam blandit aliquam ac vel eros. Integer a sapien vel massa accumsan ornare. 
+			.products-block
+				aside.products-ctg.menu-nav.menu-nav--catalog
+					.products-ctg__title Каталог
+					ul.products-ctg-items
+						li.active 
+							a(href="#") Автомобильные аксессуары
+							ul.products-ctg-dropdown-content
+								li: a(href="") Автомобильные наборы
+								li: a(href="") Для кузова
+								li: a(href="") Для салона
+						li: a(href="#") Деловые подарки
+						li: a(href="#") Зонты
+						li: a(href="#") Для дома
+						li: a(href="#") Для отдыха
+						li: a(href="#") Личные аксессуары
+						li: a(href="#") Автомобильные аксессуары
+						li: a(href="#") Деловые подарки
+						li: a(href="#") Зонты
+						li: a(href="#") Для дома
+						li: a(href="#") Для отдыха
+						li: a(href="#") Личные аксессуары
+						li: a(href="#") Автомобильные аксессуары
+						li: a(href="#") Деловые подарки
+						li: a(href="#") Зонты
+						li: a(href="#") Для дома
+						li: a(href="#") Для отдыха
+						li: a(href="#") Личные аксессуары
+						li: a(href="#") Автомобильные аксессуары
+						li: a(href="#") Деловые подарки
+						li: a(href="#") Зонты
+						li: a(href="#") Для дома
+						li: a(href="#") Для отдыха
+						li: a(href="#") Личные аксессуары
+				//- .products-slider
+				.products-content
+					.products-content-top
+						ul.products-filters
+							li.filter-group: form.products-filter-form
+								.filter-btns
+									.filter-btn Наличие
+									button.filter-btn-reset(type="reset")
+								.filter-dropdown.filter-dropdown--range
+									.range-slider
+										.multi-range
+										.range-slider-inputs
+											label От
+												input.range-slider-input.range-slider-input--min(type="text" name="amount_min" value='600' min='0')
+											label До
+												input.range-slider-input.range-slider-input--max(type="text" name="amount_max" value='1300' max='3000')
+										.filter-dropdown-sort-types
+											label.filter-dropdown-sort-type
+												input(type="radio", name="sort_type" value='asc' checked)
+												span По возрастанию
+											label.filter-dropdown-sort-type
+												input(type="radio", name="sort_type" value='desc')
+												span По убыванию
+										button(type="reset").filter-dropdown__reset-btn Сбросить фильтр
+							li.filter-group: form.products-filter-form
+								.filter-btns
+									.filter-btn Цена
+									button.filter-btn-reset(type="reset")
+								.filter-dropdown.filter-dropdown--range
+									.range-slider
+										.multi-range
+										.range-slider-inputs
+											label От
+												input.range-slider-input.range-slider-input--min(type="text" name="price_min" value='1000' min='0')
+											label До
+												input.range-slider-input.range-slider-input--max(type="text" name="price_max" value='2200' max='5000')
+										.filter-dropdown-sort-types
+											label.filter-dropdown-sort-type
+												input(type="radio", name="sort_type" value='asc' checked)
+												span По возрастанию
+											label.filter-dropdown-sort-type
+												input(type="radio", name="sort_type" value='desc')
+												span По убыванию
+										button(type="reset").filter-dropdown__reset-btn Сбросить фильтр
+							li.filter-group: form.products-filter-form
+								.filter-btns
+									.filter-btn Цвет
+									button.filter-btn-reset(type="reset")
+								.filter-dropdown
+									.filter-dropdown-checkboxes
+										label
+											input(type="checkbox", name="color_filter" value='white')
+											span.check-mark
+											span.check-text Белый
+										label
+											input(type="checkbox", name="color_filter" value='black' checked)
+											span.check-mark
+											span.check-text Черный
+										label
+											input(type="checkbox", name="color_filter" value='grey')
+											span.check-mark
+											span.check-text Серый
+										label
+											input(type="checkbox", name="color_filter" value='red')
+											span.check-mark
+											span.check-text Красный
+										label
+											input(type="checkbox", name="color_filter" value='orange' checked)
+											span.check-mark
+											span.check-text Оранжевый
+										label
+											input(type="checkbox", name="color_filter" value='pink')
+											span.check-mark
+											span.check-text Розовый
+										label
+											input(type="checkbox", name="color_filter" value='violet')
+											span.check-mark
+											span.check-text Фиолетовый
+										label
+											input(type="checkbox", name="color_filter" value='blue')
+											span.check-mark
+											span.check-text Синий
+										label
+											input(type="checkbox", name="color_filter" value='light_blue')
+											span.check-mark
+											span.check-text Голубой
+										label
+											input(type="checkbox", name="color_filter" value='green')
+											span.check-mark
+											span.check-text Зеленый
+										label
+											input(type="checkbox", name="color_filter" value='brown')
+											span.check-mark
+											span.check-text Коричневый
+										label
+											input(type="checkbox", name="color_filter" value='beige')
+											span.check-mark
+											span.check-text Бежевый
+										label
+											input(type="checkbox", name="color_filter" value='silver')
+											span.check-mark
+											span.check-text Серебряный
+										label
+											input(type="checkbox", name="color_filter" value='multi')
+											span.check-mark
+											span.check-text Мультиколор
+										label
+											input(type="checkbox", name="color_filter" value='transparent')
+											span.check-mark
+											span.check-text Прозрачный
+									button(type="reset").filter-dropdown__reset-btn Сбросить фильтр
+							li.filter-group: form.products-filter-form
+								.filter-btns
+									.filter-btn Все товары
+									button.filter-btn-reset(type="reset")
+								.filter-dropdown
+									.filter-dropdown-checkboxes
+										label
+											input(type="checkbox", name="color_filter" value='white')
+											span.check-mark
+											span.check-text Хиты продаж
+										label
+											input(type="checkbox", name="color_filter" value='white')
+											span.check-mark
+											span.check-text Новинки
+										label
+											input(type="checkbox", name="color_filter" value='white')
+											span.check-mark
+											span.check-text Скидки
+									button(type="reset").filter-dropdown__reset-btn Сбросить фильтр
+						.menu-burger.menu-burger--catalog
+							.line
+							.line
+							.line
+
+					.products-items
+						+productTile
+						+productTile
+						+productTile(['item-discount'], 200)
+						+productTile(['item-hit'])
+						+productTile([], null, true)
+						+productTile
+						+productTile
+						+productTile
+						+productTile
+						+productTile(['item-discount'], 200)
+						+productTile
+						+productTile
+						+productTile
+						+productTile
+						+productTile
+					.content-nav
+						a(href="#").content-nav-arrow.content-nav-arrow--prev
+						ul.content-nav-items
+							li: a(href="#")  1
+							li: a(href="#")  2
+							li.active: a(href="#")  3
+							li: a(href="#")  4
+							li: a(href="#")  5
+							li: a(href="#")  6
+						a(href="").content-nav-arrow.content-nav-arrow--next
+
+	section.outer.catalog
+		.inner
+			h1.s-title.s-title--1 Вам также могут быть интересны
+			h2.s-subtitle.s-subtitle--1 Предлагаем нашим Клиентам широкий спектр услуг по производству <br>
+				| печатной и сувенирной продукции. Мы воплотим в жизнь проекты любого уровня сложности <br>
+				| в кратчайшие сроки. Подробную информацию Вы можете получить в соответсвующих разделах сайта.
+			+catalogBlock
+	section.outer.request
+		.inner
+			h1.s-title.s-title--1 Оставить заявку
+			h2.s-subtitle.s-subtitle--1 Предлагаем нашим Клиентам широкий спектр услуг по производству <br>
+				| печатной и сувенирной продукции. Мы воплотим в жизнь проекты любого уровня сложности <br>
+				| в кратчайшие сроки. Подробную информацию Вы можете получить в соответсвующих разделах сайта.
+			+mForm

@@ -1,0 +1,19 @@
+mixin s-welcome
+  - const bg = require("~img/welcome-bg.png?format=webp");
+  section.xs_outer.s-welcome.s-welcome-top-line.lazy.relative.py-12.max-xl_bg-bottom.sm_pb-24(
+    data-bg=bg
+  )
+    .inner.relative
+      +img('~img/welcome-bg-m.jpg', {cn: 'relative inset-x-0 xs_hidden'})
+      .grid.sm_grid-cols-4.md_grid-cols-2
+        .max-xs_hidden
+        .flex.flex-col.text-center.max-md_sm_col-span-3.max-xs_mt-8.max-xs_px-3(class="xl_px-[76px]")
+          h2.font-michroma.uppercase.max-xs_leading-relaxed
+            span.text-xl.tracking-widest.text-flamingo-02.sm_text-3xl.lg_text-4xl Welcome to
+            span.sm-text-lg.mt-1.block.text-cod-gray.lg_text-xl Call to grid race wear
+          p.mt-2.xs_mt-4 #OklahomaOwned CallToGrid.com was started to serve the grassroots racer! We offer only the most premier brands for the driver, car, and shop to help keep #[span.underline you] safe, looking good and on the podium! We develop original content to help you and the car find speed! We know why you race; it’s the desire, discipline and determination required to do something well. It’s the camaraderie you experience at the track with people who share this passion of motorsports! Join us at CallToGrid.com and join the community of #[span.underline passionate drivers] like yourself today!
+          a.mx-auto.mt-7.flex.items-center.justify-center.bg-cod-gray(
+            href="/catalog",
+            class="py-5 px-11 sm_py-6"
+          )
+            span.font-michroma.text-sm.uppercase.tracking-widest.text-white.sm_text-xl Shop Now

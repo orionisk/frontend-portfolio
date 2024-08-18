@@ -1,0 +1,6 @@
+.page {
+  font-family: theme('fontFamily.poppins');
+  @apply text-base;
+  font-weight: 400;
+  color: theme('colors.black.02');
+}

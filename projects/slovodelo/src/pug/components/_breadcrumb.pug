@@ -1,0 +1,9 @@
+mixin breadcrumb(items = ['Главная страница'])
+	.outer.breadcrumb-wrapper
+		.inner
+			ul.breadcrumb
+				each item, i in items
+					if (i + 1 === items.length)
+						li #{item}
+					else
+						li: a(href="#") #{item} 

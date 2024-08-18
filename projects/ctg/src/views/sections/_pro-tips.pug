@@ -1,0 +1,46 @@
+mixin s-pro-tips
+  section.outer.bg-cod-gray.pt-12.pb-7.lg_py-24(
+    class="clip-path-polygon-[0%_18px,100%_63px,100%_100%,0_100%] sm_clip-path-polygon-[0%_0,100%_75px,100%_100%,0_100%]"
+  )
+    .inner.flex.text-white.max-2xl_flex-col.lg_gap-4(
+      x-data="{ currentTab: '0' }",
+      @open-tab="currentTab = $event.detail"
+    )
+      .tabs-content.shrink-0.max-2xl_order-1(class="2xl_max-[1550px]_max-w-screen-lg")
+        mixin item
+          .x-cloak.flex.gap-5.max-xl_flex-col(
+            x-id="['content']",
+            x-show="currentTab === $id('content').slice(-1)"
+          )&attributes(attributes)
+            .max-lg_order-1.xl_max-w-md
+              h2.font-michroma.text-xl.uppercase.text-flamingo-01.sm_text-2xl(class="lg_text-[35px]") The Latest pro tip for the track
+              p.mt-3.text-sm.sm_text-base "Lore issue dolor sit met, ConnectEDU advising elite, used do also temper incident UT labor ET Dolores magma cliquey. Ut ENIM ad minim venial, quit nostrum excitation Alamo labors Nisei UT liquid ex ea commode consequent. Door acute inure dolor in reprehended voltage RELIT else cilium Dolores EU Fiat null painter. Excepted sent occaecat cupidity non provident, sent in cuppa quit official desert Mollie anime id est labor um.“
+            .relative
+              +img('~img/video-preview.jpg').h-full.w-full.object-cover(
+                class="max-sm_min-h-[375px] xl_min-w-[694px]"
+              )
+              .absolute.inset-0.flex.items-end.py-2.pr-4.pl-2.sm_py-8.sm_pr-12.sm_pl-8
+                .flex.w-full.justify-between
+                  p.max-w-md.font-michroma.uppercase.text-flamingo-01.sm_text-xl Quick and ease adjustments for overseer of under steer
+                  button.grid.justify-items-center.gap-2.max-sm_absolute.sm_pt-2(
+                    class="top-1/2 left-1/2 max-sm_-translate-x-1/2 max-sm_-translate-y-1/2"
+                  )
+                    +svg("~img/icons/play-circle.svg")(width=45, height=45)
+                    span.uppercase.underline Play video
+        +item
+        +item(x-cloak="true")
+        +item(x-cloak="true")
+        +item(x-cloak="true")
+      .tabs.relative.flex.min-w-full.flex-col.gap-5o5.pb-5.font-marianina.lg_gap-7.lg_max-2xl_flex-row.2xl_justify-end.2xl_pb-11
+        mixin btn(title)
+          - const btnCn = cn("flex border-b uppercase text-[28px] italic tracking-tight lg_text-[40px]");
+          button(
+            class=btnCn,
+            x-id="['tab']",
+            :class="currentTab === $id('tab').slice(-1) ? 'text-flamingo-01 border-flamingo-01' : 'border-silver'",
+            @click="$dispatch('open-tab', $id('tab').slice(-1))"
+          )&attributes(attributes): block
+        +btn(x-init="$nextTick(() => $el.click())") IMPROVING THE DRIVER
+        +btn IMPROVING THE CAR
+        +btn DRIVER SAFETY
+        +btn Latest news

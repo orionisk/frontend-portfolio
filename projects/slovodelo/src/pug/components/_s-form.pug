@@ -1,0 +1,20 @@
+mixin sForm
+	.s-form-wrapper
+		form(action="#").s-form
+			.s-form-inputs
+				.s-form-input-wrapper: input.s-form-input(type="text", name="product" placeholder="Товар")
+				.s-form-input-wrapper: input.s-form-input(type="text", name="name" placeholder="Ваше имя")
+				.s-form-input-wrapper: input.s-form-input(type="text", name="code" placeholder="Код товара")
+				.s-form-input-wrapper: input.s-form-input(type="text", name="phone" placeholder="Номер телефона")
+				.s-form-input-wrapper: input.s-form-input(type="text", name="amount" placeholder="Тираж")
+				.s-form-input-wrapper: input.s-form-input(type="email", name="email" placeholder="Адрес электронной почты")
+				.s-form-input-wrapper: input.s-form-input(type="text", name="type" placeholder="Тип нанесения")
+				.s-form-input-wrapper.s-form-input-textarea-wrapper
+					textarea.s-form-input-textarea(placeholder="Описание проекта" name="descr", cols="30", rows="3")
+				.s-form-input-file-wrapper
+					label.input-file
+						span Прикрепить макет для нанесения
+						input(type="file", name="file")
+			.s-form-submit
+				.s-form-submit__text Нажимая на кнопку «Отправить заявку», Вы соглашаетесь на обработку персональных данных.
+				button(type="submit").s-form-submit__btn Оставить заявку

@@ -1,0 +1,81 @@
+.s-dream-team {
+  $t: &;
+
+  &-item {
+    position: relative;
+    display: grid;
+
+    @screen dsm {
+      background-color: #c9e3f4;
+    }
+
+    @screen sm {
+      grid-template-columns: minmax(0, 3fr) minmax(0, 7fr);
+
+      &.--reverse {
+        grid-template-columns: minmax(0, 7fr) minmax(0, 3fr);
+        #{$t}-descr {
+          order: -1;
+          text-align: right;
+
+          &-content {
+            margin-right: auto;
+            margin-left: unset;
+          }
+        }
+        #{$t}-img {
+          right: 0;
+        }
+        #{$t}-socials {
+          justify-content: flex-end;
+        }
+      }
+
+      &.--bg2 {
+        #{$t}-descr {
+          background-color: theme('colors.caper');
+        }
+      }
+    }
+  }
+
+  &-img {
+    width: 100%;
+    max-width: theme('maxWidth.xs');
+    margin-top: 24px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @screen sm {
+      position: absolute;
+      width: 50%;
+    }
+
+    @screen xl {
+      width: 59%;
+    }
+  }
+
+  &-descr {
+    display: flex;
+    padding: 20px 3%;
+    background-color: #c9e3f4;
+
+    &-content {
+      margin-left: auto;
+
+      @screen sm {
+        width: 68%;
+      }
+      @screen xl {
+        width: 55%;
+      }
+    }
+
+    @screen sm {
+      // padding-top: 85px;
+      // padding-bottom: 85px;
+      padding: 85px 3%;
+    }
+  }
+}

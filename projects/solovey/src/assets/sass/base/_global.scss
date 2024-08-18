@@ -1,0 +1,22 @@
+.page {
+	min-height: 100vh;
+	overflow: hidden;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.outer {
+	padding: 0 2rem;
+}
+
+.inner {
+	margin: 0 auto;
+	max-width: 1101px;
+	width: 100%;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}

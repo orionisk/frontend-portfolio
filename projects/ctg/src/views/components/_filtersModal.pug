@@ -1,0 +1,34 @@
+include ~views/components/_accordion
+
+mixin filtersModal
+  .relative.z-50(
+    x-data="{ isShown: false, open() { this.isShown = true }, close() { this.isShown = false } }",
+    @open-modal-filters.window="open",
+    x-on:keydown.window.escape="close"
+  )
+    .x-cloak.fixed.inset-0.animate-duration-500.animate-ease-out.md_hidden(
+      x-cloak,
+      x-show="isShown",
+      x-transition:enter="animate-fadeIn",
+      x-transition:leave="animate-fadeOut",
+      class="bg-black/50"
+    )
+    .max-md_x-cloak-invisible.fixed.inset-y-0.left-0.z-50.w-full.overflow-y-auto.bg-white.animate-duration-300.animate-ease-out.max-md_max-w-screen-2xs.md_static(
+      x-ref="modal",
+      x-cloak="invisible",
+      class="md_!block",
+      x-show="isShown",
+      x-trap.noscroll.inert.noreturn="isShown",
+      x-transition:enter="animate-slideInLeft",
+      x-transition:enter-start="animate-slideInLeft",
+      x-transition:enter-end="animate-slideInLeft",
+      x-transition:leave="animate-slideOutLeft",
+      x-on:click.away="close"
+    )
+      .relative
+        .sticky.inset-x-0.top-0.z-20.flex.justify-between.bg-alabaster.p-2o5.md_hidden
+          .invisible
+          span.text-sm.font-semibold.uppercase Filters
+          button.flex.h-6.h-6.w-6.w-6.items-center.justify-center(@click="close")
+            +svg('~img/icons/cross.svg')(width=12, height=12)
+        +catalog-filters

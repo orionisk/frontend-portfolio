@@ -1,0 +1,66 @@
+.product-color {
+  &-items {
+    display: flex;
+    flex-wrap: wrap;
+    @include flex-gap-p(20px);
+  }
+  // margin-left: 20px;
+  @include flex-gap-c(20px);
+
+  cursor: pointer;
+  user-select: none;
+
+  &__title {
+    font-size: 16px;
+  }
+
+  & > input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+
+    &:checked ~ span {
+      &::after {
+        display: block;
+      }
+    }
+  }
+
+  & > span {
+    position: relative;
+
+    height: 16px;
+    width: 16px;
+    display: block;
+
+    background-color: #eee;
+    border-radius: 50%;
+
+    &::after {
+      content: '';
+
+      display: none;
+      width: calc(100% + 8px);
+      height: calc(100% + 8px);
+
+      position: absolute;
+      left: -4px;
+      right: -4px;
+      top: -4px;
+      bottom: -4px;
+
+      border: 1px solid #515050;
+      border-radius: 50%;
+    }
+  }
+
+  &--red > span {
+    background-color: #d0043c;
+  }
+  &--yellow > span {
+    background-color: #f2c94c;
+  }
+  &--blue > span {
+    background-color: #27ae60;
+  }
+}

@@ -1,0 +1,67 @@
+mixin s-promo
+  - const bg = require("~img/promo-bg.jpg?format=webp&quality=80");
+  //- - const bgPh = require("~img/promo-bg.jpg?prop=placeholder&placeholder=true&emitFile=false&placeholderSize=20");
+  section.sm_outer.lazy.promo-bg.bg-black.pt-28(data-bg=bg)
+    .inner.pt-2.xs_pt-9.sm_pt-32.lg_pt-44
+      .relative.max-sm_-mx-10.xl_-ml-32(class="md_max-w-[816px]")
+        .flex.justify-center.bg-white.pb-8.max-sm_pt-8.sm_pr-8(
+          class=".sm_bg-white/80 sm_clip-path-polygon-[15%_0%,_100%_0%,_96%_100%,_0_79%]"
+        )
+          //- +svg('~img/racing-always.svg').pointer-events-none.-ml-32.w-auto(width=816, height=201)
+          h1.max-w-xs.py-4.font-michroma.text-xl.uppercase.text-woodsmoke.max-sm_text-center.sm_ml-28.sm_max-w-screen-sm.sm_text-3xl.md_pl-2.md_text-4xl.lg_ml-36.lg_max-w-2xl.lg_text-5xl Racing is always about winning
+        a.absolute.-bottom-8.flex.items-center.justify-center.bg-cod-gray.font-michroma.sm_right-0(
+          href="/catalog",
+          class="right-1/2 h-[61px] w-[212px] max-sm_translate-x-1/2 md_h-[78px] md_w-[263px]"
+        )
+          span.text-sm.uppercase.tracking-widest.text-white.sm_text-base.lg_text-xl Shop Now
+      .mt-80.flex.items-stretch.sm_mt-56(x-data)
+        .swiper.promo-swiper(
+          class="!mx-0 max-w-[685px]",
+          ax-load,
+          x-ignore,
+          x-init="loaded = true",
+          x-data=`promoSwiper($el, {
+              navigation: {
+                nextEl: $refs.nextEl,
+                prevEl: $refs.prevEl
+              },
+              pagination: {
+                el: $refs.pagination,
+                clickable: true
+              }
+          })`
+        )
+          //- .promo-swiper-preloader.absolute.inset-0.z-50.flex.items-center.justify-center.pt-10 loading...
+          .app-preloader.swiper-lazy-preloader(x-show="!loaded")
+          .swiper-wrapper
+            mixin item
+              .swiper-slide.swiper-lazy&attributes(attributes)
+                .relative.bg-flamingo-01
+                  .grid(class="grid-cols-[1fr,2.5fr] sm_grid-cols-[1fr,2fr]")
+                    .max-sm_p-1
+                      +img('~img/feat-helmet.jpg').max-sm_w-24(class="max-sm_h-[115px]")
+                    article.flex.flex-col.items-stretch.bg-flamingo-01.pt-2.pl-2.text-white.sm_pl-7.sm_pt-4.lg_pt-7(
+                      class="max-w-[460px]"
+                    )
+                      h2.font-marianina.font-bold.uppercase.italic.italic.tracking-tight.sm_text-3xl(
+                        class="text-[26px] md_text-[40px]"
+                      ) Featured Helmet
+                      p.mt-1o5.text-sm.uppercase.italic.sm_text-base.md_mt-3o5.md_text-xl Stilo ST5 GT SA2020 Racing Helmet, Composite, Silver
+                  .flex.text-white.sm_absolute.sm_right-0.sm_bottom-0.sm_justify-end
+                    a.flex.w-full.justify-center.bg-cod-gray.p-4.md_p-6(href="/product")
+                      .flex.items-center.gap-4.sm_w-max
+                        span.font-marianina.font-bold.italic.md_text-3xl(class="text-[28px]") $350
+                        span.bg-white-03.h-6.w-px.self-center.bg-boulder
+                        span.leading-tight.sm_w-min View Product
+            +item
+            +item
+            +item
+            +item
+            +item
+            +item
+          .swiper-pagination(x-ref="pagination")
+        .grid.w-14.shrink-0.grid-rows-2.items-stretch.max-sm_hidden(class="md_w-[70px]")
+          button.bg-cod-gray(x-ref="nextEl")
+            span.icm.icm-arrow-right.text-xl.text-white
+          button.bg-white(x-ref="prevEl")
+            span.icm.icm-arrow-left.text-2xl

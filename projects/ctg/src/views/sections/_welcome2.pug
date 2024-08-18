@@ -1,0 +1,50 @@
+mixin s-welcome2
+  section.outer.s-welcome2.relative.pt-6.pb-8.before_absolute.before_inset-0.before_bg-cod-gray.sm_pt-24(
+    class="before_clip-path-polygon-[0%_40px,100%_0,100%_100%,0_100%] sm_mt-[-70px] sm_before_clip-path-polygon-[0%_75px,100%_0,100%_100%,0_100%]"
+  )
+    .inner
+      .s-welcome2-layout.relative.z-10.-mt-2.grid.gap-2o5.sm_mt-2
+        - const imgCn = cn("h-full sm_max-h-[270px] object-cover");
+        - const titleCn = cn("pointer-events-none absolute left-3 top-4 z-10 font-marianina text-xl uppercase text-white sm_left-1 md_text-2xl lg_top-7 lg_left-5 lg_text-3xl");
+        a.g-area-suits.relative(href="/catalog")
+          span(class=titleCn) Suits
+          +img('~img/preview-seats.png').grayscale.transition-all.hover_grayscale-0(
+            width=460,
+            class=imgCn
+          )
+        a.g-area-helmets.relative(href="/catalog")
+          span(class=titleCn) Helmets
+          +img('~img/preview-helmets.png').grayscale.transition-all.hover_grayscale-0(
+            width=460,
+            class=imgCn
+          )
+        a.g-area-shocks.relative(href="/catalog")
+          span(class=titleCn) Shocks
+          +img('~img/preview-shocks.png').grayscale.transition-all.hover_grayscale-0(
+            width=225,
+            class=imgCn
+          )
+        a.g-area-shop.relative(href="/catalog")
+          span(class=titleCn) For the shop
+          +img('~img/preview-shop.png').grayscale.transition-all.hover_grayscale-0(
+            width=695,
+            class=imgCn
+          )
+        a.g-area-shoes.relative(href="/catalog")
+          span(class=titleCn) shoes
+          +img('~img/preview-shoes.png').grayscale.transition-all.hover_grayscale-0(
+            width=225,
+            class="h-full object-cover"
+          )
+        a.g-area-underwear.relative(href="/catalog")
+          span(class=titleCn) underwear
+          +img('~img/preview-underwear.png').grayscale.transition-all.hover_grayscale-0(
+            width=225,
+            class=imgCn
+          )
+        a.g-area-gloves.relative(href="/catalog")
+          span(class=titleCn) gloves
+          +img('~img/preview-gloves.png').grayscale.transition-all.hover_grayscale-0(
+            width=225,
+            class=imgCn
+          )

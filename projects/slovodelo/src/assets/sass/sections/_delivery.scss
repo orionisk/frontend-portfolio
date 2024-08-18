@@ -1,0 +1,48 @@
+.delivery {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  &-block {
+    margin-top: 50px;
+  }
+
+  &-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    @include flex-gap-p(60px);
+  }
+
+  &-btn {
+    @include flex-gap-c(60px);
+
+    font-size: 20px;
+    font-weight: 700;
+    text-align: left;
+
+    &.active,
+    &:hover {
+      color: #d0043c;
+    }
+  }
+
+  &-contents {
+    padding-top: 37px;
+  }
+
+  // SM
+  @media screen and (max-width: $sm-max) {
+    &-buttons {
+      @include flex-gap-p(20px);
+    }
+    &-btn {
+      @include flex-gap-c(20px);
+    }
+  }
+
+  // XM
+  @media screen and (max-width: $xm-max) {
+    &-contents {
+      padding-top: 20px;
+    }
+  }
+}

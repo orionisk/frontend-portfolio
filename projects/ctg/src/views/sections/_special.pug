@@ -1,0 +1,20 @@
+mixin s-special
+  section.outer.py-4.sm_py-8.lg_py-12
+    .inner
+      .relative.mx-auto.gap-2o5(class="max-w-[930px]")
+        .flex.w-full.justify-between.gap-3.border-flamingo-02.pb-1.max-lg_flex-col.lg_items-center.lg_gap-5.lg_border-b
+          .flex.items-center.gap-1.border-flamingo-01.max-lg_border-b.max-lg_pb-1o5.sm_gap-4
+            +svg('~img/icons/iconify-light-send.svg').-left-14.shrink-0.lg_absolute(
+              width=44,
+              height=44
+            )
+            span.flex.items-center.text-sm.uppercase.sm_text-base.lg_max-w-sm.lg_shrink-0 For racing tips and special member-only offers and discounts
+          .flex.gap-2o5.max-xs_flex-col.xs_gap-1
+            input.block.flex-1.border.px-2(
+              class="max-xs_py-[5px] lg_w-[310px]",
+              type="text",
+              placeholder="Enter your email address"
+            )
+            button.block.h-9.bg-flamingo-01.px-6.font-marianina.uppercase.italic.leading-none.tracking-wider.text-white(
+              class="text-[25px]"
+            ) subscribe

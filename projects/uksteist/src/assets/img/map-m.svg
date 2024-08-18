@@ -1,0 +1,38 @@
+<svg preserveAspectRatio="xMidYMid slice" viewBox="0 0 320 509" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect y="434" width="91" height="38" rx="15" fill="#F8F8F8"/>
+<text fill="#1D1F1D" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="18" font-weight="bold" letter-spacing="0em"><tspan x="15.0615" y="459.453">Tallinn</tspan></text>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M66.2464 416.305C72.5947 413.374 77 406.951 77 399.5C77 389.283 68.7173 381 58.5 381C48.2827 381 40 389.283 40 399.5C40 406.951 44.4053 413.374 50.7536 416.305L57.6154 429.322C57.9905 430.033 59.0095 430.033 59.3846 429.322L66.2464 416.305Z" fill="#77833F"/>
+<ellipse cx="58.5" cy="400.5" rx="10.5" ry="11.5" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M255.246 109.305C261.595 106.374 266 99.9514 266 92.5C266 82.2827 257.717 74 247.5 74C237.283 74 229 82.2827 229 92.5C229 99.9514 233.405 106.374 239.754 109.305L246.615 122.322C246.99 123.033 248.01 123.033 248.385 122.322L255.246 109.305Z" fill="#77833F"/>
+<ellipse cx="247.5" cy="92.5" rx="10.5" ry="11.5" fill="white"/>
+<rect x="69" y="93" width="155" height="38" rx="15" fill="#F8F8F8"/>
+<text fill="#1D1F1D" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="18" font-weight="bold" letter-spacing="0em"><tspan x="82.2432" y="118.453">Piirikivi tee 15</tspan></text>
+<a href="https://www.google.com/maps?saddr=My+Location&amp;daddr=59.5416504,24.877599", target="_blank" tabindex="0" class="s-place-mapBtn" role="link" aria-label="link to google maps">
+  <rect x="68" y="43" width="112" height="38" rx="15" fill="#314C51"/>
+  <text fill="#F8F8F8" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="14" font-weight="bold" letter-spacing="0em"><tspan x="90.5928" y="67.019">Marsruut</tspan></text>
+</a>
+<g filter="url(#filter0_d_2663_1004)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M39 221C30.7157 221 24 227.716 24 236V262C24 270.284 30.7157 277 39 277H143C151.284 277 158 270.284 158 262V254.774L166.5 249.866C167.167 249.481 167.167 248.519 166.5 248.134L158 243.226V236C158 227.716 151.284 221 143 221H39Z" fill="#F8F8F8"/>
+</g>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="12" font-weight="500" letter-spacing="0em"><tspan x="84" y="262.802">18.2 km</tspan></text>
+<text fill="#77833F" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="12" font-weight="500" letter-spacing="0em"><tspan x="84" y="243.802">22-26 min</tspan></text>
+<path d="M40.7064 248.361C40.9775 246.44 42.7928 245 44.9435 245H67.0565C69.2072 245 71.0225 246.44 71.2936 248.361L71.9861 253.268C72.1158 254.187 71.3203 255 70.2913 255H41.7087C40.6797 255 39.8842 254.187 40.0139 253.268L40.7064 248.361Z" fill="#314C51"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M62.0937 235.7H49.9063C48.1757 235.7 46.7055 237.004 46.4488 238.766L45.6621 244.166C45.345 246.343 46.9822 248.3 49.1197 248.3H62.8803C65.0178 248.3 66.655 246.343 66.3379 244.166L65.5512 238.766C65.2945 237.004 63.8243 235.7 62.0937 235.7ZM49.9063 233C46.8777 233 44.3049 235.281 43.8556 238.365L43.0689 243.765C42.5141 247.574 45.3791 251 49.1197 251H62.8803C66.6209 251 69.4859 247.574 68.9311 243.765L68.1444 238.365C67.6951 235.281 65.1223 233 62.0937 233H49.9063Z" fill="#314C51"/>
+<path d="M49 249C49 250.657 47.6569 252 46 252C44.3431 252 43 250.657 43 249C43 247.343 44.3431 246 46 246C47.6569 246 49 247.343 49 249Z" fill="#F8F8F8"/>
+<path d="M68 249C68 250.657 66.6569 252 65 252C63.3431 252 62 250.657 62 249C62 247.343 63.3431 246 65 246C66.6569 246 68 247.343 68 249Z" fill="#F8F8F8"/>
+<path d="M40 257C40 256.448 40.5655 256 41.2632 256H70.7368C71.4345 256 72 256.448 72 257V257C72 257.552 71.4345 258 70.7368 258H41.2632C40.5655 258 40 257.552 40 257V257Z" fill="#314C51"/>
+<path d="M42 260.714C42 259.768 42.6396 259 43.4286 259H45.5714C46.3604 259 47 259.768 47 260.714V263.286C47 264.232 46.3604 265 45.5714 265H43.4286C42.6396 265 42 264.232 42 263.286V260.714Z" fill="#314C51"/>
+<path d="M65 260.714C65 259.768 65.6396 259 66.4286 259H68.5714C69.3604 259 70 259.768 70 260.714V263.286C70 264.232 69.3604 265 68.5714 265H66.4286C65.6396 265 65 264.232 65 263.286V260.714Z" fill="#314C51"/>
+<defs>
+<filter id="filter0_d_2663_1004" x="20" y="221" width="151" height="64" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2663_1004"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2663_1004" result="shape"/>
+</filter>
+</defs>
+</svg>

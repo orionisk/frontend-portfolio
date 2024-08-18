@@ -1,0 +1,16 @@
+extends ~views/layout/_base
+
+block variables
+  - const title = 'Main';
+
+block content
+  //- +about-head
+  +page-head('~img/about-us-bg.jpg?format=webp')
+    block text
+      h1.sec-title About us
+      p.sec-subtitle Some facts about our activity
+  +s-promo2
+    block centerImg
+      +img('~img/mango-smoothie.png', {cn: 'self-center'})
+  +s-supplies
+  +s-dream-team

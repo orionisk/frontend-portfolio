@@ -1,0 +1,28 @@
+mixin footer
+  footer.footer.outer.bg-lightsalmon-03.pt-16.pb-10.text-white.lg_pb-14.lg_pt-36
+    .inner
+      .flex.gap-10.border-b.border-b-white.pb-10.max-lg_flex-col.sm_pb-16.xl_gap-20
+        +img('~img/logo-bjk2.png')
+        .flex.flex-1.justify-between.gap-x-5.gap-y-10.max-sm_flex-col
+          div
+            h3.mb-5.text-lg.font-semibold Halaman
+            ul.grid.sm_gap-2
+              li: a(href='#') Mentor
+              li: a(href='#') Tentang Kami
+              li: a(href='#') Terms & Conditions
+              li: a(href='#') Kebijakan Privasi
+          div
+            h3.mb-5.text-lg.font-semibold Kontak
+            address.grid
+              a(href='#') +62 821-2368-3118
+              a(href='#') halo@bebasjamkerja.com
+          div
+            h3.mb-5.text-lg.font-semibold Alamat
+            address Jl. Yos Sudarso no. 21 Kotabaru,#[br]Gondokusuman, DIY 55224
+      .pt-11.lg_pt-16
+        .flex.justify-between
+          cite © Bebas Jam Kerja
+          .flex.gap-4.max-lg_hidden
+            a(href='#'): img(src=require('~img/icons/fb.svg?inline'))
+            a(href='#'): img(src=require('~img/icons/inst.svg?inline'))
+            a(href='#'): img(src=require('~img/icons/twitter.svg?inline'))

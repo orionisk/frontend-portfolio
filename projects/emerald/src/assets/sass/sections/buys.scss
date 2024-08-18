@@ -1,0 +1,161 @@
+.buys__inner {
+	margin-top: 65px;
+
+	display: grid;
+	grid-template-columns: calc(383 / 1200 * 100%) calc(33 / 120 * 100%) calc(33 / 120 * 100%);
+	gap: 78px;
+	grid-gap: 78px;
+}
+.buys__item {
+	display: flex;
+}
+.buys__item__first {
+	// margin-top: -20px;
+
+	line-height: 0.5;
+	font-family: Source Sans Pro;
+	font-size: 60px;
+	text-transform: uppercase;
+	color: #035635;
+}
+.buys__item__last {
+	&-title {
+		margin-bottom: 39px;
+		padding-bottom: 3px;
+
+		max-width: max-content;
+
+		border-bottom: 1px #2c2c2c solid;
+	}
+	margin-left: 30px;
+	padding-bottom: 85px;
+
+	flex-grow: 1;
+
+	position: relative;
+
+	span {
+		display: none;
+	}
+
+	h3 {
+		font-family: Roboto;
+		font-size: 30px;
+		text-transform: uppercase;
+		color: #035635;
+	}
+	.line {
+		width: 100%;
+		display: block;
+		background: #2c2c2c;
+		height: 1px;
+		margin-bottom: 39px;
+	}
+	button {
+		max-width: 240px;
+		width: 100%;
+
+		position: absolute;
+		bottom: 0;
+	}
+	p {
+		font-family: Roboto;
+		font-size: 18px;
+		line-height: 21px;
+		color: #2c2c2c;
+	}
+}
+
+// LG-max
+@media screen and (max-width: $lg-max) {
+	.buys__inner {
+		gap: 70px;
+		grid-gap: 70px;
+	}
+}
+
+// MD-max
+@media screen and (max-width: $md-max) {
+	.buys {
+		&__inner {
+			grid-template-columns: 1fr;
+			justify-items: center;
+		}
+		&__item {
+			max-width: 320px;
+			width: 100%;
+			&__last {
+			}
+		}
+	}
+}
+
+// SM-max
+@media screen and (max-width: $sm-max) {
+	.buys {
+		&__inner {
+			margin-top: 30px;
+
+			gap: 40px;
+			grid-gap: 40px;
+		}
+	}
+}
+
+// XM-max
+@media screen and (max-width: $xm-max) {
+	.buys {
+		&__inner {
+			margin-top: 20px;
+		}
+		&__item {
+			position: relative;
+			&__first {
+				// font-size: 40px;
+				display: none;
+			}
+			&__last {
+				padding-bottom: 65px;
+				margin-left: 0;
+				h3 {
+					font-size: 18px;
+					line-height: 21px;
+				}
+
+				p {
+					font-size: 12px;
+					line-height: 14px;
+
+					br {
+						display: none;
+					}
+				}
+
+				&-title {
+					padding-bottom: 9px;
+					margin-bottom: 16px;
+
+					max-width: 100%;
+
+					display: flex;
+					align-items: flex-end;
+					span {
+						line-height: 0.9;
+						display: block;
+						margin-right: 20px;
+
+						font-family: Source Sans Pro;
+						font-size: 40px;
+						text-transform: uppercase;
+						color: #035635;
+					}
+				}
+
+				button {
+					max-width: 100%;
+					font-size: 12px;
+				}
+			}
+		}
+	}
+}

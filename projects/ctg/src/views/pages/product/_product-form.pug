@@ -1,0 +1,53 @@
+mixin product-form
+  form.z-10.max-w-screen-sm.shrink-0.md_max-xl_pl-28.max-md_mt-4.xl_max-w-md(
+    x-data,
+    @submit.prevent
+  )
+    h1.font-marianina.text-2xl.font-bold.font-bold.uppercase.leading-tight.tracking-tight(
+      class="md_text-[42px]"
+    ) For the Driver
+    h2.font-michroma.text-xl.uppercase.md_text-4xl Sparco Slalom+ Suede Racing Shoe
+    .mt-5.flex.items-center.gap-4.border-y.border-flamingo-01.py-6
+      span.font-bold.sm_text-lg Color:
+      .flex.gap-3o5
+        label
+          input.h-5.w-5.appearance-none.rounded-full.border.border-transparent.checked_border-flamingo-01(
+            type="radio",
+            name="color",
+            style="background-color: #171717"
+          )
+        label
+          input.h-5.w-5.appearance-none.rounded-full.border.border-transparent.checked_border-flamingo-01(
+            type="radio",
+            name="color",
+            style="background-color: #7b7b7b"
+          )
+        label
+          input.h-5.w-5.appearance-none.rounded-full.border.border-transparent.checked_border-flamingo-01(
+            type="radio",
+            name="color",
+            style="background-color: #c4c4c4"
+          )
+    .flex.gap-3o5.border-b.border-cod-gray.pt-4.pb-3o5
+      span.font-bold.sm_text-lg Size:
+      - const data = require("./data/shoeSizes.js");
+      .flex.flex-wrap.gap-x-4o5.gap-y-1.text-lg
+        each size in data
+          label(class="min-w-[26px]")
+            input.peer.appearance-none(type="radio", name="size")
+            span.peer-checked_font-bold= size
+    .flex.justify-around.py-5(x-data="productQuantity")
+      span.text-lg.font-bold.uppercase(class="tracking-[5px]") Quantity
+      .flex.items-center.gap-4
+        button.grid.h-6.w-6.place-content-center(@click="changeQ(-1)", aria-label="Quantity down")
+          +svg('~img/icons/chevron-left.svg')(width=10, height=4)
+        span.w-8.text-center.text-lg.font-bold(aria-label="Quantity", x-text="quantity") 1
+        button.grid.h-6.w-6.place-content-center(@click="changeQ(1)", aria-label="Quantity up")
+          +svg('~img/icons/chevron-right-2.svg')(width=10, height=4)
+    a.group.mt-2.flex.items-center.justify-between.bg-cod-gray.px-7.py-5.text-white.transition-colors.hover_bg-white.hover_text-cod-gray(
+      href="#"
+    )
+      span.font-michroma.uppercase.tracking-widest Add to cart
+      .flex.items-center.gap-3.md_gap-5
+        span.bg-white-03.flex.h-5.w-px.bg-boulder
+        span.text-2xl.font-semibold $599.00

@@ -1,0 +1,49 @@
+.phone-box {
+  &::before,
+  &::after {
+    content: '';
+
+    position: absolute;
+    right: 0;
+    left: 0;
+
+    height: 10px;
+
+    border: 1px solid theme('colors.flamingo.02');
+  }
+
+  &::before {
+    top: -4px;
+    border-bottom-color: transparent;
+  }
+
+  &::after {
+    bottom: -4px;
+    border-top-color: transparent;
+  }
+}
+
+.phone-box-2 {
+  &::before,
+  &::after {
+    content: '';
+
+    position: absolute;
+    top: 2px;
+
+    width: 10px;
+    height: 23px;
+
+    border: 2px solid theme('colors.flamingo.01');
+  }
+
+  &::before {
+    left: -12px;
+    border-right: none;
+  }
+
+  &::after {
+    right: -13px;
+    border-left: none;
+  }
+}

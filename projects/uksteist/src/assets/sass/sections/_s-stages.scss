@@ -1,0 +1,17 @@
+.s-stages {
+  padding-top: 100px;
+  padding-bottom: 80px;
+
+  &-svg-mobile {
+    @media screen and (max-width: 360px) {
+      max-width: calc(100% + 50px);
+
+      // max-width: 310px;
+    }
+  }
+
+  @screen lg {
+    padding-top: 130px;
+    padding-bottom: 180px;
+  }
+}

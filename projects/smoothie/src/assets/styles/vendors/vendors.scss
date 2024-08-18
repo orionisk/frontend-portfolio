@@ -1,0 +1,8 @@
+@use './tailwind';
+@use './icomoon';
+@use './swiper';
+@use './sweetalert';
+
+[x-cloak] {
+  display: none !important;
+}

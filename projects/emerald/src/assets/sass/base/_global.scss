@@ -1,0 +1,48 @@
+html,
+body {
+  -webkit-overflow-scrolling: touch !important;
+  overflow: auto !important;
+  height: 100% !important;
+}
+
+.page {
+  // max-width: 1600px; // Для корректного PixelPerfect
+  min-height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.outer {
+  // padding: 0 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  @media screen and (max-width: $md-max) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  @media screen and (max-width: $xm-max) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+// .inner {
+//   margin: 0 auto;
+//   max-width: 1290px;
+//   width: 100%;
+// }

@@ -1,0 +1,40 @@
+mixin footer
+  footer.footer.outer
+    .inner
+      .footer-content
+        ul.mt-3o5.flex.gap-6.sm_hidden
+          li: a(tabindex="0", href="#"): img.w-6.h-6.sm_w-5.sm_h-5.fill-white(
+            src=require("~img/icons/inst.svg?inline"),
+            alt="instagram icon"
+          )
+          li: a(tabindex="0", href="#"): img.w-6.h-6.sm_w-5.sm_h-5.fill-white(
+            src=require("~img/icons/fb.svg?inline"),
+            alt="facebook icon"
+          )
+        .footer-contacts
+          .mb-3o5.font-medium Kontaktid:
+          p Team Media OU
+          address Harjumaa, Tallinn linn, Tulika põik 4, 10613
+          a Tel.: +372 5820 5581
+          p E-mail: dmitri.vain@gmail.com
+          p Registrikood: 14268077
+          ul.mt-3o5.flex.gap-6.dsm_hidden
+            li: a(tabindex="0", href="#"): img.w-6.h-6.sm_w-5.sm_h-5.fill-white(
+              src=require("~img/icons/inst.svg?inline"),
+              alt="instagram icon"
+            )
+            li: a(tabindex="0", href="#"): img.w-6.h-6.sm_w-5.sm_h-5.fill-white(
+              src=require("~img/icons/fb.svg?inline"),
+              alt="facebook icon"
+            )
+        img.fill-white.dsm_order-first.dsm_w-24(src=require("~img/logo-footer.svg"), alt="logo")
+        .footer-pHelper
+          div
+            p.font-medium Suhtlemine isikliku abistajaga<br>krundi ostmisel:
+            .grid.mt-3.font-light
+              span Svetlana Davidovski
+              span +372 5813 0166
+            ul.mt-11.flex.gap-3
+              li: a.underline(tabindex="0", href="#") Telegram
+              li: a.underline(tabindex="0", href="#") WhatApp
+              li: a.underline(tabindex="0", href="#") Viber

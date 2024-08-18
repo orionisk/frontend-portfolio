@@ -1,0 +1,12 @@
+mixin blog-article(props)
+  - const { img, date, title, p, postedIn, postedBy } = props;
+  - const fDate = Intl.DateTimeFormat('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }).format(new Date(date));
+  article.s-blog-item
+    .relative
+      +img(img)
+      time.s-blog-time(datetime=date) #{ fDate }
+    a(href='#')
+      h3.s-blog-title.mt-5 #{ title }
+    p.s-blog-p.mt-5 #{ p }
+    footer.mt-4.text-black.font-medium(class='text-[15px]')
+      | Posted in #[a.text-rose-bud(href='#')= postedIn] by #[a.text-rose-bud(href='#')= postedBy]

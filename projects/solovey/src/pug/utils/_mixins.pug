@@ -1,0 +1,11 @@
+mixin systemItem(number, title, text)
+	li.system-item
+		.system-item__header
+			.system-item__number: span=number
+			.system-item__title=title
+		.system-item__text!=text
+
+mixin tasksTableItem(left, right)
+	.tasks-table__item
+		.tasks-table__item--left!=left
+		.tasks-table__item--right!=right

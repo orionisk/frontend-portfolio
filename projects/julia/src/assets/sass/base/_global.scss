@@ -1,0 +1,25 @@
+.page {
+	min-height: 100vh;
+	overflow: hidden;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.outer {
+	padding: 0 2rem;
+	@media screen and (max-width: $xm-max) {
+		padding: 0 3rem;
+	}
+}
+
+.inner {
+	margin: 0 auto;
+	max-width: 760px;
+	width: 100%;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}

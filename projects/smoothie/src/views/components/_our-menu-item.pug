@@ -1,0 +1,8 @@
+mixin menu-item(props)
+  - const { img, title, descr, price } = props;
+  article.flex.flex-col.gap-2.lg_gap-7.lg_flex-row
+    +img(img, {cn: 'flex-shrink-0'}).dlg_mx-auto
+    .text-white.dlg_text-center.dlg_order-1
+      h3.text-2xl.font-medium.leading-tight.lg_leading-normal Tasty Banana Smoothie
+      p.leading-tight Lorem ipsum dolor sit amet, consectetur adipiscing elit. ipsum dolor sit amet, consectetur adipiscing.
+    .text-caper.font-wfts.leading-none.dlg_text-center(class='text-[56px]') $38

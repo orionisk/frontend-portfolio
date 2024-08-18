@@ -1,0 +1,25 @@
+mixin history
+  section#ajalugu.s-history.outer
+    .inner
+      h2.h2(x-data, x-intersect-class.once="animate-fadeInDown") Ajalugu:
+      h3.h3.font-medium.mt-4.lg_mt-9.lg_ml-2.mb-6.delay(
+        x-cloak,
+        class="lg_mb-[75px]",
+        x-data,
+        x-intersect-class.once="animate-fadeInDown"
+      ) Osa Sinu elust
+      ul.s-history-list(class="animate-distance-1/5 animate-duration-300", x-data)
+        li(x-intersect-class.once="animate-fadeInLeftBig")
+          p Mets kasvas Maal veel enne inimese tekkimist. Metsa juured peidavad Maa ajalugu, aga mets ise jagab meiega oma rahu. Igas metsas on midagi erilist ja see on hindamatu. Nende jaoks, kes suhtuvad elamispinna valikusse teadlikult, ei ole kodu lihtsalt koht, kus pärast tööd veeta aega. See on koht taastumiseks ja enda „laadimiseks“. Metsaga ümbritsetud kodu pakub tõelist rahu, leevendab ärevust, pakkudes rahu ja enesekindlust. Meie maailmas püüdleb kõik uuenemise poole - see on elu võti.
+        li(x-intersect-class.once="animate-fadeInLeftBig")
+          p Maailm, nii väline kui ka sisemine, on pidevas liikumises. Püüame mõista iga elatud hetke väärtust ja ainulaadsust. Arendada tundlikkust väikseimate muutuste suhtes eluvoolus. Väliste sündmuste ülekülluse tõttu jääb meil märkamata sisemiste sündmuste sügavus. Jalutuskäik metsas või mererannal viib meid tagasi meie endi juurde.
+        li(x-intersect-class.once="animate-fadeInLeftBig")
+          p Selle ainulaadse kohaga tutvudes tekkis meis soov anda oma panus selle suure maatüki arengusse, alustada uut etappi. Luua looduse keskel eriline elamurajoon. Integreerida õrnalt ja hoolivalt loodusesse uusimad tehnilised võimalused, tasakaalustades sajanditepikkust ajalugu, olevikku ja tulevikku. Võib-olla just selle paigaga saab olema tihedalt seotud osa Sinu õnnelikust elust.
+          a.btn1.mt-10.lg_mt-40(
+            class="animate-delay-500 animate-distance-1/5",
+            x-data,
+            x-intersect-class.once="animate-fadeInLeftBig",
+            tabindex="0",
+            href="#krundidMap",
+            @click="$scroll($el.hash)"
+          ) Krundid

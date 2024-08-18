@@ -1,0 +1,27 @@
+.promo2 {
+	min-height: 35rem;
+
+	background: #0000f0 url('#{$imgPath}/promo2-bg.png') 50% / cover no-repeat;
+
+	.inner {
+		max-width: 1115px;
+		min-height: inherit;
+
+		display: flex;
+		align-items: center;
+	}
+	&__title {
+		color: #ffffff;
+		font-size: 7.3rem;
+		font-weight: 700;
+		line-height: 7.751rem;
+	}
+	@media screen and (max-width: $xm-max) {
+		min-height: 432px;
+
+		&__title {
+			max-width: 40rem;
+			line-height: 46px;
+		}
+	}
+}

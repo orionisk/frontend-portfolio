@@ -1,0 +1,19 @@
+html,
+body {
+  height: 100%;
+}
+
+.page {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.outer {
+  @apply px-6;
+}
+
+.inner {
+  @apply container mx-auto;
+}

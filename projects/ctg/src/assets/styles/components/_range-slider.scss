@@ -1,0 +1,68 @@
+.range-slider {
+  height: 4px;
+  background-color: theme('colors.cod-gray');
+  border: none;
+
+  .noUi {
+    &-connects {
+      border-radius: 0;
+    }
+
+    &-connect {
+      background-color: theme('colors.flamingo.01');
+    }
+
+    &-handle {
+      cursor: pointer;
+
+      top: -10px;
+      right: -10px;
+
+      width: 22px;
+      height: 22px;
+
+      background-color: theme('colors.cod-gray');
+      border-radius: 100%;
+      box-shadow: none;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    &-origin {
+      & > .noUi-tooltip {
+        bottom: -60px;
+      }
+    }
+
+    &-tooltip {
+      top: 0;
+      right: unset;
+      bottom: unset;
+      left: 0;
+      transform: unset;
+
+      width: max-content;
+      padding: 0;
+
+      // bottom: -53px;
+      padding-top: 24px;
+
+      font-weight: bold;
+
+      background: transparent;
+      border: none;
+
+      &-single {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-top: 32px;
+
+        // padding-top: 24px;
+      }
+    }
+  }
+}

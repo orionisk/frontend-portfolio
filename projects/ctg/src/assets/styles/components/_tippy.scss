@@ -1,0 +1,16 @@
+.tippy-box[data-theme~='menu'] {
+  // width: calc(55vw + 20px);
+  background-color: transparent;
+
+  .tippy-content {
+    padding: 0;
+  }
+}
+
+.tippy-box[data-theme~='menu2'] {
+  background-color: transparent;
+
+  .tippy-content {
+    padding: 0;
+  }
+}

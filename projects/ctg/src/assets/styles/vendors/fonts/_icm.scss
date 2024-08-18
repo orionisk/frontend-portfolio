@@ -1,0 +1,67 @@
+@font-face {
+  font-family: icomoon;
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+  src: url('~fonts/icomoon.woff') format('truetype');
+}
+
+.icm {
+  speak: never;
+
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: icomoon !important;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-transform: none;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icm-arrow-left::before {
+  content: '\e900';
+}
+
+.icm-arrow-right::before {
+  content: '\e901';
+}
+
+.icm-basket::before {
+  content: '\e902';
+}
+
+.icm-call::before {
+  content: '\e903';
+}
+
+.icm-chat::before {
+  content: '\e904';
+}
+
+.icm-chevron-down::before {
+  content: '\e905';
+}
+
+.icm-chevron-right::before {
+  content: '\e907';
+}
+
+.icm-chevron-up::before {
+  content: '\e908';
+}
+
+.icm-location::before {
+  content: '\e90e';
+}
+
+.icm-search::before {
+  content: '\e910';
+}
+
+.icm-star::before {
+  content: '\e911';
+}

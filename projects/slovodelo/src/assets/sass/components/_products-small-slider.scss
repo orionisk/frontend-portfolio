@@ -1,0 +1,14 @@
+.products-small-slider {
+  margin-top: 35px;
+  position: relative;
+  &-container {
+    overflow: unset !important;
+  }
+
+  &-wrapper {
+    margin: -25px;
+    padding: 25px;
+
+    overflow: hidden;
+  }
+}

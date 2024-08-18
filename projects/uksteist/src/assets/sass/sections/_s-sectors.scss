@@ -1,0 +1,86 @@
+.a-cloud {
+}
+
+.s-sec {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 1160px;
+
+  background: url('~img/bg-plan-all-mobile.jpg?prop=placeholder&placeholder=true&emitFile=false&placeholderSize=50')
+    50% / cover no-repeat;
+  @screen xs {
+    height: 1300px;
+
+    background: url('~img/bg-plan-all.jpg') 50% / cover no-repeat !important;
+  }
+  @screen md {
+    height: 2532px;
+  }
+
+  @media screen and (min-width: 1921px) {
+    height: 3370px;
+  }
+}
+
+.s-sectors {
+  position: relative;
+  z-index: 1;
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px 8px;
+
+    margin-top: 20px;
+    padding-right: 20px;
+    @screen md {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &-circle {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+
+    width: 126px;
+    height: 126px;
+    margin-top: 30px;
+
+    font-size: 16px;
+    color: theme('colors.th-white');
+
+    backdrop-filter: blur(8px);
+    border: 1px solid theme('colors.th-white');
+    border-radius: 50%;
+
+    img {
+      height: 85px;
+    }
+
+    @screen sm {
+      margin-top: 100px;
+    }
+
+    @screen md {
+      width: 214px;
+      height: 214px;
+      margin-top: 400px;
+
+      font-size: 20px;
+
+      img {
+        height: auto;
+      }
+    }
+  }
+
+  @screen md {
+    padding-top: 370px;
+  }
+}

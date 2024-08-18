@@ -1,0 +1,25 @@
+@use './tailwind';
+@use 'swiper/css/bundle';
+@use 'tippy.js/dist/tippy';
+@use 'sweetalert2/src/sweetalert2';
+@import 'photoswipe/style.css';
+
+.swal2-html-container {
+  margin: 0;
+
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: inherit;
+}
+
+.swal2-popup {
+  padding-bottom: 0;
+
+  font-family: Montserrat;
+}
+
+[x-cloak] {
+  // display: none !important;
+  visibility: hidden;
+}

@@ -1,0 +1,7 @@
+mixin accordion
+  .grid(x-data='accordion')
+    button.flex.items-center.justify-between.p-4.pr-3.font-semibold(@click='expanded = !expanded')
+      span Kategori
+      span.icm.icm-arrow-up.text-xl.transition-transform(:class='{ "rotate-180": expanded }')
+    div(x-show='expanded', x-collapse.duration.300ms)
+      block

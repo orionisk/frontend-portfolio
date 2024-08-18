@@ -1,0 +1,58 @@
+extends ./layout/_base
+
+//- include ./utils/_mixins.pug
+//- include ./components/_product-tile.pug
+//- include ./components/_catalog-block.pug
+include ./components/_m-form.pug
+include ./components/_breadcrumb.pug
+include ./components/_text-example.pug
+
+block append variables
+	- const title = 'Полиграфия'
+
+block content
+	+breadcrumb(['Главная страница', 'Услуги', 'Полиграфия и дизайн'])
+	section.outer.polygraphy
+		.inner
+			.polygraphy-block
+				.polygraphy-view
+					.polygraphy-view-img.polygraphy-view-img--big: img(src=`${img}/services-1.jpg`, alt="polygraphy-img")
+					.polygraphy-view-img: img(src=`${img}/services-1.jpg`, alt="polygraphy-img")
+					.polygraphy-view-img: img(src=`${img}/services-1.jpg`, alt="polygraphy-img")
+					.polygraphy-view-img: img(src=`${img}/services-1.jpg`, alt="polygraphy-img")
+					.polygraphy-view-img: img(src=`${img}/services-1.jpg`, alt="polygraphy-img")
+				.polygraphy-info
+					.s-title.s-title--2 Полиграфия и дизайн
+					.polygraphy-info__items
+						.polygraphy-info-item
+							.polygraphy-info-item__title Бизнес полиграфия и фирменный стиль
+							.polygraphy-info-item__descr Разработка дизайна с нуля до полного комплекта решений. Печать бланков, конвертов, визиток, поздравительных открыток, комплементарных карт и т.д. Самые сложные и высокотехнологичные способы отделки продукции. Использование новейшего оборудования для создания эксклюзивных эффектов
+						.polygraphy-info-item
+							.polygraphy-info-item__title Календари
+							.polygraphy-info-item__descr Настенные, перекидные, карманные, настольные, квартальные. Разработка индивидуальных эксклюзивных проектов под конкретного заказчика. Нестандартные решения, работа с деревом, пластиком, камнем, композитными материалами. Любые объемы при разумных ценах.
+						.polygraphy-info-item
+							.polygraphy-info-item__title Книги и брошюры
+							.polygraphy-info-item__descr Все виды переплета: мягкий, жесткий, открытый, скрепка, пружина и т.д.
+								| <br>Уникальная технология Layflat – идеальная раскрываемость книги на 180 градусов.
+								| <br>Тираж от 1 шт. Использование новейших разработок в области материалов.
+								| <br>Высочайшее качество производства при сжатых сроках.
+						.polygraphy-info-item
+							.polygraphy-info-item__title Листовая продукция
+							.polygraphy-info-item__descr Листовки, открытки, флаеры, буклеты – любые форматы любыми тиражами
+								| <br>Все виды печати, отделки и постпечатной обработки. Антикризисные бюджетные предложения.
+						.polygraphy-info-item
+							.polygraphy-info-item__title Упаковка
+							.polygraphy-info-item__descr Держим в одних руках все нити производства, чтобы проверить добротность
+								| <br>исполнения на каждом этапе. Ваш персональный менеджер лично отвечает за
+								| <br>качество. Вы в обязательном порядке получите сигнальные образцы.
+					a(href="#").section-btn.polygraphy-info-btn Перейти в портфолио
+	section.outer.request
+		.inner
+			h1.s-title.s-title--1 Нужна полиграфическая продукция?
+			h2.s-subtitle.s-subtitle--1 Предлагаем нашим Клиентам широкий спектр услуг по производству <br>
+				| печатной и сувенирной продукции. Мы воплотим в жизнь проекты любого уровня сложности <br>
+				| в кратчайшие сроки. Подробную информацию Вы можете получить в соответсвующих разделах сайта.
+			+mForm
+	section.outer.text-example
+		.inner
+			+textExampleBlock

@@ -1,0 +1,20 @@
+.promo2 {
+  position: relative;
+
+  // padding-top: 85px;
+  // padding-bottom: 85px;
+
+  &-decor {
+    position: absolute;
+
+    &.--1 {
+      bottom: -108px;
+      left: -476px;
+    }
+
+    &.--2 {
+      top: -82px;
+      right: -484px;
+    }
+  }
+}

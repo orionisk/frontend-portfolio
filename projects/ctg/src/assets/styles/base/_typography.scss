@@ -1,0 +1,10 @@
+.page {
+  font-family: theme('fontFamily.inter');
+  font-size: 1rem;
+  font-weight: 400;
+  color: theme('colors.cod-gray');
+}
+
+.font-feat {
+  font-feature-settings: 'salt' on, 'liga' off;
+}

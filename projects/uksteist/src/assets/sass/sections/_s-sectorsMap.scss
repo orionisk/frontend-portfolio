@@ -1,0 +1,70 @@
+.s-sectorsMap {
+  padding-top: 200px;
+
+  &-wrapper {
+    position: relative;
+
+    margin-bottom: 78px;
+
+    // margin-top: 120px;
+
+    svg {
+      max-width: 100%;
+      height: auto;
+
+      .path-sector {
+        transition: all 0.1s ease-out;
+
+        &:focus {
+          outline: none;
+        }
+
+        &:hover {
+          fill-opacity: 0.4;
+        }
+      }
+
+      :not(.path-sector) {
+        pointer-events: none;
+      }
+    }
+  }
+  @media screen and (min-width: 1921px) {
+    &-wrapper {
+      margin-bottom: 100px;
+    }
+  }
+  @media screen and (min-width: 1921px) {
+    svg {
+      width: 1060px;
+    }
+  }
+  @screen dxl {
+    svg {
+      max-width: 800px;
+    }
+  }
+
+  @screen dmd {
+    padding-top: 100px;
+
+    &-wrapper {
+      margin-bottom: 40px;
+    }
+
+    svg {
+      max-width: 410px;
+    }
+  }
+  @screen dxs {
+    padding-top: 0;
+
+    &-wrapper {
+      margin-bottom: 32px;
+    }
+
+    svg {
+      width: 317px;
+    }
+  }
+}

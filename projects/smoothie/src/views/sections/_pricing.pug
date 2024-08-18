@@ -1,0 +1,24 @@
+mixin s-pricing
+  section.outer.s-pricing.pt-4.pb-12.lg_pt-8.lg_pb-24
+    .inner
+      .text-center
+        h2.sec-title Our Pricing Tables
+        p.sec-subtitle.text-rose-bud.leading-4 Take a look at our packages prices
+      .s-pricing-items.mt-5.relative.grid.gap-5.sm_mt-10.sm_grid-cols-2.lg_mt-20.lg_grid-cols-3
+        - const btnCn = cvaButton({ intent: 'v5', size: 'small', font: 'small', class: 'tracking-[3px]' });
+        - const itemCn = cn('bottom-pattern --v1 relative pt-5 pb-32 px-7 text-center overflow-hidden lg_px-14 after_-left-40 rounded-[5px]');
+        article(class=itemCn)
+          h3.sec-title Starter
+          span.text-rose-bud.font-wfts.leading-none(class='text-[80px]') $50
+          p.mt-4.text-dusty-gray.leading-relaxed(class='text-[15px]') Plan one lorem imsup included#[br]Plan two included lorem lorem ipsum#[br]Plan three included tast here#[br]Plan one lorem imsup lorem included#[br]Plan two included lorem ipsum#[br]Plan three included tast lorem here
+          button.mt-5.md_mt-10(class=btnCn) View More
+        article(class=itemCn)
+          h3.sec-title Middle
+          span.text-rose-bud.font-wfts.leading-none(class='text-[80px]') $100
+          p.mt-4.text-dusty-gray.leading-relaxed(class='text-[15px]') Plan one lorem imsup included#[br]Plan two included lorem lorem ipsum#[br]Plan three included tast here#[br]Plan one lorem imsup lorem included#[br]Plan two included lorem ipsum#[br]Plan three included tast lorem here
+          button.mt-5.md_mt-10(class=btnCn) View More
+        article(class=itemCn)
+          h3.sec-title Platinum
+          span.text-rose-bud.font-wfts.leading-none(class='text-[80px]') $500
+          p.mt-4.text-dusty-gray.leading-relaxed(class='text-[15px]') Plan one lorem imsup included#[br]Plan two included lorem lorem ipsum#[br]Plan three included tast here#[br]Plan one lorem imsup lorem included#[br]Plan two included lorem ipsum#[br]Plan three included tast lorem here
+          button.mt-5.md_mt-10(class=btnCn) View More

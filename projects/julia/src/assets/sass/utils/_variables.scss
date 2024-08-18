@@ -1,0 +1,23 @@
+// Path
+$path: '';
+@if ($env) {
+	$path: '/portfolio/julia';
+}
+
+$fontPath: '#{$path}/assets/fonts';
+$imgPath: '#{$path}/assets/img';
+
+// Colors
+
+// Sizes
+
+$xm-min: 320px;
+$sm-min: 480px;
+$md-min: 768px;
+$lg-min: 1024px;
+$xl-min: 1366px;
+
+$xm-max: 479px;
+$sm-max: 767px;
+$md-max: 1023px;
+$lg-max: 1365px;

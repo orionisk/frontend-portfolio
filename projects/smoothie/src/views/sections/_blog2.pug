@@ -1,0 +1,12 @@
+mixin s-blog2
+  section.outer.s-blog2.py-5.sm_py-10.lg_py-20
+    .inner
+      .grid.gap-5.gap-y-12.xs_grid-cols-2.sm_grid-cols-3
+        - const btnCn = cvaButton({ intent: 'v3', size: 'large' });
+        +blog-article({ img: '~img/blog-1.jpg', date: '2022-02-02', title: 'Lorem ipsum dolor sit amet', p: 'Quisque vitae cursus orci, ac dignissim odio. Ut dapibus aliquam neque tempus aliquet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', postedIn: 'Smoothies', postedBy: 'Admin' })
+        +blog-article({ img: '~img/blog-2.jpg', date: '2022-02-01', title: 'Lorem ipsum dolor sit', p: 'Quisque vitae cursus orci, ac dignissim odio. Ut dapibus aliquam neque tempus aliquet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', postedIn: 'Smoothies', postedBy: 'Admin' })
+        +blog-article({ img: '~img/blog-3.jpg', date: '2022-02-02', title: 'Lorem ipsum dolor sit amet', p: 'Quisque vitae cursus orci, ac dignissim odio. Ut dapibus aliquam neque tempus aliquet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', postedIn: 'Smoothies', postedBy: 'Admin' })
+        +blog-article({ img: '~img/blog-4.jpg', date: '2022-02-02', title: 'Lorem ipsum dolor sit amet', p: 'Quisque vitae cursus orci, ac dignissim odio. Ut dapibus aliquam neque tempus aliquet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', postedIn: 'Smoothies', postedBy: 'Admin' })
+        +blog-article({ img: '~img/blog-5.jpg', date: '2022-02-02', title: 'Lorem ipsum dolor sit', p: 'Quisque vitae cursus orci, ac dignissim odio. Ut dapibus aliquam neque tempus aliquet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', postedIn: 'Smoothies', postedBy: 'Admin' })
+        +blog-article({ img: '~img/blog-6.jpg', date: '2022-02-02', title: 'Lorem ipsum dolor sit amet', p: 'Quisque vitae cursus orci, ac dignissim odio. Ut dapibus aliquam neque tempus aliquet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', postedIn: 'Smoothies', postedBy: 'Admin' })
+      button.mt-8.mx-auto.block.lg_mt-16(class=btnCn) Load more

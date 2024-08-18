@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+q {
+  &::before,
+  &::after {
+    content: none;
+  }
+}
+
+picture {
+  display: block;
+}

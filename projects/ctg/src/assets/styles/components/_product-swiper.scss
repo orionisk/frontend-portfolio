@@ -1,0 +1,19 @@
+.product-swipers {
+  .swiper {
+    &-slide-thumb-active {
+      &::before {
+        pointer-events: none;
+        content: '';
+
+        position: absolute;
+        inset: 0 0;
+
+        background: linear-gradient(0deg, rgb(243 93 20 / 35%), rgb(243 93 20 / 35%));
+      }
+    }
+  }
+
+  .app-preloader {
+    translate: 50% -50%;
+  }
+}

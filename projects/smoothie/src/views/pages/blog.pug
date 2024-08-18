@@ -1,0 +1,12 @@
+extends ~views/layout/_base
+
+block variables
+  - const title = 'Main';
+  - const active = 'blog';
+
+block content
+  +page-head('~img/blog-bg.jpg?format=webp')
+    block text
+      h1.sec-title Our Blog
+      p.sec-subtitle Read and follow our posts
+  +s-blog2

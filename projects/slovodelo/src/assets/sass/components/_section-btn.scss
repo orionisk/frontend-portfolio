@@ -1,0 +1,18 @@
+.section-btn {
+  margin: 0 auto;
+  margin-top: 40px;
+
+  width: 240px;
+  height: 40px;
+
+  @include flex;
+
+  border: 1px solid #515050;
+  border-radius: 15px;
+
+  font-size: 15px;
+
+  &:hover {
+    color: #d0043c;
+  }
+}

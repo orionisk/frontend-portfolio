@@ -1,0 +1,73 @@
+section.outer.bg-lightsalmon-07.pt-11.pb-24.lg_py-28
+  .inner
+    .mx-auto.text-center(class='max-w-[528px]')
+      h2.text-xl.font-semibold.sm_text-2xl.lg_text-3xl #[span.text-lightsalmon-03 Yang membedakan] dengan pelatihan lain
+      p.mt-3.md_mt-6 Kamu akan dibimbing dari nol sampai kamu #[br.max-sm_hidden]#[span.font-bold mendapatkan projek pertama]
+    .mt-44.grid.place-content-center.gap-y-40.md_mt-48.lg_grid-cols-3
+      //- mixin item
+        .relative.text-white
+          img.pointer-events-none.max-sm_hidden(src=require('~img/projek-bg.svg'), alt='')
+          img.pointer-events-none.sm_hidden(src=require('~img/projek-bg-m.svg'), alt='')
+          .absolute.inset-0.flex.flex-col.justify-center.px-5.text-center
+            .absolute.-top-36.sm_-top-36.flex.w-full.justify-center
+              +img(`~img/projek-1.png`, {cn: 'max-sm_max-w-[250px] max-sm_mr-10'}).max-sm_h-56
+            .mx-auto.mt-4.max-w-xs
+              h3.text-xl.sm_text-2xl.font-semibold Mentoring
+              p.mt-2.px-3 Kamu akan mendapatkan 3 kali Live Mentoring gratis untuk setiap pembelian kelas
+      .relative.text-white
+        img.pointer-events-none.max-sm_hidden(
+          src=require('~img/projek-bg.svg'),
+          alt='',
+          width=410,
+          height=273
+        )
+        img.pointer-events-none.sm_hidden(
+          src=require('~img/projek-bg-m.svg'),
+          width=312,
+          height=273,
+          alt=''
+        )
+        .absolute.inset-0.flex.flex-col.justify-center.px-5.text-center
+          .absolute.-top-36.flex.w-full.justify-center.sm_-top-36
+            +img(`~img/projek-1.png`, {cn: 'max-sm_max-w-[250px] max-sm_mr-10'}).max-sm_h-56
+          .mx-auto.mt-4.max-w-xs
+            h3.text-xl.font-semibold.sm_text-2xl Mentoring
+            p.mt-2.px-3 Kamu akan mendapatkan 3 kali Live Mentoring gratis untuk setiap pembelian kelas
+      .relative.text-white
+        img.pointer-events-none.max-sm_hidden(
+          src=require('~img/projek-bg.svg'),
+          alt='',
+          width=410,
+          height=273
+        )
+        img.pointer-events-none.sm_hidden(
+          src=require('~img/projek-bg-m.svg'),
+          width=312,
+          height=273,
+          alt=''
+        )
+        .absolute.inset-0.flex.flex-col.justify-center.px-5.text-center
+          .absolute.-top-36.flex.w-full.justify-center.sm_-top-36
+            +img(`~img/projek-2.png`, {cn: 'max-sm_max-w-[250px] max-sm_mr-7'}).max-sm_h-56
+          .mx-auto.mt-4.max-w-xs
+            h3.text-xl.font-semibold.sm_text-2xl Projek
+            p.mt-2.px-3 Kamu akan dibimbing untuk mendapatkan projek pertama sebagai Freelancer
+      .relative.text-white
+        img.pointer-events-none.max-sm_hidden(
+          src=require('~img/projek-bg.svg'),
+          alt='',
+          width=410,
+          height=273
+        )
+        img.pointer-events-none.sm_hidden(
+          src=require('~img/projek-bg-m.svg'),
+          width=312,
+          height=273,
+          alt=''
+        )
+        .absolute.inset-0.flex.flex-col.justify-center.px-5.text-center
+          .absolute.-top-36.flex.w-full.justify-center.sm_-top-36
+            +img(`~img/projek-3.png`, {cn: 'max-sm_max-w-[160px] max-sm_mr-5'}).max-sm_h-56
+          .mx-auto.mt-4.max-w-xs
+            h3.text-xl.font-semibold.sm_text-2xl Komunikasi
+            p.mt-2.px-3 Kamu bisa belajar bagaimana berkomunikasi dengan client

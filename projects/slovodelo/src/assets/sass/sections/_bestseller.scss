@@ -1,0 +1,19 @@
+.bestseller {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  &-slider {
+    position: relative;
+    &-container {
+      overflow: unset !important;
+    }
+
+    &-wrapper {
+      margin: -25px;
+      margin-top: 7px;
+      padding: 25px;
+
+      overflow: hidden;
+    }
+  }
+}

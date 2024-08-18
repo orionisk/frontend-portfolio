@@ -1,0 +1,23 @@
+mixin pHelper
+  section.s-pHelper.outer.overflow-hidden
+    .inner
+      .s-pHelper-content.animate-distance-10(
+        x-data,
+        x-intersect-class.once="animate-fadeInDownBig"
+      )
+        +img('~img/personal-helper.jpg', {className: 's-pHelper-img'})
+        h3.s-pHelper-h3 Suhtlemine isikliku abistajaga krundi ostmisel:
+        .s-pHelper-text.mt-14.lg_mt-0
+          h4.font-medium.mb-6.ml-1(class="text-[22px]") Svetlana Davidovski
+          .ml-1.grid.gap-2o5.font-medium.text-sm
+            a.flex.gap-4(href="#")
+              img(src=require("~img/icons/mail.svg"), alt="mail icon")
+              p svetlana@svkinnisvara.ee
+            a.flex.gap-4(href="#")
+              img(src=require("~img/icons/phone2.svg"), alt="phone icon")
+              p +372 5813 0166
+          ul.mt-7.flex.gap-4
+            li: a(tabindex="0", href="#"): img(src=require("~img/icons/tg.svg"), alt="tg icon")
+            li: a(tabindex="0", href="#"): img(src=require("~img/icons/wsap.svg"), alt="whatsapp icon")
+            li: a(tabindex="0", href="#"): img(src=require("~img/icons/viber.svg"), alt="viber icon")
+          img.s-pHelper-11(src=require("~img/helper-11.svg"), alt="")

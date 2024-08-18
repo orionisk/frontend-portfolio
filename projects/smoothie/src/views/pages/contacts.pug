@@ -1,0 +1,11 @@
+extends ~views/layout/_base
+
+block variables
+  - const title = 'Main';
+
+block content
+  +page-head('~img/contact-bg.jpg?format=webp')
+    block text
+      h1.sec-title Contact
+      p.sec-subtitle Get in touch with us
+  +s-contact

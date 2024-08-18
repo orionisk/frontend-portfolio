@@ -1,0 +1,73 @@
+.range-slider {
+	&-inputs {
+		margin-top: 22px;
+		display: grid;
+		grid-template-columns: max-content max-content;
+		gap: 10px;
+		align-items: center;
+
+		& > label {
+			display: flex;
+			align-items: center;
+		}
+	}
+	&-input {
+		&-slider {
+			margin-top: 10px;
+		}
+		margin-left: 5px;
+
+		height: 35px;
+		width: 80px;
+
+		border-radius: 15px;
+
+		text-align: center;
+		font-size: 16px;
+		color: inherit;
+	}
+
+	.multi-range {
+		height: 15px;
+
+		display: flex;
+		align-items: center;
+
+		background: none;
+		border: none;
+		box-shadow: none;
+	}
+}
+
+.noUi {
+	&-base {
+		height: 2px;
+	}
+	&-connects {
+		// height: 5px;
+		background-color: #9d9d9d;
+	}
+
+	&-connect {
+		background-color: #cd2152;
+	}
+
+	&-touch-area {
+		height: 10px;
+	}
+
+	&-horizontal &-handle {
+		// max-height: 100%;
+		height: 16px;
+		width: 16px;
+
+		border-radius: 50%;
+		border-color: #cd2152;
+		background: #fff;
+
+		&::before,
+		&::after {
+			display: none;
+		}
+	}
+}

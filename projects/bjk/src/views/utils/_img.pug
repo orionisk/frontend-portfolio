@@ -1,0 +1,83 @@
+mixin img(url, o = {})
+  -
+    const def = {
+        pswp: false,
+        cn: '', ar: true,
+        q: 95, w: null,
+        sz: false,
+        sizes: [480, 960, 1920],
+        ph: true, phSize: 5,
+        webp: true, webpQ: 95,
+        avif: false, avifQ: 80,
+        lazy: true, lazyCn: 'lazy'
+      }
+
+    const opts = { ...def, ...o };
+
+    const ss = new Set();
+    opts.sizes.forEach((size, i, arr) => {
+      const w = opts.w || require(url + '?prop=width');
+      if (!w) return ss.add(size);
+      if (w <= size) return ss.add(w)
+      if (w > size && w / size <= 1.25) return ss.add(w);
+      return ss.add(size);
+    });
+
+    const srcsetStr = opts.sz ? [...ss].map(size => {
+      return `sizes[]=${size}`
+      }).join(",") : '';
+
+    const formats = (format) => {
+      if (!opts[format]) return false;
+      return require(url + `?format=${format},quality=${opts[format + 'Q']}&${srcsetStr}`)
+    }
+
+    const f = () => {
+      return {
+        width: require(url + '?prop=width'),
+        height: require(url + '?prop=height'),
+        srcset: opts.sz && require(`${url}?${srcsetStr}&quality=${opts.q}`),
+        src: require(`${url}?quality=${opts.q}`),
+        webp: formats('webp'),
+        webpSrc: require(`${url}?format=webp&quality=${opts.webpQ}`),
+        avif: formats('avif'),
+        ph: opts.ph && require(`${url}?prop=placeholder&placeholder=true&emitFile=false&placeholderSize=${opts.phSize}`),
+      }
+    }
+    const r = f();
+
+  -
+    const srcsetAttr = opts.lazy ? "data-srcset" : "srcset";
+
+  mixin picture
+    picture(class=opts.cn)
+      if block
+        block
+      if opts.avif
+        source(type='image/avif')&attributes({ [srcsetAttr]: r.avif })
+      if opts.webp
+        source(type='image/webp')&attributes({ [srcsetAttr]: r.webp })
+      img(
+        class=opts.lazy ? opts.lazyCn : '',
+        src=opts.lazy && opts.ph ? r.ph : opts.lazy ? false : r.src,
+        data-src=opts.lazy && r.src,
+        width=r.width,
+        height=r.height,
+        style=opts.ar && `aspect-ratio: ${r.width} / ${r.height}`,
+        alt=''
+      )&attributes({[srcsetAttr]: opts.sz && r.srcset})&attributes(attributes)
+  if opts.pswp
+    a(
+      href=r.webpSrc,
+      data-pswp-width=r.width,
+      data-pswp-height=r.height,
+      data-cropped='true',
+      target='_blank'
+    )
+      +picture&attributes(attributes)
+        if block
+          block
+  else
+    +picture&attributes(attributes)
+      if block
+        block

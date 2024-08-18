@@ -1,0 +1,240 @@
+extends ./layout/_base
+
+include ./utils/_mixins
+
+block append variables
+	- const title = 'solovey'
+
+block content
+	header.outer.promo
+		.inner
+			.menu
+				.menu-logo(data-micromodal-trigger="modal-1")
+					img(src=`${img}/logo.png`, alt="logo")
+				nav.menu-nav
+					ul.menu-nav__list
+						li: a(href="#system") Как это работает
+						li: a(href="#tasks") Преимущества
+						li: a(href="#projects") Кому подходит
+						li: a(href="#examples") Кейсы
+						li: a(href="#world") Как изменился мир В2В
+				.menu-contacts
+					a.menu-contacts__email(href="mailto:mail@solovey.ru") mail@solovey.ru
+					a.menu-contacts__phone(href="tel:+73833830716") +7 (383) 383-07-16
+				button.menu-burger#menu-burger
+					.line
+					.line
+					.line
+				.overlay
+			.promo__content
+				h1.promo__title Как продавать сложный<br>В2В-продукт в новых условиях
+				h2.promo__subtitle Помогаем клиентам меняться, продавать легко и дорого с помощью эффективных инструментов
+	section.outer.discuss
+		.inner
+			.discuss-content
+				.discuss__video: img(src=`${img}/discuss-video-placeholder.jpg`, alt="video")
+				form(action="#").form.discuss__form
+					h3.form__title Нужны подробности? Давайте обсудим!
+					.form__content
+						.form__input
+							input(type="text" placeholder='Имя' name='name')
+							span
+						.form__input
+							input(type="tel" placeholder='Телефон' name='phone')
+							span
+						.form__input
+							input(type="email" placeholder='E-Mail' name='email')
+							span
+						button(type="submit").form__btn Получить консультацию
+			.discuss-algorithm
+				.discuss-algorithm__content
+					.discuss-algorithm__title Алгоритм В2В продаж
+					.discuss-algorithm__subtitle .Pdf 
+						a(href="/") Скачай и делай
+	section.outer.system#system
+		.inner
+			.title.system__title Как устроена система
+			ol.system__items
+				+systemItem('01', 'Прогноз', 'Работают аналитики. Разрабатывается\nпредварительный медиаплан и\nнеобходимый бюджет. Когда план\nустраивает - заключаем договор')
+				+systemItem('02', 'Инструменты', 'Работает креативная группа.\nСоздаются креативы и видео\nдля разных этапов воронки')
+				+systemItem('03', 'Запуск', 'Работают AdOps-специалисты. Настраивается и обучается\nусловиям поиска и показов математический алгоритм (ИИ)')
+				+systemItem('04', 'Управление', 'Работает искусственный интеллект.\nПроисходит оптимизация алгоритмов\nи бюджета. Постепенно снижается\nстоимость просмотров и конверсий.\nЗаказчик имеет ЛК для наблюдения\nза показателями')
+				+systemItem('05', 'Анализ', 'Работают аналитики. Формируется\nподробный отчет с результатами\nпоказателей и рекомендациями')
+				+systemItem('06', 'Доработка', 'Работают маркетологи и креативная\nгруппа. Дорабатываются креативы и\nинструменты для роста конверсий на\nосновании рекомендаций аналитиков')
+	section.tasks#tasks
+		.inner
+			.title.tasks__title Какие задачи решаются в отделе <br>продаж <span>после внедрения системы</span>
+			.tasks-table
+				.tasks-table__header
+					.left Задачи отдела продаж
+					.right Наше решение
+				.tasks-table__items
+					+tasksTableItem('Автоматизация поиска \nи увеличение базы \nцелевых клиентов', 'Programmatic - система автоматического размещения \nрекламы. Точный таргетинг и оптимизацию показов \nобеспечивает искусственный интеллект')
+					+tasksTableItem('Увеличение конверсии на всех этапах воронки и повышение коэффициента успешных сделок', 'Увеличение количества продуктивных встреч за \nсчет привлечения целевых лидов, качественной \nсегментации по анализу реакции на материалы')
+					+tasksTableItem('Снижение числа касаний \nи «пустых» встреч', 'Минута профессионального видео откроет двери к труднодоступному ЛПР. Назначать встречи только с теми, кто проявил интерес, кто смотрел видеопрезентацию до конца или несколько раз')
+					+tasksTableItem('Снижение количества возражений', 'Видео позволяет передать больше информации \nза единицу времени, упрощает переговоры \nчерез наглядность приведенных в нем фактов')
+					+tasksTableItem('Увеличение среднего чека', 'Добавленная ценность за счет крутой \nвизуализации и отличия от конкурентов \nпозволит аргументированно увеличить цену')
+					+tasksTableItem('Увеличение \nмаржинальности \nкаждой сделки', 'Видео быстро доносит суть, требуется \nменьше ресурсов в процессе прогрева \nи  доведении до сделки')
+					+tasksTableItem('Быстрое установление контакта \nи выстраивание доверия', 'У ЛПР всегда много задач и мало времени на изучение \nобъемных коммерческих предложений. Показываем \nглавное за 2 минуты и так доказываем экспертность')
+					+tasksTableItem('Быстрая сегментация лидов', 'Точечное обращение, анализируем смотрел / не \nсмотрел, не теряем время на “пустые” активности')
+					+tasksTableItem('Эффективность работы: \nполучить бóльший результат \nпри меньших усилиях', 'Двухминутная видеопрезентация может \nпоказать куда больше, чем получасовая \nвстреча со всеми формальностями')
+					+tasksTableItem('Экспертное позиционирование: продемонстрировать уникальность и ценность продукта', 'Усиление ценности предложения за счет качественного \nвидео, а следовательно, и усиление имиджа компании, \nповышение доверия, демонстрация экспертности')
+					+tasksTableItem('Снижение издержек на командировки и ФОТ \nотдела продаж', 'Краткое и понятное коммерческое предложение в \nвидеоформате экономит до 2,5 часов в день каждому \nменеджеру! <a href="/">расчет ссылка на стр блога</a>')
+					+tasksTableItem('Автоматизация продаж', 'Наглядное предложение и нативные рекламные \nматериалы, которые убеждают клиента приобрести \nпродукт с вашим минимальным участием или без него')
+					.gradient-line
+			.tasks-notice
+				.tasks-notice__wrapper
+					.tasks-notice__text Если ваш продукт действительно решает серьезные задачи рынка, то после внедрения системы клиент уже “не уйдет подумать” на пару месяцев и точно не пропадут. И если захочет “подумать”, то только над бюджетом инвестиций для  сотрудничества с вами!
+					img.tasks-notice__bird(src=`${img}/tasks-solovey-2.png`, alt="solovey")
+			.tasks-discuss
+				.tasks-discuss__wrapper
+					.tasks-discuss__title Нужны подробности? Давайте обсудим!
+					form(action="#").form.tasks__form
+						.form__content
+							.form__input
+								input(type="tel" placeholder='Телефон' name='phone')
+								span
+							.form__input
+								input(type="email" placeholder='E-Mail' name='email')
+								span
+							button(type="submit").form__btn Получить консультацию
+	section.projects#projects
+		.inner
+			.projects-system
+				.title.projects-system__title Для каких проектов подходит система?
+				.swiper-container.projects__slider
+					.swiper-wrapper.projects-system__items
+						.swiper-slide.projects-system__item.projects-system__item--1
+							span Производство сложных B2B- Продуктов
+						.swiper-slide.projects-system__item.projects-system__item--2
+							span Цифровые технологии<br>и сервисы
+						.swiper-slide.projects-system__item.projects-system__item--3
+							span Рекламные кампании для продвижении бренда
+	section.examples#examples
+		.examples__header Пример использования programmatic -технологии:
+		.swiper-container.examples__slider
+			.swiper-wrapper.examples__items
+				// 1
+				.swiper-slide.outer.examples-item.examples-item--1
+					.inner
+						.examples-item__header Пример использования programmatic-технологии:
+						.examples-item__content
+							.examples-subitem
+								span.examples-subitem__title Клиент:
+								.examples-subitem__descr Транспортно-логистическая компания
+							.examples-subitem
+								span.examples-subitem__title Задача:
+								.examples-subitem__descr Брендовая кампания, повышение узнаваемости компании на рынке логистических услуг
+							.examples-subitem--result
+								span.examples-subitem__title Результат:
+								.examples-subitem__descr Количество звонков и заявок увеличилось в 2,75 раза по сравнению с прошлым периодом, средняя конверсия увеличилась в 3,15 раза по сравнению с предыдущей кампанией. Количество клиентов повысилось на 124,1% по сравнению с аналогичным периодом, в расчет принимался период для совершения отложенных конверсий
+				// 2
+				.swiper-slide.outer.examples-item.examples-item--2
+					.inner
+						.examples-item__content.examples-item__content--2
+							.examples-subitem
+								span.examples-subitem__title.examples-subitem__title--2 Клиент:
+								.examples-subitem__descr Компания по продаже программного обеспечения
+							.examples-subitem
+								span.examples-subitem__title.examples-subitem__title--2 Задача:
+								.examples-subitem__descr Привлечение интереса к подписке на предлагаемый продукт
+							.examples-subitem--result
+								span.examples-subitem__title.examples-subitem__title--2 Результат:
+								.examples-subitem__descr Продажи SaaS-софта увеличились в 2,43 раза по сравнению с периодом до проведения programmatic кампании, показатель ROI показал рост в 225%, увеличение лояльности — количество продлений подписки выросло на 374%
+				// 3
+				.swiper-slide.outer.examples-item.examples-item--3
+					.inner
+						.examples-item__content.examples-item__content--3
+
+							.examples-subitem
+								span.examples-subitem__title Клиент:
+								.examples-subitem__descr Региональное<br>представительство банка
+							.examples-subitem
+								span.examples-subitem__title Задача:
+								.examples-subitem__descr Повышать узнаваемость<br>HR-бренда компании, разогревать интерес пассивной аудитории
+							.examples-subitem--result
+								span.examples-subitem__title Результат:
+								.examples-subitem__descr
+									ol
+										li Узнаваемость HR-бренда компании увеличилась на 169%
+										li Количество обращений в HR увеличилось в 3,4 раза,<br>при этом 65% обратившихся было принято на работу
+										li CTR составил 2,4% 
+	section.outer.world#world
+		.inner
+			.title.world__title Как изменился мир В2В
+			.world__subtitle Тем, кто продает сложный продукт или услугу с длинным циклом сделки, прекрасно известно: <span>качественная презентация - это половина успеха</span>
+			.swiper-container.world__slider
+				.swiper-wrapper.world__items
+					.swiper-slide.world-item
+						.world-item__logo: img(src=`${img}/world-logo-1.png`, alt="1")
+						.world-item__descr По данным агентства<br>Hubspot:
+						.world-item__percent: span 56%
+						.world-item__text Современных руководителей предпочитают получать<br>информацию в видеоформате
+						.world-item__percent: span 7 из 10
+						.world-item__text Покупателей B2B смотрят видео<br>во время процесса покупки
+						.world-item__text Самые популярные видео - профессиональные обзоры, практические рекомендации и о функциях продукта
+					.swiper-slide.world-item
+						.world-item__logo: img(src=`${img}/world-logo-2.png`, alt="2")
+						.world-item__descr.world-item__descr--2 Google подтверждает эту<br>статистику такими фактами:
+						.world-item__percent: span 70%
+						.world-item__text Покупателей и<br>исследователей B2B смотрят<br>видео на всем пути покупки
+						.world-item__text Покупателей и исследователей просматривает 30 или более минут связанных с B2B
+						.world-item__text Видео также помогает расширить<br>беседу и повысить продуктивность<br>встреч и переговоров
+					.swiper-slide.world-item
+						.world-item__logo: img(src=`${img}/world-logo-3.png`, alt="3")
+						.world-item__descr.world-item__descr--3 Недавний опрос в Linkedin среди 3200<br>профессионалов из 16 регионов показал:
+						.world-item__percent: span 86%
+						.world-item__text Говорят, что они с большей<br>вероятностью будут смотреть видео, которое имеет отношение к их работе
+						.world-item__advice
+							.world-item__advice-text Именно поэтому мы предлагаем внедрять видеомаркетинг и видеорекламу
+							img.world-item__advice-bird(src=`${img}/world-solovey.png`, alt="solovey")
+			.world-item__advice.world-item__advice--mobile
+				.world-item__advice-text Именно поэтому мы предлагаем внедрять видеомаркетинг и видеорекламу
+				img.world-item__advice-bird(src=`${img}/world-solovey.png`, alt="solovey")
+	section.outer.promo2
+		.inner
+			.title.promo2__title Как продавать сложный<br>В2В-продукт в новых условиях?
+	section.outer.discuss2
+		.inner
+			form(action="#").form.discuss2__form
+				h3.form__title Поговорим?
+				.form__content
+					.form__input
+						input(type="tel" placeholder='Телефон' name='phone')
+						span
+					.form__input
+						input(type="email" placeholder='E-Mail' name='email')
+						span
+					button(type="submit").form__btn Получить консультацию
+	section.outer.contacts
+		.inner
+			.contacts__items
+				.contacts-item
+					.contacts-item__title Связаться
+					.contacts-item__text +7 (383) 383 07 16<br>mail@solovey.ru
+				.contacts-item
+					.contacts-item__title Посетить
+					.contacts-item__text г. Новосибирск<br>ул. Вертковская 10, офис 301
+				.contacts-item
+					.contacts-item__title ОГРН
+					.contacts-item__text 317547600032099
+	footer.outer.footer
+		.inner
+			a(href="/").footer__conf Политика конфиденциальности
+			#modal-1.modal.micromodal-slide
+				.modal__overlay(tabindex='-1', data-micromodal-close='')
+					.modal__container(role='dialog', aria-modal='true', aria-labelledby='modal-1-title')
+						//- header.modal__header
+						button.modal__close(aria-label='Close modal', data-micromodal-close='')
+						form(action="#").form
+							.form__content
+								.form__input
+									input(type="text" placeholder='Имя' name='name')
+									span
+								.form__input
+									input(type="tel" placeholder='Телефон' name='phone')
+									span
+								.form__input
+									input(type="email" placeholder='E-Mail' name='email')
+									span
+								button(type="submit").form__btn Отправить

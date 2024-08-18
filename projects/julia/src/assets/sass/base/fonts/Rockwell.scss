@@ -1,0 +1,8 @@
+@font-face {
+	font-family: 'Rockwell';
+	src: url('#{$fontPath}/RockwellRegular.eot');
+	src: url('#{$fontPath}/RockwellRegular.eot?#iefix') format('embedded-opentype'),
+		url('#{$fontPath}/RockwellRegular.woff') format('woff'), url('#{$fontPath}/RockwellRegular.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}

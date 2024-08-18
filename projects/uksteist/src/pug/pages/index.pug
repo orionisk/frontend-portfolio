@@ -1,0 +1,67 @@
+extends ~pug/layout/_base
+include ~pug/sections/sections
+include ~pug/components/components
+
+block append variables
+  - const title = "Uksteist";
+
+block content
+  +promo
+  - const bg = require("~img/bg-plan-all-mobile.jpg");
+  .relative.sectors-wrapper.s-sec.lazy(data-bg=bg)
+    +sectors
+    +sectorsMap
+    .overflow-hidden.absolute.inset-0.z-10.pointer-events-none
+      img.absolute.lazy.a-cloud.--c0(src=require("~img/clouds/cloud0.png?format=webp"), alt="", class="")
+      img.absolute.lazy.a-cloud.--c1(
+        src=require("~img/clouds/cloud1.png?format=webp"),
+        alt="",
+        class="top-[50px]"
+      )
+      img.absolute.lazy.a-cloud.--c2(
+        src=require("~img/clouds/cloud2.png?format=webp"),
+        alt="",
+        class="top-[300px]"
+      )
+      img.absolute.lazy.a-cloud.--c3(
+        src=require("~img/clouds/cloud3.png?format=webp"),
+        alt="",
+        class="top-[700px]"
+      )
+      img.absolute.lazy.a-cloud.--c4(
+        src=require("~img/clouds/cloud4.png?format=webp"),
+        alt="",
+        class="top-[800px]"
+      )
+      img.absolute.lazy.a-cloud.--c5(
+        src=require("~img/clouds/cloud5.png?format=webp"),
+        alt="",
+        class="top-[800px]"
+      )
+      img.absolute.lazy.a-cloud.--c6(
+        src=require("~img/clouds/cloud6.png?format=webp"),
+        alt="",
+        class="top-[1100px]"
+      )
+      img.absolute.lazy.a-cloud.--c7(
+        src=require("~img/clouds/cloud7.png?format=webp"),
+        alt="",
+        class="top-[2100px]"
+      )
+      img.absolute.lazy.a-cloud.--c8(
+        src=require("~img/clouds/cloud8.png?format=webp"),
+        alt="",
+        class="top-[2100px]"
+      )
+  +homePlace
+  +sources
+  +history
+  +infra
+  +stages
+  +team
+  +documents
+  +place
+  +walk
+  +pHelper
+  +tippy
+  +modals

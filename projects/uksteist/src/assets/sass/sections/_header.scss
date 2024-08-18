@@ -1,0 +1,28 @@
+.header {
+  &-menu {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+
+    width: 100%;
+    max-width: 792px;
+    margin-right: auto;
+    margin-left: auto;
+
+    font-size: 14px;
+    line-height: 1;
+    color: theme('colors.th-firm');
+
+    & > li {
+      text-underline-offset: 1px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &-nav {
+    @apply -mx-6 mt-3o5 py-4o5 border-b border-t border-th-gray hidden sm_block;
+  }
+}

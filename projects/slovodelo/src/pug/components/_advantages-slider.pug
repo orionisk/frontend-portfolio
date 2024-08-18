@@ -1,0 +1,10 @@
+mixin bigSlider(n = 3)
+	.big-slider-wrapper
+		.swiper-container.big-slider-container
+			.swiper-wrapper.big-slider-items
+				- for(let i = 0; i < n; i++)
+					.swiper-slide.bit-slider-item-wrapper
+						.big-slider-item: img(src=`${img}/advantages-1.jpg`, alt=`advantages-${i}`)
+			.sl-pag.big-slider-pagination
+		.sl-nav.sl-nav--next.big-slider-next
+		.sl-nav.sl-nav--prev.big-slider-prev

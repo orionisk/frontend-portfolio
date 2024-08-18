@@ -1,0 +1,45 @@
+mixin s-featured
+  section.outer.pt-1o5.sm_pt-7
+    .inner
+      .grid.items-center.sm_gap-4.lg_grid-cols-2
+        .relative.flex.w-full.justify-center.before_absolute.before_right-0.before_bottom-1.before_h-px.before_bg-flamingo-02.max-lg_before_-inset-x-32.lg_justify-end.lg_before_w-screen
+          h2.font-marianina.font-bold.italic.tracking-tighter(class="text-[28px] sm_text-[42px]") FEATURED COLLECTION
+        span.pt-1.uppercase.xs_max-lg_text-center.max-sm_text-sm Equipment from the best manufacturers, choose for every taste and #[br]color, a variety of sizes are available
+      //- .mt-4.flex.flex-wrap.justify-center.gap-x-2o5.gap-y-5.sm_px-2o5
+      .mt-4.grid.gap-x-2o5.gap-y-5.sm_grid-cols-2.sm_px-2o5.xl_grid-cols-3
+        mixin item
+          .group.relative.border.border-alto.transition-all.hover_border-cod-gray(
+            class="hover_shadow-[0px_4px_22px_rgba(0,0,0,0.14)] max-sm_[&:not(:first-of-type)]_hidden"
+          )
+            a.absolute.bg-cod-gray.px-6.pt-4.pb-5.text-white.opacity-0.transition-opacity.group-hover_opacity-100(
+              href="/product"
+            )
+              span.relative.text-sm.before_absolute.before_-bottom-1o5.before_h-px.before_bg-white(
+                class="before_w-[74px]"
+              ) View Details #[span.icm.icm-chevron-right.ml-2o5]
+            +img('~img/feat-helmet2.jpg')
+            .mt-2.flex.flex-col.justify-center.text-center.text-lg
+              p.max-sm_mt-3.max-sm_leading-snug Stilo ST5 GT SA2020 Racing #[br]Helmet, Composite, Silver
+              .mt-2.flex.justify-center.gap-2
+                .flex.items-center.gap-1.text-xl.text-mustard
+                  .icm.icm-star
+                  .icm.icm-star
+                  .icm.icm-star
+                  .icm.icm-star
+                  .icm.icm-star
+                a(href="#") 24 reviews
+            a.mt-2.flex.items-center.justify-between.px-7.py-5.transition-colors.group-hover_bg-cod-gray.group-hover_text-white(
+              href="#"
+            )
+              span.font-michroma.uppercase.tracking-widest.sm_max-lg_text-sm Add to cart
+              .flex.items-center.gap-5
+                span.bg-white-03.flex.h-5.w-px.bg-boulder.group-hover_bg-white
+                span.text-2xl.font-semibold $599.00
+        +item
+        +item
+        +item
+        +item
+        +item
+        +item
+      .mx-auto.mt-4.text-center
+        a.text-lg.uppercase.tracking-wide(href="/catalog") View All #[span.icm.icm-chevron-right.ml-5.text-sm]

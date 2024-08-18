@@ -1,0 +1,52 @@
+include ~views/components/_accordion
+
+mixin footer
+  footer.outer.bg-cod-gray.py-5.sm_py-10.lg_py-20
+    .inner
+      .flex.justify-between.gap-4.text-white.max-sm_flex-col.max-sm_px-2.md_gap-10(class="max-w-[1176px]")
+        .flex.w-full.max-w-xl.justify-between.gap-6.max-sm_order-1.max-sm_flex-col.sm_pt-6.md_gap-5
+          +accordion('ORDERS', { expanded: true, arrowCn: 'sm_hidden max-sm_text-flamingo-01', btnCn: 'max-sm_border-b border-flamingo-01 max-sm_pb-2o5 max-sm_w-full sm_pointer-events-none', titleCn: 'max-sm_text-flamingo-01 sm_text-lg font-semibold' })#f-a1
+            .mt-2o5.grid.gap-2
+              .border-white.pb-2o5.max-sm_border-b
+                a(href="#") Login
+              .border-white.pb-2o5.max-sm_border-b
+                a(href="#") Track Order
+          +accordion('CONTENT', { expanded: true, arrowCn: 'sm_hidden max-sm_text-flamingo-01', btnCn: 'max-sm_border-b border-flamingo-01 max-sm_pb-2o5 max-sm_w-full sm_pointer-events-none', titleCn: 'max-sm_text-flamingo-01 sm_text-lg font-semibold' })#f-a2
+            .mt-2o5.grid.gap-2
+              .border-white.pb-2o5.max-sm_border-b
+                a(href="#") About US
+              .border-white.pb-2o5.max-sm_border-b
+                a(href="#") Shop Racing Gear
+              .border-white.pb-2o5.max-sm_border-b
+                a(href="#") Pro Racing Tips
+          +accordion('INFORMATION', { expanded: true, arrowCn: 'sm_hidden max-sm_text-flamingo-01', btnCn: 'max-sm_border-b border-flamingo-01 max-sm_pb-2o5 max-sm_w-full sm_pointer-events-none', titleCn: 'max-sm_text-flamingo-01 sm_text-lg font-semibold' })#f-a3
+            .mt-2o5.grid.gap-2
+              .border-white.pb-2o5.max-sm_border-b
+                a(href="#") Terms of Use
+              .border-white.pb-2o5.max-sm_border-b
+                a(href="#") Privacy Policy
+              .border-white.pb-2o5.max-sm_border-b
+                a(href="#") Return Policy
+              .border-white.pb-2o5.max-sm_border-b
+                a(href="#") Shipping Policy
+        .grid.content-start.gap-7.max-sm_w-full.sm_gap-5
+          +img('~img/logo.png')
+          .flex.gap-5.max-sm_justify-between.sm_flex-col
+            .grid.gap-5
+              a.flex.w-max.items-center.gap-3o5(href="#")
+                span.icm.icm-call.text-2xl
+                span (918) 512-1281
+              a.flex.w-max.items-center.gap-3o5(href="#")
+                span.icm.icm-chat.text-2xl
+                span info@calltogrid.com
+              a.flex.w-max.items-center.gap-3o5(href="#")
+                span.icm.icm-location.text-2xl
+                span Oklahoma City, OK, USA
+            .flex.gap-5.max-sm_flex-col
+              +svg('~img/icons/yt-alt.svg')(alt="youtube icon", width=32, height=32)
+              +svg('~img/icons/tt-alt.svg')(alt="twitter icon", width=32, height=32)
+              +svg('~img/icons/inst-alt.svg')(
+                alt="instagram icon",
+                width=32,
+                height=32
+              )

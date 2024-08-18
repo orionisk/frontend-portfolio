@@ -1,0 +1,56 @@
+extends ./layout/_base
+
+//- include ./utils/_mixins.pug
+//- include ./components/_m-form.pug
+//- include ./components/_product-tile.pug
+//- include ./components/_catalog-block.pug
+include ./components/_breadcrumb.pug
+
+block append variables
+	- const title = 'Контакты'
+
+block content
+	+breadcrumb(['Главная страница', 'Контакты',])
+
+	section.outer.contacts
+		.inner
+			.s-title.s-title--2 Контакты
+			.contacts-items
+				.contacts-item
+					.contacts-item__title Основные контакты
+					.contacts-item__text
+						| <a href='tel:#'>+7 (495) 990-49-90</a>
+						| <br><a href='mailto:#'>info@slovodelo.ru</a>
+				.contacts-item
+					.contacts-item__title Дополнительные номера:
+					.contacts-item__text 
+						| <a href='tel:#'>+7 (495) 207-75-77</a>
+						| <br><a href='tel:#'>+7 (985) 799-33-80</a>
+				.contacts-item.contacts-item--address
+					.contacts-item__title Где мы находимся:
+					.contacts-item__text.contacts-item__text--address
+						| г. Москва, Бережковская набережная, д.20, стр.64, 3-й этаж.
+						| <br>Метро Киевская: автобус 205, 119, 91, 791, троллейбус 17, 34 до остановки ТЭЦ № 12 (по требованию) 
+			.contacts-map
+				.contacts-map-img: img(src=`${img}/map.jpg`, alt="map")
+			.contacts-req
+				.contacts-req__title Реквизиты компании:
+				.contacts-req-items
+					.contacts-req-item НАИМЕНОВАНИЕ ОРГАНИЗАЦИИ: ООО «СЛОВОДЕЛО»
+						| <br>Адрес юридический: 121059, Москва г, Бережковская наб, дом 20, строение 64, этаж 3 ПОМ I КОМ 302
+						| <br>Адрес юридический: 121059, Москва г, Бережковская наб, дом 20, строение 64, этаж 3 ПОМ I КОМ 302
+						| <br>БАНКОВСКИЕ РЕКВИЗИТЫ
+						| <br>Р/С: 40702810402630000387
+						| <br>АО «АЛЬФА-БАНК» г. Москва
+						| <br>БИК: 044525593,
+						| <br>К/С: 30101810200000000593
+					.contacts-req-item Идентификационный номер: 7722716163
+						| <br>КПП: 773001001
+						| <br>ОГРН: 1107746347312
+						| <br>Код организации по ОКАТО/ОКТМО: 45268554000/45318000
+						| <br>Код организации по ОКПО: 66389442
+						| <br>Код организации по ОКОПФ: 12300
+						| <br>Код организации по ОКФС: 16
+						| <br>ОКВЭД: 51.47.22, 22.24,.22.1, 21.23, 21.25, 22.15
+						| <br>Генеральный директор Бобров Антон Александрович
+						| <br>Главный бухгалтер Стаценко Ирина Юрьевна

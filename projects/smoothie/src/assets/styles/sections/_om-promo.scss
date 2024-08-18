@@ -1,0 +1,16 @@
+.s-om-promo {
+  &-btn {
+    display: block;
+
+    width: 100%;
+    max-width: 160px;
+    height: 60px;
+
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 3px;
+
+    background-color: theme('colors.caper');
+    border-radius: 5px;
+  }
+}

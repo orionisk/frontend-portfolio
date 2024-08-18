@@ -1,0 +1,67 @@
+mixin s-contact
+  - const bg = require("~img/contact-bg.jpg?format=webp&quality=40");
+  section.relative.pt-32.max-md_pb-3.md_pt-5
+    .lazy.relative.bg-cover.bg-center.bg-no-repeat.md_bg-black(
+      data-bg=bg,
+      class="max-md_!bg-none md_min-h-[700px] lg_min-h-[1035px]"
+    )
+      .inner
+        .absolute.-inset-y-0.bg-no-repeat.max-md_hidden(
+          class="left-0 w-[65vw] bg-[url(~img/product-bg.svg)]"
+        )
+        .relative.grid.gap-2o5.pt-4o5.md_grid-cols-2(class="max-w-[919px]")
+          .text-alabaster.md_bg-cod-gray.md_px-2o5.md_pb-28.md_pt-8
+            .relative.bg-cod-gray.max-md_p-1
+              h1.flex.items-center.gap-3.font-michroma.text-xl.uppercase.md_text-2xl.lg_text-4xl
+                span Contact Us
+                +svg('~img/icons/arrow-right-long.svg').right-0.inline.max-md_hidden(
+                  width=83,
+                  height=16
+                )
+                .md_hidden
+                  .absolute.right-5.h-0o5.bg-white(class="w-1/3")
+                  .absolute.right-5.w-0o5.bg-white.before_absolute.before_bottom-0.before_h-3.before_w-0o5.before_rotate-45.before_bg-white.after_absolute.after_bottom-0.after_h-3.after_w-0o5.after_-rotate-45.after_bg-white(
+                    class="h-[80%] before_left-[5px] after_right-[5px]"
+                  )
+              p.mt-3.text-lg.capitalize.max-md_pr-6.md_mt-2.md_text-xl Send us a message and our manager will contact you within a day
+            .relative
+              .absolute.right-5.w-0o5.bg-flamingo-01.before_absolute.before_bottom-0.before_h-3.before_w-0o5.before_rotate-45.before_bg-flamingo-01.after_absolute.after_bottom-0.after_h-3.after_w-0o5.after_-rotate-45.after_bg-flamingo-01.md_hidden(
+                class="h-full before_left-[5px] after_right-[5px]"
+              )
+              .m-1.bg-white.md_hidden
+                +img('~img/contact-bg.jpg', { size: 768, q: 80 })
+              .grid.gap-1.bg-cod-gray.max-md_m-1.md_mt-14.md_gap-8.md_text-xl.md_font-bold
+                .flex.items-center.gap-2o5.md_gap-5
+                  .icm.icm-call.flex.items-center.text-2xl.max-md_h-10.max-md_w-20.max-md_justify-end.max-md_bg-flamingo-01.max-md_pr-2.md_text-xl
+                  a(href="#") (918) 512-1281
+                .flex.items-center.gap-2o5.md_gap-5
+                  .icm.icm-chat.flex.items-center.text-2xl.max-md_h-10.max-md_w-20.max-md_justify-end.max-md_bg-flamingo-01.max-md_pr-2.md_text-xl
+                  a(href="#") info@calltogrid.com
+                .flex.items-center.gap-2o5.md_gap-5
+                  .icm.icm-location.flex.items-center.text-2xl.max-md_h-10.max-md_w-20.max-md_justify-end.max-md_bg-flamingo-01.max-md_pr-2.md_text-xl
+                  a(href="#") Oklahoma City, OK, USA
+          form.grid.gap-2.bg-transparent.max-md_px-1.md_gap-4o5(x-data, @submit.prevent)
+            .grid.gap-7.bg-white.pt-5.md_gap-4o5.md_pb-2o5.md_pl-2o5.md_pr-1o5.md_pt-10
+              label.grid
+                input.border-b.border-cod-gray.pb-3.text-flamingo-01.outline-none.transition-colors.placeholder_text-cod-gray.focus_border-flamingo-01(
+                  type="text",
+                  name="name",
+                  placeholder="Name"
+                )
+              label.grid
+                input.border-b.border-cod-gray.pb-3.text-flamingo-01.outline-none.transition-colors.placeholder_text-cod-gray.focus_border-flamingo-01(
+                  type="text",
+                  name="email",
+                  placeholder="Enter Your Email"
+                )
+              label.grid
+                span Enter Your Message
+                textarea.mt-2o5.resize-none.border.border-cod-gray.p-2.text-flamingo-01.outline-none.transition-colors.focus_border-flamingo-01(
+                  class="max-h-[186px]",
+                  name="message",
+                  cols="30",
+                  rows="8"
+                )
+            button.bg-flamingo-01.font-michroma.uppercase.text-white(class="h-[72px] text-[15px]") send message
+          .px-1.md_hidden
+            +img('~img/map.jpg').mx-auto

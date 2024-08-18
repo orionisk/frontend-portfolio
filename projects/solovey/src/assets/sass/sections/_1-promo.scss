@@ -1,0 +1,44 @@
+.promo {
+	padding-top: 4rem;
+	min-height: 50rem;
+
+	background: url('#{$imgPath}/promo-bg.jpg') 50% / cover no-repeat;
+
+	color: #fff;
+
+	@media screen and (max-width: $xm-max) {
+		min-height: 621px;
+	}
+
+	&__content {
+		padding-top: 9.4rem;
+		@media screen and (max-width: $xm-max) {
+			padding-top: 90px;
+		}
+	}
+
+	&__title {
+		font-size: 7.4rem;
+		font-weight: 700;
+		line-height: 7.978rem;
+		@media screen and (max-width: $sm-max) {
+			font-size: 44px;
+			line-height: 46px;
+		}
+	}
+
+	&__subtitle {
+		margin-top: 2rem;
+
+		font-size: 2.2rem;
+		line-height: 2.6rem;
+
+		@media screen and (max-width: $xm-max) {
+			margin-top: 26px;
+			max-width: 252px;
+
+			font-size: 18px;
+			line-height: 22px;
+		}
+	}
+}

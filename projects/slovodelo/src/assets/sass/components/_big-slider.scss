@@ -1,0 +1,39 @@
+.big-slider {
+  &-container {
+    border-radius: 15px;
+  }
+
+  &-wrapper {
+    margin-top: 31px;
+    position: relative;
+  }
+
+  &-item {
+    position: relative;
+    overflow: hidden;
+
+    background: #c4c4c4;
+    border-radius: 15px;
+    line-height: 0;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &::before {
+      content: '';
+
+      width: 100%;
+      height: 100%;
+
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      background: rgba(0, 0, 0, 0.5);
+    }
+  }
+}

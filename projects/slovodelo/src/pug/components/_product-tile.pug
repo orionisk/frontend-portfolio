@@ -1,0 +1,26 @@
+mixin productTile(classes = [], discount, star)
+	- const cn = classes.join(' ');
+	.swiper-slide.product-tile-wrapper
+		form(action="#").product-tile.swiper-no-swiping
+			.product-tile__view(class=`${cn || ''}`)
+				button.product-tile__star(class=`${star ? 'active' : ''}`)
+				.product-tile__img: img(src=`${img}/bestseller-1.png`, alt="item")
+				.product-color-items.product-tile-color-items
+					label.product-color.product-color--red
+						input(type="radio", name="color" value="red")
+						span
+					label.product-color.product-color--yellow
+						input(type="radio", name="color" value="yellow")
+						span
+					label.product-color.product-color--blue
+						input(type="radio", name="color" value="blue")
+						span
+			.product-tile__info
+				.product-tile__price
+					if (discount)
+						.product-tile__price-old #{discount} руб
+					.product-tile__price-current 299 руб.
+				.product-tile__name Кружка Molti Surprise Touch, soft-touch, голубая
+				.product-tile__code Код товара: IL-297469
+				.product-tile__amount Наличие: 743 шт.
+				button(type="submit").product-tile__btn В корзину
